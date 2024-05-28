@@ -12,7 +12,7 @@ import {
 
 function Header() {
   return (
-    <div className="fixed flex items-center z-10 justify-around w-full ease-in duration-300 gap-28 py-9 xl:gap-96">
+    <div className="fixed flex items-center z-10 justify-around w-full ease-in duration-300 gap-7 py-9 md:gap-11 xl:gap-56">
       <div>
         <Sheet>
           <SheetTrigger>
@@ -53,7 +53,7 @@ function Header() {
         </a>
       </div>
       <Button variant="outline" asChild className="text-white">
-        <Link href="/booking">REGISTRO</Link>
+        <Link href="/booking">BOOK NOW</Link>
       </Button>
     </div>
   );

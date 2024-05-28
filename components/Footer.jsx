@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="fixed bottom-0 left-0 flex justify-end gap-6 w-full px-12 pb-9">
+    <div className="fixed bottom-0 justify-center md:left-0 flex md:justify-end gap-6 w-full sm:px md:px-12 lg:px-16 xl:px-20 pb-9 z-10">
       <div className="rounded-full bg-white/30 p-3 w-12 h-12">
         <a href="/">
           <Image
