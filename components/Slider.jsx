@@ -229,7 +229,7 @@ export default function Slider() {
           <div
             className="bg-cover flex flex-col "
             style={{
-              backgroundImage: `url(/images/Mujer_Heiss.jpg)`,
+              backgroundImage: `url(/images/Mujer_Heiss.jpeg)`,
               width: "100%",
               height: "100%",
               display: "flex",
