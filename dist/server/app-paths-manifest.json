@@ -1,13 +1,13 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/contacto/page": "app/contacto/page.js",
-  "/habitaciones/habitacionMedium/page": "app/habitaciones/habitacionMedium/page.js",
+  "/booking/page": "app/booking/page.js",
   "/experiencias/page": "app/experiencias/page.js",
   "/habitaciones/habitacionLarge/page": "app/habitaciones/habitacionLarge/page.js",
-  "/booking/page": "app/booking/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
+  "/habitaciones/habitacionMedium/page": "app/habitaciones/habitacionMedium/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/habitaciones/page": "app/habitaciones/page.js",
   "/habitaciones/habitacionSmall/page": "app/habitaciones/habitacionSmall/page.js",
-  "/espacios/page": "app/espacios/page.js",
-  "/habitaciones/page": "app/habitaciones/page.js"
+  "/espacios/page": "app/espacios/page.js"
 }
