@@ -143,7 +143,7 @@ const SliderHabLarge = () => {
             <h2 className="h5">MEDIUM</h2>
             <p className="parrafo-light-24 pl-12">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industrys standard dummy text
               ever since.
             </p>
           </div>

@@ -101,7 +101,7 @@ const SliderHabitaciones = () => {
                             src="/icons/camas.svg"
                             alt="Camas Queen"
                             width={25}
-                            height={29.1}
+                            height={29}
                             className="md:w-[40px] lg:w-[50px]"
                           />
                           <p className="p-light-16">Camas Queen</p>
@@ -111,7 +111,7 @@ const SliderHabitaciones = () => {
                             src="/icons/wifi.svg"
                             alt="Wifi"
                             width={25}
-                            height={29.1}
+                            height={29}
                             className="md:w-[40px] lg:w-[50px]"
                           />
                           <p className="p-light-16">
@@ -123,7 +123,7 @@ const SliderHabitaciones = () => {
                             src="/icons/armario.svg"
                             alt="Armario"
                             width={25}
-                            height={29.1}
+                            height={29}
                             className="md:w-[40px] lg:w-[50px]"
                           />
                           <p className="p-light-16">Armario</p>
@@ -135,7 +135,7 @@ const SliderHabitaciones = () => {
                             src="/icons/bar.svg"
                             alt="Bar"
                             width={25}
-                            height={29.1}
+                            height={29}
                             className="md:w-[40px] lg:w-[50px]"
                           />
                           <p className="p-light-16">Mini bar</p>
@@ -145,7 +145,7 @@ const SliderHabitaciones = () => {
                             src="/icons/ducha.svg"
                             alt="Ducha"
                             width={25}
-                            height={29.1}
+                            height={29}
                             className="md:w-[40px] lg:w-[50px]"
                           />
                           <p className="p-light-16">Cuarto de baño con ducha</p>
@@ -155,7 +155,7 @@ const SliderHabitaciones = () => {
                             src="/icons/cafetera.svg"
                             alt="Cafetera"
                             width={25}
-                            height={29.1}
+                            height={29}
                             className="md:w-[40px] lg:w-[50px]"
                           />
                           <p className="p-light-16">Set de cafetera</p>
@@ -166,8 +166,8 @@ const SliderHabitaciones = () => {
                       <h3 className="h6">PODRAS ENCONTRAR</h3>
                       <p className="p-light-16 pt-3 md:pt-7">
                         Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s.
+                        typesetting industry. Lorem Ipsum has been the industry
+                        standard dummy text ever since the 1500s.
                       </p>
                     </div>
                   </section>
