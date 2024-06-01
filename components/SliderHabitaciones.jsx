@@ -11,6 +11,7 @@ import "/app/css/pagination.css";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css";
+import { CalendarWidget } from "./CalendarWidget";
 
 import { register } from "swiper/element/bundle";
 register();
@@ -62,7 +63,7 @@ const SliderHabitaciones = () => {
               <h2 className="h2">ROOMS</h2>
             </div>
             <div className="p-10">
-              {/* <CalendarWidget /> */}
+              <CalendarWidget />
             </div>
           </section>
         </div>
@@ -92,7 +93,7 @@ const SliderHabitaciones = () => {
                   <Button>DESCRIPCIÓN</Button>
                 </DrawerTrigger>
                 <DrawerContent>
-                  <section className="md:flex md:grid-col-3 bg-black text-white gap-4 py-8 md:px-16 md:py-12 lg:py-20 lg:px-24 xl:py-24 xl:px-32 justify-center lg:justify-between items-end">
+                  <section className="md:flex md:grid-col-3 bg-black text-white gap-4 py-8 md:px-12 md:py-8 lg:py-10 lg:px-16 xl:py-12 xl:px-32 justify-center lg:justify-between items-end">
                     <div className="flex px-8 md:px-5 col-span-2 gap-5 md:gap-9 lg:gap-10 xl:gap-36 justify-center">
                       <div className="flex flex-col grid-col-2 h-40 md:gap-7 md:w-40 md:h-52 lg:w-60 lg:h-60 xl:w-72 xl:h-64 xl:gap-10 justify-between">
                         <div className="flex gap-5 lg:gap-10 items-center text-left">

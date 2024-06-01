@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { z } from "zod";
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -31,17 +30,24 @@ const FormSchema = z.object({
 });
 
 export function CalendarWidget() {
-  
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
+  const handleSelect = (ranges) => {
+    setStartDate(ranges.selection.startDate);
+    setEndDate(ranges.selection.endDate);
+  };
+  const selectionRange = {
+    startDate: startDate,
+    endDate: endDate,
+    key: "selection",
+  };
+  const currentDate = new Date();
+  currentDate.setDate(currentDate.getDate() + 1);
+
   const form = useForm({
     resolver: zodResolver(FormSchema),
   });
-
-  useEffect(() => {
-    if (form.getValues("arrival")) {
-      setDepartureCalendarOpen(true);
-    }
-  }, [form.getValues("arrival")]);
-
   const onSubmit = async (data) => {
     const { arrival, departure } = data;
     const arrivalDate = format(arrival, "yyyy-MM-dd");
@@ -86,22 +92,24 @@ export function CalendarWidget() {
                     >
                       {field.value
                         ? format(field.value, "dd/MM/yyyy")
-                        : "Escoja una fecha"}
+                        : format(new Date(), "dd/MM/yyyy")}
                       <CalendarIcon className="ml-auto h-6 w-6 opacity-80" />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
+                    ranges={[selectionRange]}
+                    onChange={handleSelect}
                     mode="single"
                     selected={field.value}
                     onSelect={(date) => {
                       field.onChange(date);
-                      setDepartureCalendarOpen(true);
                     }}
                     disabled={(date) => date < new Date()}
                     fromYear={2023}
                     initialFocus
+                    className={"rounded-md border shadow"}
                   />
                 </PopoverContent>
               </Popover>
@@ -126,7 +134,7 @@ export function CalendarWidget() {
                     >
                       {field.value
                         ? format(field.value, "dd/MM/yyyy")
-                        : "Escoja una fecha"}
+                        : format(currentDate, "dd/MM/yyyy")}
                       <CalendarIcon className="ml-auto h-6 w-6 opacity-80" />
                     </Button>
                   </FormControl>
@@ -139,7 +147,7 @@ export function CalendarWidget() {
                     disabled={(date) =>
                       date < form.watch("arrival") || date < new Date()
                     }
-                    initialFocus={departureCalendarOpen}
+                    initialFocus
                   />
                 </PopoverContent>
               </Popover>

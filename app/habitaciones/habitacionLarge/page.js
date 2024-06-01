@@ -1,7 +1,12 @@
 import React from "react";
+import SliderHabLarge from "@/components/habitaciones/SliderHabLarge";
 
 function habitacionL() {
-  return <div>habitacionL</div>;
+  return (
+    <main>
+      <SliderHabLarge />
+    </main>
+  );
 }
 
 export default habitacionL;

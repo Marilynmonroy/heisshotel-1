@@ -51,7 +51,7 @@ const SliderHome = () => {
         {/* Home */}
         <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
           <div
-            className="bg-cover bg-right-top"
+            className="bg-cover bg-center"
             style={{
               backgroundImage: `url(/images/Fachada_Heiss_R3.jpg)`,
               width: "100%",
@@ -109,95 +109,114 @@ const SliderHome = () => {
           </div>
         </SwiperSlide>
         {/* Especios */}
-        <SwiperSlide className="text-white text-center flex justify-center items-center">
-          <div className="absolute grid grid-cols-4 gap-6 p-5 overscroll-contain">
-            <Swiper
-              direction={"vertical"}
-              mousewheel={true}
-              freeMode={true}
-              scrollbar={{
-                hide: true,
-              }}
-              nested={true}
-              spaceBetween={35}
-              slidesPerView={"auto"}
-              modules={[Mousewheel, FreeMode, Scrollbar]}
-              className="w-full h-screen"
-            >
-              <div className="flex flex-col">
-                <SwiperSlide style={{ height: "25rem" }}>
-                  <div
-                    className="bg-cover bg-center rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out"
-                    style={{
-                      backgroundImage: `url(/images/Terraza.jpg)`,
-                    }}
-                  >
-                    <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-300 ease-in-out hover:opacity-100 pointer-events-auto">
-                      <h2 className="h6">ESPACIO</h2>
-                      <p className="md:px-5 text-justify items-center pt-10 p-regular-16">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide style={{ height: "25rem" }}>
-                  <div
-                    className="bg-cover bg-center flex flex-col rounded-3xl"
-                    style={{
-                      backgroundImage: `url(/images/Piscina.jpg)`,
-                      width: "100%",
-                      height: "25rem",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-200 ease-in-out hover:opacity-100 pointer-events-auto">
-                      <h2 className="h6">ESPACIO</h2>
-                      <p className="md:px-5 text-justify items-center pt-8 p-regular-16">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide style={{ height: "25rem" }}>
-                  <div
-                    className="bg-cover flex flex-col rounded-3xl"
-                    style={{
-                      backgroundImage: `url(/images/Fachada_Contrapicada.jpg)`,
-                      width: "100%",
-                      height: "25rem",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-00 ease-in-out hover:opacity-100 pointer-events-auto">
-                      <h2 className="h6">ESPACIO</h2>
-                      <p className="md:px-5 text-justify items-center pt-8 p-regular-16">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
+        <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
+          {/* Para móviles */}
+          <div
+            className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center p-8"
+            style={{ backgroundImage: `url(/images/Zona_Comercial.jpg)` }}
+          >
+            <div className="text-center flex flex-col gap-5">
+              <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
+              <h2 className="h5">CAMBIA DE AMBIENTE</h2>
+              <p className="parrafo-light-24">
+                El espacio que buscabas, con las comodidades que necesitas para
+                vivir una gran experiencia.
+              </p>
+              <div className="my-5">
+                <Button asChild>
+                  <Link href="/">CONOCE MÁS</Link>
+                </Button>
               </div>
-            </Swiper>
+            </div>
+          </div>
+
+          {/* Para dispositivos grandes */}
+          <div className="hidden md:absolute md:grid md:grid-cols-4 gap-6 p-5 overscroll-contain">
+            <div className="md:flex hidden">
+              <Swiper
+                direction={"vertical"}
+                mousewheel={true}
+                freeMode={true}
+                scrollbar={{ hide: true }}
+                nested={true}
+                spaceBetween={35}
+                slidesPerView={"auto"}
+                modules={[Mousewheel, FreeMode, Scrollbar]}
+                className="w-full h-screen"
+              >
+                <div className="flex flex-col">
+                  <SwiperSlide style={{ height: "25rem" }}>
+                    <div
+                      className="bg-cover bg-center rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out"
+                      style={{ backgroundImage: `url(/images/Terraza.jpg)` }}
+                    >
+                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-300 ease-in-out hover:opacity-100 pointer-events-auto">
+                        <h2 className="h6">ESPACIO</h2>
+                        <p className="md:px-5 text-justify items-center pt-10 p-regular-16">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make.
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide style={{ height: "25rem" }}>
+                    <div
+                      className="bg-cover bg-center flex flex-col rounded-3xl"
+                      style={{
+                        backgroundImage: `url(/images/Piscina.jpg)`,
+                        width: "100%",
+                        height: "25rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-200 ease-in-out hover:opacity-100 pointer-events-auto">
+                        <h2 className="h6">ESPACIO</h2>
+                        <p className="md:px-5 text-justify items-center pt-8 p-regular-16">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make.
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide style={{ height: "25rem" }}>
+                    <div
+                      className="bg-cover flex flex-col rounded-3xl"
+                      style={{
+                        backgroundImage: `url(/images/Fachada_Contrapicada.jpg)`,
+                        width: "100%",
+                        height: "25rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-00 ease-in-out hover:opacity-100 pointer-events-auto">
+                        <h2 className="h6">ESPACIO</h2>
+                        <p className="md:px-5 text-justify items-center pt-8 p-regular-16">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make.
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </div>
+              </Swiper>
+            </div>
+
             {/* Imagen estatica */}
             <div
-              className="bg-cover bg-center col-span-3 rounded-3xl"
+              className="bg-cover bg-center md:col-span-3 rounded-3xl"
               style={{
                 backgroundImage: `url(/images/Zona_Comercial.jpg)`,
                 width: "100%",
@@ -225,6 +244,7 @@ const SliderHome = () => {
             </div>
           </div>
         </SwiperSlide>
+
         {/* Experiencias */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
           <div
