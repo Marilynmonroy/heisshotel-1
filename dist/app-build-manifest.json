@@ -3,113 +3,113 @@
     "/_not-found/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
       "static/chunks/app/_not-found/page-2c4a17a4e2bf4a07.js"
     ],
     "/layout": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
       "static/css/912e3fcedf67aff2.css",
-      "static/chunks/770-1001679325dd530a.js",
+      "static/chunks/770-7286087467e4d753.js",
       "static/chunks/231-e783ab1133593637.js",
-      "static/chunks/173-acd69b7136ac5c2c.js",
-      "static/chunks/304-6df4588be8607f6c.js",
+      "static/chunks/173-1dac3bcf6434603b.js",
+      "static/chunks/304-49fd06b0dcfeaa78.js",
       "static/chunks/app/layout-63df2617e205c348.js"
-    ],
-    "/booking/page": [
-      "static/chunks/webpack-c14d3860794bc7d8.js",
-      "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
-      "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/chunks/app/booking/page-03f5f073024705af.js"
     ],
     "/experiencias/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/chunks/app/experiencias/page-d585e14c02d4218b.js"
-    ],
-    "/habitaciones/habitacionLarge/page": [
-      "static/chunks/webpack-c14d3860794bc7d8.js",
-      "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
-      "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/css/fe6ec16bd0ce2ccb.css",
-      "static/chunks/770-1001679325dd530a.js",
-      "static/chunks/447-a73a66645c028189.js",
-      "static/chunks/231-e783ab1133593637.js",
-      "static/chunks/173-acd69b7136ac5c2c.js",
-      "static/chunks/app/habitaciones/habitacionLarge/page-b28e150442690fc0.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-c14d3860794bc7d8.js",
-      "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
-      "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/css/fe6ec16bd0ce2ccb.css",
-      "static/chunks/770-1001679325dd530a.js",
-      "static/chunks/447-a73a66645c028189.js",
-      "static/chunks/231-e783ab1133593637.js",
-      "static/chunks/app/page-0c21a6fd3db9065e.js"
-    ],
-    "/habitaciones/habitacionMedium/page": [
-      "static/chunks/webpack-c14d3860794bc7d8.js",
-      "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
-      "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/css/fe6ec16bd0ce2ccb.css",
-      "static/chunks/770-1001679325dd530a.js",
-      "static/chunks/447-a73a66645c028189.js",
-      "static/chunks/231-e783ab1133593637.js",
-      "static/chunks/173-acd69b7136ac5c2c.js",
-      "static/chunks/app/habitaciones/habitacionMedium/page-c12ff1e2b02a18ea.js"
+      "static/chunks/app/experiencias/page-b6139f9abc743137.js"
     ],
     "/contacto/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/chunks/app/contacto/page-1977ab714b6dd448.js"
+      "static/chunks/app/contacto/page-43cd34d3f0400a58.js"
+    ],
+    "/booking/page": [
+      "static/chunks/webpack-c14d3860794bc7d8.js",
+      "static/chunks/fd9d1056-92ed80df59cdd210.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
+      "static/chunks/main-app-7555ade0c721c9ee.js",
+      "static/chunks/app/booking/page-03f5f073024705af.js"
+    ],
+    "/habitaciones/habitacionMedium/page": [
+      "static/chunks/webpack-c14d3860794bc7d8.js",
+      "static/chunks/fd9d1056-92ed80df59cdd210.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
+      "static/chunks/main-app-7555ade0c721c9ee.js",
+      "static/css/fe6ec16bd0ce2ccb.css",
+      "static/chunks/770-7286087467e4d753.js",
+      "static/chunks/447-27b6ed3b4c6b29fd.js",
+      "static/chunks/231-e783ab1133593637.js",
+      "static/chunks/173-1dac3bcf6434603b.js",
+      "static/chunks/app/habitaciones/habitacionMedium/page-21303bcf71e3e92a.js"
+    ],
+    "/habitaciones/habitacionLarge/page": [
+      "static/chunks/webpack-c14d3860794bc7d8.js",
+      "static/chunks/fd9d1056-92ed80df59cdd210.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
+      "static/chunks/main-app-7555ade0c721c9ee.js",
+      "static/css/fe6ec16bd0ce2ccb.css",
+      "static/chunks/770-7286087467e4d753.js",
+      "static/chunks/447-27b6ed3b4c6b29fd.js",
+      "static/chunks/231-e783ab1133593637.js",
+      "static/chunks/173-1dac3bcf6434603b.js",
+      "static/chunks/app/habitaciones/habitacionLarge/page-c731a0e51f546d6c.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-c14d3860794bc7d8.js",
+      "static/chunks/fd9d1056-92ed80df59cdd210.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
+      "static/chunks/main-app-7555ade0c721c9ee.js",
+      "static/css/fe6ec16bd0ce2ccb.css",
+      "static/chunks/770-7286087467e4d753.js",
+      "static/chunks/447-27b6ed3b4c6b29fd.js",
+      "static/chunks/231-e783ab1133593637.js",
+      "static/chunks/app/page-0c21a6fd3db9065e.js"
     ],
     "/habitaciones/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
       "static/css/fe6ec16bd0ce2ccb.css",
-      "static/chunks/770-1001679325dd530a.js",
-      "static/chunks/447-a73a66645c028189.js",
+      "static/chunks/770-7286087467e4d753.js",
+      "static/chunks/447-27b6ed3b4c6b29fd.js",
       "static/chunks/231-e783ab1133593637.js",
-      "static/chunks/173-acd69b7136ac5c2c.js",
-      "static/chunks/304-6df4588be8607f6c.js",
-      "static/chunks/915-e8768223139e1762.js",
+      "static/chunks/173-1dac3bcf6434603b.js",
+      "static/chunks/304-49fd06b0dcfeaa78.js",
+      "static/chunks/915-8ff9dc9dbdc239a2.js",
       "static/chunks/app/habitaciones/page-816c23e2070a0683.js"
-    ],
-    "/habitaciones/habitacionSmall/page": [
-      "static/chunks/webpack-c14d3860794bc7d8.js",
-      "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
-      "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/css/fe6ec16bd0ce2ccb.css",
-      "static/chunks/770-1001679325dd530a.js",
-      "static/chunks/447-a73a66645c028189.js",
-      "static/chunks/231-e783ab1133593637.js",
-      "static/chunks/173-acd69b7136ac5c2c.js",
-      "static/chunks/app/habitaciones/habitacionSmall/page-413d2098522ee3e2.js"
     ],
     "/espacios/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
       "static/css/fe6ec16bd0ce2ccb.css",
-      "static/chunks/770-1001679325dd530a.js",
-      "static/chunks/447-a73a66645c028189.js",
+      "static/chunks/770-7286087467e4d753.js",
+      "static/chunks/447-27b6ed3b4c6b29fd.js",
       "static/chunks/app/espacios/page-83611531a419eb67.js"
+    ],
+    "/habitaciones/habitacionSmall/page": [
+      "static/chunks/webpack-c14d3860794bc7d8.js",
+      "static/chunks/fd9d1056-92ed80df59cdd210.js",
+      "static/chunks/23-1ad8b10d95c7d04a.js",
+      "static/chunks/main-app-7555ade0c721c9ee.js",
+      "static/css/fe6ec16bd0ce2ccb.css",
+      "static/chunks/770-7286087467e4d753.js",
+      "static/chunks/447-27b6ed3b4c6b29fd.js",
+      "static/chunks/231-e783ab1133593637.js",
+      "static/chunks/173-1dac3bcf6434603b.js",
+      "static/chunks/app/habitaciones/habitacionSmall/page-3b1959077e7ac27c.js"
     ]
   }
 }
