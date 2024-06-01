@@ -19,26 +19,19 @@
       "static/chunks/304-6df4588be8607f6c.js",
       "static/chunks/app/layout-63df2617e205c348.js"
     ],
-    "/contacto/page": [
-      "static/chunks/webpack-c14d3860794bc7d8.js",
-      "static/chunks/fd9d1056-92ed80df59cdd210.js",
-      "static/chunks/23-232542ea63692fc1.js",
-      "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/chunks/app/contacto/page-1977ab714b6dd448.js"
-    ],
     "/booking/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
       "static/chunks/23-232542ea63692fc1.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/chunks/app/booking/page-da1a5513e25161e5.js"
+      "static/chunks/app/booking/page-03f5f073024705af.js"
     ],
     "/experiencias/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
       "static/chunks/fd9d1056-92ed80df59cdd210.js",
       "static/chunks/23-232542ea63692fc1.js",
       "static/chunks/main-app-7555ade0c721c9ee.js",
-      "static/chunks/app/experiencias/page-b6139f9abc743137.js"
+      "static/chunks/app/experiencias/page-d585e14c02d4218b.js"
     ],
     "/habitaciones/habitacionLarge/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
@@ -74,6 +67,13 @@
       "static/chunks/231-e783ab1133593637.js",
       "static/chunks/173-acd69b7136ac5c2c.js",
       "static/chunks/app/habitaciones/habitacionMedium/page-c12ff1e2b02a18ea.js"
+    ],
+    "/contacto/page": [
+      "static/chunks/webpack-c14d3860794bc7d8.js",
+      "static/chunks/fd9d1056-92ed80df59cdd210.js",
+      "static/chunks/23-232542ea63692fc1.js",
+      "static/chunks/main-app-7555ade0c721c9ee.js",
+      "static/chunks/app/contacto/page-1977ab714b6dd448.js"
     ],
     "/habitaciones/page": [
       "static/chunks/webpack-c14d3860794bc7d8.js",
