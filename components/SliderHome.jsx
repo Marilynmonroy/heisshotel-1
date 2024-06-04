@@ -104,8 +104,8 @@ const SliderHome = () => {
           </div>
         </SwiperSlide>
         {/* Especios */}
-        <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
-          {/* Para dispositivos grandes */}
+        {/* <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
+          {/* Para dispositivos grandes 
           <div className="hidden md:grid md:grid-cols-4 gap-6 p-5 overscroll-contain relative w-full h-full">
             <div className="md:col-span-1">
               <Swiper
@@ -143,7 +143,7 @@ const SliderHome = () => {
               </Swiper>
             </div>
 
-            {/* Imagen estática */}
+            {/* Imagen estática
             <div
               className="relative md:col-span-3 rounded-3xl flex flex-col justify-center items-center p-8"
               style={{ width: "100%", height: "100%" }}
@@ -170,7 +170,7 @@ const SliderHome = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
         {/* Experiencias */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
