@@ -25,7 +25,7 @@ export default function Footer() {
         </a>
       </div>
       <div className="rounded-full bg-white/30 p-3 w-12 h-12">
-        <a href="/">
+        <a href="https://wa.me/573178946768" target="_blank">
           <Image
             src="/icons/whatsapp.svg"
             alt="Whatsapp Heiss"
