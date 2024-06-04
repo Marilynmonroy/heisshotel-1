@@ -32,9 +32,9 @@ function Header() {
               <li>
                 <Link href={"/espacios"}>ESPACIOS</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"/experiencias"}>EXPERIENCIAS</Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link href={"/contacto"}>CONTACTO</Link>
               </li> */}
