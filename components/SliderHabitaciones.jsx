@@ -79,7 +79,7 @@ const SliderHabitaciones = () => {
             flexDirection: "column",
           }}
         >
-          <div className="text-center p-8 md:p-16 flex flex-col lg:text-center md:pb-36 lg:pb-36 xl:pb-36">
+          <div className="text-center p-8 md:p-16 flex flex-col lg:text-center md:pb-24 lg:pb-28 xl:pb-36">
             <div className="items-center text-center flex flex-col gap-3 md:gap-5">
               <span className="p-medium-24">DESCUBRE</span>
               <p className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
@@ -174,7 +174,7 @@ const SliderHabitaciones = () => {
                 </DrawerContent>
               </Drawer>
             </div>
-            <div className="flex justify-center md:justify-center gap-4 mt-24 md:mt-12 lg:mt-16 xl:mt-28">
+            <div className="flex justify-center md:justify-center gap-4 mt-10 md:mt-9 lg:mt-8 xl:mt-28">
               <Button variant="destructive" size="sm" asChild>
                 <Link href="/habitaciones/habitacionSmall">S</Link>
               </Button>

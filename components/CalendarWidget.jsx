@@ -73,7 +73,7 @@ export function CalendarWidget() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex justify-center gap-5"
+        className="flex flex-col gap-5 items-center md:flex-row md:justify-center"
       >
         <FormField
           control={form.control}
@@ -155,7 +155,11 @@ export function CalendarWidget() {
             </FormItem>
           )}
         />
-        <Button variant="secondary" type="submit">
+        <Button
+          variant="secondary"
+          type="submit"
+          className="w-[60%] md:w-[10%]"
+        >
           BOOK NOW
         </Button>
       </form>

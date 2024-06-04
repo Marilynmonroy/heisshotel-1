@@ -38,7 +38,7 @@ const SliderHabLarge = () => {
           <span className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
             HOTEL HEISS MEDELLÍN
           </span>
-          <h2 className="h2">MEDIUM</h2>
+          <h2 className="h2">JUNIOR SUITE</h2>
         </div>
         <div className="mt-5">
           <CalendarWidget />
@@ -140,11 +140,16 @@ const SliderHabLarge = () => {
         <div className="flex flex-col w-[45%] gap-10 h-full p-8 md:p-16 items-end justify-end text-right">
           {/* ICONOS */}
           <div className="">
-            <h2 className="h5">MEDIUM</h2>
-            <p className="parrafo-light-24 pl-12">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since.
+            <h2 className="h5 py-8">JUNIOR SUITE</h2>
+            <p className="p-light-16 pl-12">
+              Descubre la elegancia y el confort de nuestra{" "}
+              <b>Junior Suite, </b>una espaciosa habitación de 20 m2 con un
+              balcón privado de 10 m2. Perfecta para aquellos que buscan un poco
+              más de lujo durante su estancia. Esta Junior Suite combina
+              espacios interiores y exteriores generosos con detalles elegantes,
+              garantizando una estancia memorable y relajante. ¡Reserva ahora y
+              experimenta el lujo y la comodidad de nuestra Junior Suite con
+              Balcón!
             </p>
           </div>
 

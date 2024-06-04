@@ -130,7 +130,9 @@
   .parrafo-light-24 {
     @apply text-base md:text-[18px] lg:text-[20px] xl:text-[26px] font-light py-1 md:py-3 md:leading-snug tracking-wide;
   }
-
+  .parrafo-light-20 {
+    @apply text-base md:text-[18px] lg:text-[18px] xl:text-[20px] font-light py-1 md:py-3 md:leading-snug tracking-wide;
+  }
   .p-light-16 {
     @apply text-xs md:text-xs lg:text-sm xl:text-xl font-light;
   }

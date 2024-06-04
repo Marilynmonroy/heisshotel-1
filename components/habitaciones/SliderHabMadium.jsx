@@ -38,7 +38,7 @@ const SliderHabMedium = () => {
           <span className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
             HOTEL HEISS MEDELLÍN
           </span>
-          <h2 className="h2">MEDIUM</h2>
+          <h2 className="h2">SUPERIOR</h2>
         </div>
         <div className="mt-5">
           <CalendarWidget />
@@ -140,11 +140,16 @@ const SliderHabMedium = () => {
         <div className="flex flex-col w-[45%] gap-10 h-full p-8 md:p-16 items-end justify-end text-right">
           {/* ICONOS */}
           <div className="">
-            <h2 className="h5">MEDIUM</h2>
-            <p className="parrafo-light-24 pl-12">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since.
+            <h2 className="h5 py-8">SUPERIOR</h2>
+            <p className="p-light-16 pl-2">
+              Descubre nuestra cómoda <b>Habitación Superior</b> de 20 metros
+              cuadrados con un balcón adicional de 4.5 metros cuadrados,
+              diseñada para ofrecer una estancia relajante y funcional. Ideal
+              para viajeros que buscan comodidad y conveniencia. Esta habitación
+              combina comodidad interior con un espacio exterior privado,
+              garantizando una estancia placentera y relajante. <br />
+              ¡Reserva ahora y disfruta de una experiencia completa en nuestra
+              Habitación Superior con Balcón!
             </p>
           </div>
 

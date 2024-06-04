@@ -38,7 +38,7 @@ const SliderHabSmall = () => {
           <span className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
             HOTEL HEISS MEDELLÍN
           </span>
-          <h2 className="h2">SMALL</h2>
+          <h2 className="h2">ESTÁNDAR</h2>
         </div>
         <div className="mt-5">
           <CalendarWidget />
@@ -94,7 +94,7 @@ const SliderHabSmall = () => {
       <div className="text-white text-center flex items-center w-full">
         <Swiper
           slidesPerView={1}
-          className="w-[55%] h-screen"
+          className="w-[55%] h-screen flex flex-col md:flex-row"
           pagination={{
             clickable: true,
             bulletActiveClass: "swiper-pagination-bullet-active",
@@ -138,15 +138,19 @@ const SliderHabSmall = () => {
           </SwiperSlide>
         </Swiper>
         <div className="flex flex-col w-[45%] gap-10 h-full p-8 md:p-16 items-end justify-end text-right">
-          {/* ICONOS */}
           <div className="">
-            <h2 className="h5">SMALL</h2>
-            <p className="parrafo-light-24 pl-12">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since.
+            <h2 className="h5 py-8">ESTÁNDAR</h2>
+            <p className="p-light-16 pl-12">
+              Bienvenido a nuestra acogedora <b>Habitación Estándar</b> de 20
+              metros cuadrados, diseñada para ofrecer confort y funcionalidad.
+              Ideal para viajeros que buscan una estancia cómoda y conveniente.
+              Aunque esta habitación no cuenta con balcón, su diseño inteligente
+              y acogedor garantiza una estancia placentera y relajante. <br />
+              ¡Reserva ahora y disfruta de una experiencia cómoda y práctica en
+              nuestra Habitación Estándar! Está habitación cuenta con:
             </p>
           </div>
+          {/* ICONOS */}
 
           <div className="flex gap-5 md:gap-9 lg:gap-10 xl:gap-10 justify-end">
             <Image

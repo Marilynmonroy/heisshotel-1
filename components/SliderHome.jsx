@@ -8,10 +8,12 @@ import "/app/css/pagination.css";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css";
+import Image from "next/image";
 
 import { register } from "swiper/element/bundle";
 register();
 import {
+  Navigation,
   Mousewheel,
   Pagination,
   EffectFade,
@@ -50,41 +52,34 @@ const SliderHome = () => {
       >
         {/* Home */}
         <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
-          <div
-            className="bg-cover bg-center"
-            style={{
-              backgroundImage: `url(/images/Fachada_Heiss_R3.jpg)`,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            {" "}
-            <div>
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/Fachada_Heiss_R3.jpg"
+              alt="Fachada Heiss"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />{" "}
+            <div className="absolute inset-0 flex flex-col justify-center items-center">
               <CalendarWidget />
             </div>
           </div>
         </SwiperSlide>
         {/* Habitaciones */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
-          <div
-            className="bg-cover bg-center flex flex-col"
-            style={{
-              backgroundImage: `url(/images/Habitacion_Small_Front.jpg)`,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <div className="text-center p-8 md:p-16 flex flex-col lg:text-right lg:pr-44">
-              <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-end md:mt-36">
-                <span className=".parrafo-regular-18">HEISS MEDELLÍN</span>
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/Habitacion_Small_Front.jpg"
+              alt="Habitación Small"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+            <div className="absolute inset-0 flex flex-col justify-center p-8 md:p-16 lg:pr-44 lg:text-right">
+              <div className="flex flex-col gap-3 md:gap-5 items-center lg:items-end md:mt-36">
+                <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
                 <h2 className="h5">CONOCE NUESTRAS HABITACIONES</h2>
-                <p className="parrafo-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:text-right lg:float-right">
+                <p className="parrafo-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:float-right">
                   El espacio que buscabas, con las comodidades que necesitas
                   para vivir una gran experiencia.
                 </p>
@@ -94,7 +89,7 @@ const SliderHome = () => {
                   <Link href="/habitaciones">HABITACIONES</Link>
                 </Button>
               </div>
-              <div className="flex justify-center md:justify-center gap-4 ">
+              <div className="flex justify-center md:justify-center gap-4">
                 <Button variant="destructive" size="sm" asChild>
                   <Link href="/habitaciones/habitacionSmall">S</Link>
                 </Button>
@@ -111,10 +106,14 @@ const SliderHome = () => {
         {/* Especios */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
           {/* Para móviles */}
-          <div
-            className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center p-8"
-            style={{ backgroundImage: `url(/images/Zona_Comercial.jpg)` }}
-          >
+          <div className="md:hidden w-full h-full flex flex-col justify-center items-center p-8">
+            <Image
+              src="/images/Zona_Comercial.jpg"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              alt="Zona Comercial"
+            />
             <div className="text-center flex flex-col gap-5">
               <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
               <h2 className="h5">CAMBIA DE AMBIENTE</h2>
@@ -135,90 +134,45 @@ const SliderHome = () => {
             <div className="md:flex hidden">
               <Swiper
                 direction={"vertical"}
-                mousewheel={true}
+                navigation={true}
                 freeMode={true}
-                scrollbar={{ hide: true }}
-                nested={true}
                 spaceBetween={35}
-                slidesPerView={"auto"}
-                modules={[Mousewheel, FreeMode, Scrollbar]}
+                slidesPerView={3}
+                modules={[Navigation, FreeMode, Scrollbar]}
                 className="w-full h-screen"
               >
                 <div className="flex flex-col">
                   <SwiperSlide style={{ height: "25rem" }}>
-                    <div
-                      className="bg-cover bg-center rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out"
-                      style={{ backgroundImage: `url(/images/Terraza.jpg)` }}
-                    >
-                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-300 ease-in-out hover:opacity-100 pointer-events-auto">
-                        <h2 className="h6">ESPACIO</h2>
+                    <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
+                      <Image
+                        src="/images/Terraza.jpg"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                        alt="Terraza"
+                      />
+                      <div className="absolute inset-0 flex flex-col justify-center items-center p-8 bg-black/65 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
                         <p className="md:px-5 text-justify items-center pt-10 p-regular-16">
                           Lorem Ipsum is simply dummy text of the printing and
                           typesetting industry. Lorem Ipsum has been the
-                          industrys standard dummy text ever since the 1500s,
+                          industry’s standard dummy text ever since the 1500s,
                           when an unknown printer took a galley of type and
                           scrambled it to make.
                         </p>
                       </div>
                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ height: "25rem" }}>
-                    <div
-                      className="bg-cover bg-center flex flex-col rounded-3xl"
-                      style={{
-                        backgroundImage: `url(/images/Piscina.jpg)`,
-                        width: "100%",
-                        height: "25rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-200 ease-in-out hover:opacity-100 pointer-events-auto">
-                        <h2 className="h6">ESPACIO</h2>
-                        <p className="md:px-5 text-justify items-center pt-8 p-regular-16">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industrys standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make.
-                        </p>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ height: "25rem" }}>
-                    <div
-                      className="bg-cover flex flex-col rounded-3xl"
-                      style={{
-                        backgroundImage: `url(/images/Fachada_Contrapicada.jpg)`,
-                        width: "100%",
-                        height: "25rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-00 ease-in-out hover:opacity-100 pointer-events-auto">
-                        <h2 className="h6">ESPACIO</h2>
-                        <p className="md:px-5 text-justify items-center pt-8 p-regular-16">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industrys standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley of type and
-                          scrambled it to make.
-                        </p>
-                      </div>
-                    </div>
+                    <h2 className="absolute inset-x-0 bottom-0 flex justify-center items-center h6 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0">
+                      ESPACIO
+                    </h2>
                   </SwiperSlide>
                 </div>
               </Swiper>
             </div>
 
-            {/* Imagen estatica */}
+            {/* Imagen estática */}
             <div
-              className="bg-cover bg-center md:col-span-3 rounded-3xl"
+              className="relative md:col-span-3 rounded-3xl"
               style={{
-                backgroundImage: `url(/images/Zona_Comercial.jpg)`,
                 width: "100%",
                 height: "96%",
                 display: "flex",
@@ -226,6 +180,13 @@ const SliderHome = () => {
                 justifyContent: "center",
               }}
             >
+              <Image
+                src="/images/Zona_Comercial.jpg"
+                alt="Zona Comercial"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-3xl"
+              />
               <div className="text-center p-8 md:p-16 flex flex-col lg:text-left lg:pl-32 md:mt-36">
                 <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
                   <span className=".parrafo-regular-18">HEISS MEDELLÍN</span>
@@ -248,24 +209,42 @@ const SliderHome = () => {
         {/* Experiencias */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
           <div
-            className="bg-cover flex flex-col "
+            className="flex flex-col"
             style={{
-              backgroundImage: `url(/images/Mujer_Heiss.jpeg)`,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
+              position: "relative",
+              width: "100vw",
+              height: "100vh",
+              overflow: "hidden",
             }}
           >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: -1, // Esto asegura que el video esté detrás del contenido
+              }}
+            >
+              <source src="/images/Experiencias_Heiss.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div className="text-center p-8 md:p-16 flex flex-col lg:text-left lg:pl-44 lg:mt-56">
               <div className="my-5 md:my-8">
                 <Button asChild>
-                  <Link href="/experiencias">EXPLORAR</Link>
+                  <Link href="https://wa.me/573178946768" target="_blank">
+                    EXPLORAR
+                  </Link>
                 </Button>
               </div>
               <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
-                <span className=".parrafo-regular-18">EXPLORA MEDELLÍN</span>
+                <span className="parrafo-regular-18">EXPLORA MEDELLÍN</span>
                 <h2 className="h5">SUMÉRGETE EN SU AUTENTICIDAD</h2>
                 <p className="parrafo-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:text-left lg:float-left">
                   El espacio que buscabas, con las comodidades que necesitas
