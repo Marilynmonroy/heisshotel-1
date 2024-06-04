@@ -195,7 +195,7 @@ const SliderHome = () => {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                zIndex: -1, // Esto asegura que el video esté detrás del contenido
+                zIndex: -1,
               }}
             >
               <source src="/images/Experiencias_Heiss.mp4" type="video/mp4" />
