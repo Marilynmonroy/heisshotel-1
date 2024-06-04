@@ -53,7 +53,10 @@ function Header() {
         </a>
       </div>
       <Button variant="outline" asChild className="text-white">
-        <Link href="https://hotels.cloudbeds.com/es/reservation/lLxxdq">
+        <Link
+          href="https://hotels.cloudbeds.com/es/reservation/lLxxdq"
+          target="_blank"
+        >
           BOOK NOW
         </Link>
       </Button>
