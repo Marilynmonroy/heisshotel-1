@@ -152,6 +152,9 @@ const SliderHome = () => {
                         alt="Terraza"
                       />
                       <div className="absolute inset-0 flex flex-col justify-center items-center p-8 bg-black/65 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                        <h2 className="absolute inset-x-0 bottom-0 flex justify-center items-center h6 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0">
+                          ESPACIO
+                        </h2>
                         <p className="md:px-5 text-justify items-center pt-10 p-regular-16">
                           Lorem Ipsum is simply dummy text of the printing and
                           typesetting industry. Lorem Ipsum has been the
@@ -161,9 +164,6 @@ const SliderHome = () => {
                         </p>
                       </div>
                     </div>
-                    <h2 className="absolute inset-x-0 bottom-0 flex justify-center items-center h6 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0">
-                      ESPACIO
-                    </h2>
                   </SwiperSlide>
                 </div>
               </Swiper>
