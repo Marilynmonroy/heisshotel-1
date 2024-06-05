@@ -61,11 +61,10 @@ const SliderHabSmall = () => {
           modules={[Pagination]}
         >
           <SwiperSlide>
-            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <div className="relative inset-0 bg-black opacity-25 z-10"></div>
             <Image
               src="/images/habitacionSmall/smallcarrousel.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
@@ -76,7 +75,6 @@ const SliderHabSmall = () => {
             <Image
               src="/images/habitacionSmall/smallcarrousel2.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
@@ -87,7 +85,6 @@ const SliderHabSmall = () => {
             <Image
               src="/images/habitacionSmall/smallcarrousel3.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority

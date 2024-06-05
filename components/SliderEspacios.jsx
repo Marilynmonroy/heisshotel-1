@@ -10,6 +10,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css";
 import { CalendarWidget } from "./CalendarWidget";
+import { Badge } from "./ui/badge";
 import Image from "next/image";
 import { register } from "swiper/element/bundle";
 register();
@@ -51,6 +52,7 @@ const SliderComponent = () => {
       <div className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full">
         <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
+          <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">ROOFTOP</h2>
           <p className="p-light-16">
             Descubre el encanto del Rooftop del Heiss Hotel, un espacio
@@ -101,6 +103,7 @@ const SliderComponent = () => {
         </Swiper>
         <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:text-right md:gap-5 md:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
+          <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">LOBBY</h2>
           <p className="p-light-16">
             Bienvenido al elegante lobby del Heiss Hotel, donde cada detalle
@@ -118,6 +121,7 @@ const SliderComponent = () => {
       <div className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full">
         <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
+          <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">PISCINA CON JACUZZI</h2>
           <p className="p-light-16 ">
             Disfruta de nuestra espectacular piscina al aire libre con jacuzzi,
@@ -161,6 +165,8 @@ const SliderComponent = () => {
         </Swiper>
         <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:text-right md:gap-5 md:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
+          <Badge className="w-28">Próximamente</Badge>
+
           <h2 className="h2">GIMNASIO</h2>
           <p className="p-light-16 ">
             Mantén tu rutina de ejercicios en nuestro moderno gimnasio, equipado
@@ -178,6 +184,8 @@ const SliderComponent = () => {
       <div className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full">
         <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
+          <Badge className="w-28">Próximamente</Badge>
+
           <h2 className="h2">SALA DE MASAJES</h2>
           <p className="p-light-16 ">
             Sumérgete en un mundo de relajación y bienestar en nuestra exclusiva
@@ -224,6 +232,8 @@ const SliderComponent = () => {
         </Swiper>
         <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:text-right md:gap-5  md:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
+          <Badge className="w-28">Próximamente</Badge>
+
           <h2 className="h2">ZONA COMERCIAL</h2>
           <p className="p-light-16 ">
             Explora nuestra exclusiva zona comercial, donde encontrarás
