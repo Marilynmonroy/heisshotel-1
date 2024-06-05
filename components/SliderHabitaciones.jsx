@@ -160,10 +160,13 @@ const SliderHabitaciones = () => {
                     </div>
                     <div className="flex flex-col justify-center text-center md:text-right md:w-96 xl:w-5/6 pt-10 px-7">
                       <h3 className="h6">PODRAS ENCONTRAR</h3>
-                      <p className="p-light-16 pt-3 md:pt-7">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry
-                        standard dummy text ever since the 1500s.
+                      <p className="p-light-12 pt-3 md:pt-7">
+                        Nuestras habitaciones están diseñadas para ofrecer el
+                        máximo confort y elegancia. Disfruta de camas queen
+                        size, Wi-Fi gratuito, televisores de pantalla plana y
+                        baños privados con artículos de tocador de lujo. Algunas
+                        habitaciones también cuentan con balcones privados para
+                        que puedas disfrutar de vistas panorámicas de Medellín.
                       </p>
                     </div>
                   </section>

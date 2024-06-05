@@ -5,11 +5,12 @@ import Link from "next/link";
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 import "/app/css/pagination.css";
+import "/app/css/navegation.css";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css";
 import Image from "next/image";
-
+import { useEffect } from "react";
 import { register } from "swiper/element/bundle";
 register();
 import {
@@ -25,15 +26,28 @@ import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 
 const SliderHome = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
       <Swiper
         direction={"vertical"}
         spaceBetween={30}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
+        effect={isMobile ? "slide" : "fade"}
+        fadeEffect={isMobile ? undefined : { crossFade: true }}
         speed={600}
-        mousewheel={true}
+        mousewheel={!isMobile}
         keyboard={true}
         pagination={{
           clickable: true,
@@ -41,8 +55,12 @@ const SliderHome = () => {
           bulletClass: "swiper-pagination-bullet",
           modifierClass: "swiper-pagination",
         }}
-        modules={[Keyboard, Mousewheel, Pagination, EffectFade]}
-        className=" w-full h-screen"
+        modules={[
+          Keyboard,
+          Pagination,
+          ...(isMobile ? [] : [Mousewheel, EffectFade]),
+        ]}
+        className="w-full h-screen"
         slidesPerView={2}
         breakpoints={{
           640: {
@@ -106,50 +124,96 @@ const SliderHome = () => {
             </div>
           </div>
         </SwiperSlide>
-        {/* Especios */}
-        {/* <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
+        {/* Especios 
+        <SwiperSlide className="text-white h-screen text-center flex justify-center items-center bg-black">
+          {/* Para móviles 
+          <div className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center p-8">
+            <Image
+              src="/images/Zona_Comercial.webp"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              alt="Terraza"
+            />
+            <div className="text-center flex flex-col gap-5">
+              <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
+              <h2 className="h5">CAMBIA DE AMBIENTE</h2>
+              <p className="parrafo-light-24">
+                El espacio que buscabas, con las comodidades que necesitas para
+                vivir una gran experiencia.
+              </p>
+              <div className="my-5">
+                <Button asChild>
+                  <Link href="/espacios">CONOCE MÁS</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+
           {/* Para dispositivos grandes 
-          <div className="hidden md:grid md:grid-cols-4 gap-6 p-5 overscroll-contain relative w-full h-full">
-            <div className="md:col-span-1">
+          <div className="hidden md:absolute md:grid md:grid-cols-4 gap-6 p-5 overscroll-contain">
+            <div className="md:flex hidden">
               <Swiper
                 direction={"vertical"}
-                navigation={true}
                 freeMode={true}
-                spaceBetween={35}
-                slidesPerView={3}
-                modules={[Navigation, FreeMode, Scrollbar]}
-                className="w-full h-full"
+                navigation={true}
+                slidesPerView={"auto"}
+                spaceBetween={150}
+                modules={[FreeMode, Navigation]}
+                injectStyles={[]}
+                className="w-full h-screen"
               >
-                <SwiperSlide style={{ height: "25rem" }}>
-                  <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
-                    <Image
-                      src="/images/Terraza.webp"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="center"
-                      alt="Terraza"
-                    />
-                    <div className="absolute inset-0 flex flex-col justify-center items-center p-8 bg-black/65 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
-                      <h2 className="absolute inset-x-0 bottom-0 flex justify-center items-center h6 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0">
-                        ESPACIO
-                      </h2>
-                      <p className="md:px-5 text-justify items-center pt-10 p-regular-16">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry’s standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and
-                        scrambled it to make.
-                      </p>
+                <div className="flex flex-col">
+                  <SwiperSlide style={{ height: "25rem" }}>
+                    <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
+                      <Image
+                        src="/images/Terraza.webp"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                        alt="Terraza"
+                      />
+                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-300 ease-in-out hover:opacity-100 pointer-events-auto">
+                        <h2 className="h6">ROOFTOP</h2>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
+                  <SwiperSlide style={{ height: "25rem" }}>
+                    <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
+                      <Image
+                        src="/images/Piscina.webp"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                        alt="Terraza"
+                      />
+                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-200 ease-in-out hover:opacity-100 pointer-events-auto">
+                        <h2 className="h6">PISCINA</h2>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide style={{ height: "25rem" }}>
+                    <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
+                      <Image
+                        src="/images/Fachada_Contrapicada.webp"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
+                        alt="Terraza"
+                      />
+                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-00 ease-in-out hover:opacity-100 pointer-events-auto">
+                        <h2 className="h6">EDIFICIO HEISS</h2>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </div>
               </Swiper>
             </div>
 
-            {/* Imagen estática
+            {/* Imagen estatica 
             <div
-              className="relative md:col-span-3 rounded-3xl flex flex-col justify-center items-center p-8"
-              style={{ width: "100%", height: "100%" }}
+              className="relative md:col-span-3 rounded-3xl flex flex-col justify-center items-center p-8 inset-0 bg-black opacity-25 z-10"
+              style={{ width: "100%", height: "95%" }}
             >
               <Image
                 src="/images/Zona_Comercial.webp"
@@ -158,22 +222,24 @@ const SliderHome = () => {
                 objectFit="cover"
                 className="rounded-3xl absolute inset-0 z-0"
               />
-              <div className="relative z-10 bg-opacity-50 p-8 md:p-16 rounded-3xl flex flex-col items-start">
-                <div className="text-center lg:text-left flex flex-col gap-3 md:gap-5 lg:items-start">
-                  <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
+              <div className="text-center p-8 md:p-16 flex flex-col lg:text-left lg:pl-32 md:mt-36 z-20">
+                <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
+                  <span className=".parrafo-regular-18">HEISS MEDELLÍN</span>
                   <h2 className="h5">CAMBIA DE AMBIENTE</h2>
-                  <p className="parrafo-light-24 md:w-2/5 lg:w-1/2 xl:w-1/2">
+                  <p className="parrafo-light-24 md:2/5 lg:w-1/2 xl:w-1/2 lg:text-left lg:float-left">
                     El espacio que buscabas, con las comodidades que necesitas
                     para vivir una gran experiencia.
                   </p>
+                </div>
+                <div className="my-5 md:my-8">
                   <Button asChild>
-                    <Link href="/espacios">CONOCE MÁS</Link>
+                    <Link href="/">CONOCE MÁS</Link>
                   </Button>
                 </div>
               </div>
             </div>
           </div>
-        </SwiperSlide> */}
+        </SwiperSlide>*/}
 
         {/* Experiencias */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">

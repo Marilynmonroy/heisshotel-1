@@ -28,22 +28,25 @@ import Link from "next/link";
 const SliderHabSmall = () => {
   return (
     <section className="overflow-y-auto">
-      <section
-        className="bg-center bg-cover w-full h-screen flex flex-col justify-center"
-        style={{
-          backgroundImage: `url(/images/habitacionSmall/smallPrincipal.webp)`,
-        }}
-      >
-        <div className="items-center text-center flex flex-col gap-3 text-white">
-          <span className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
+      <div className="relative w-full h-screen">
+        <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+        <Image
+          src="/images/habitacionSmall/smallPrincipal.webp"
+          alt="Piscina Image"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+        <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
+          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
             HOTEL HEISS MEDELLÍN
           </span>
-          <h2 className="h2">ESTÁNDAR</h2>
+          <h2 className="h3">SUPERIOR</h2>
+          <div className="mt-5">
+            <CalendarWidget />
+          </div>
         </div>
-        <div className="mt-5">
-          <CalendarWidget />
-        </div>
-      </section>
+      </div>
       {/* carrousel 1 */}
       <div className="text-white h-3/4 text-center flex items-center w-full">
         <Swiper
@@ -58,34 +61,37 @@ const SliderHabSmall = () => {
           modules={[Pagination]}
         >
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionSmall/smallcarrousel.webp)`,
-                width: "100%",
-                height: "70vh",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionSmall/smallcarrousel.webp"
+              alt="Piscina Image"
+              height={"70vh"}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionSmall/smallcarrousel2.webp)`,
-                width: "100%",
-                height: "70vh",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionSmall/smallcarrousel2.webp"
+              alt="Piscina Image"
+              height={"70vh"}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionSmall/smallcarrousel3.webp)`,
-                width: "100%",
-                height: "70vh",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionSmall/smallcarrousel3.webp"
+              alt="Piscina Image"
+              height={"70vh"}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -104,37 +110,34 @@ const SliderHabSmall = () => {
           modules={[Pagination]}
         >
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionSmall/smalldetalles.webp)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionSmall/smalldetalles.webp"
+              alt="Piscina Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionSmall/smalldetalles2.webp)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionSmall/smalldetalles2.webp"
+              alt="Piscina Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionSmall/smalldetalles3.jpg)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionSmall/smalldetalles3.webp"
+              alt="Piscina Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
         </Swiper>
         <div className="flex flex-col w-[45%] gap-10 h-full p-8 md:p-16 items-end justify-end text-right">

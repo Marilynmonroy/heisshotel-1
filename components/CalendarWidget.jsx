@@ -159,7 +159,7 @@ export function CalendarWidget() {
                     }
                     initialFocus
                     className={"rounded-md border shadow"}
-                    style={{ width: "220px", height: "250px" }} // Adjusted size
+                    style={{ width: "220px", height: "260px" }} // Adjusted size
                     dayStyle={(date) => ({
                       ...(date &&
                         date.getDate() === new Date().getDate() && {

@@ -61,34 +61,37 @@ const SliderHabMedium = () => {
           modules={[Pagination]}
         >
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel.webp)`,
-                width: "100%",
-                height: "70vh",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionMedium/mediumcarrousel.webp"
+              alt="Piscina Image"
+              height={"70vh"}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel2.webp)`,
-                width: "100%",
-                height: "70vh",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionMedium/mediumcarrousel2.webp"
+              alt="Piscina Image"
+              height={"70vh"}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel3.webp)`,
-                width: "100%",
-                height: "70vh",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionMedium/mediumcarrousel3.webp"
+              alt="Piscina Image"
+              height={"70vh"}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -107,37 +110,34 @@ const SliderHabMedium = () => {
           modules={[Pagination]}
         >
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumdetalles1.webp)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionMedium/mediumdetalles1.webp"
+              alt="Piscina Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumdetalles2.webp)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionMedium/mediumdetalles2.webp"
+              alt="Piscina Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <div
-              className="bg-cover bg-center"
-              style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumdetalles3.webp)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/habitacionMedium/mediumdetalles3.webp"
+              alt="Piscina Image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
           </SwiperSlide>
         </Swiper>
         <div className="flex flex-col w-[45%] gap-10 h-full p-8 md:p-16 items-end justify-end text-right">
