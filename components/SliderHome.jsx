@@ -26,14 +26,34 @@ import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 
 const SliderHome = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize(); // Ejecutar la función al montar el componente para establecer el estado inicial
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const swiperModules = isMobile
+    ? [Keyboard, Pagination]
+    : [Keyboard, Mousewheel, Pagination, EffectFade];
+
+  const swiperProps = isMobile
+    ? {}
+    : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true };
+
   return (
     <div>
       <Swiper
         direction={"vertical"}
         spaceBetween={30}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
-        mousewheel={true}
+        speed={600}
         keyboard={true}
         pagination={{
           clickable: true,
@@ -41,16 +61,16 @@ const SliderHome = () => {
           bulletClass: "swiper-pagination-bullet",
           modifierClass: "swiper-pagination",
         }}
-        modules={[Keyboard, Mousewheel, Pagination, EffectFade]}
-        className=" w-full h-screen"
+        modules={swiperModules}
+        className="w-full h-screen"
         slidesPerView={2}
         breakpoints={{
           640: {
             slidesPerView: 1,
             fadeEffect: false,
-            effect: "slide",
           },
         }}
+        {...swiperProps}
       >
         {/* Home */}
         <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
