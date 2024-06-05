@@ -58,7 +58,7 @@ const SliderHome = () => {
         <Swiper
             key={swiperKey}
             direction={"vertical"}
-            spaceBetween={30}
+            spaceBetween={0}
             speed={600}
             keyboard={true}
             pagination={{
