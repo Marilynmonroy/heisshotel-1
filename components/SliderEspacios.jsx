@@ -93,7 +93,7 @@ const SliderComponent = () => {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-                <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:text-right md:gap-5 md:px-44">
+                <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left  md:items-end md:text-right md:gap-5 md:px-44">
                     <span className="p-regular-18">HEISS MEDELLÍN</span>
                     <Badge className="w-28">Próximamente</Badge>
                     <h2 className="h2">LOBBY</h2>
@@ -154,7 +154,7 @@ const SliderComponent = () => {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-                <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:text-right md:gap-5 md:px-44">
+                <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center md:items-end text-left md:text-right md:gap-5 md:px-44">
                     <span className="p-regular-18">HEISS MEDELLÍN</span>
                     <Badge className="w-28">Próximamente</Badge>
 
@@ -219,7 +219,7 @@ const SliderComponent = () => {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-                <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:text-right md:gap-5  md:px-44">
+                <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:items-end md:text-right md:gap-5  md:px-44">
                     <span className="p-regular-18">HEISS MEDELLÍN</span>
                     <Badge className="w-28">Próximamente</Badge>
 
