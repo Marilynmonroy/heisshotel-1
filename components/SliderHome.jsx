@@ -47,7 +47,7 @@ const SliderHome = () => {
         effect={isMobile ? "slide" : "fade"}
         fadeEffect={isMobile ? undefined : { crossFade: true }}
         speed={600}
-        mousewheel={!isMobile}
+        mousewheel={true}
         keyboard={true}
         pagination={{
           clickable: true,
