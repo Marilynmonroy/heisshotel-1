@@ -46,9 +46,9 @@ const SliderHabitaciones = () => {
     >
       <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
         <div className="relative w-full h-full">
-          <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+          <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
           <Image
-            src="/images/Habitacion_L_Balcón.webp"
+            src="/images/Habitacion_L_Balcón.gif"
             alt="Habitación Small"
             layout="fill"
             objectFit="cover"
@@ -67,9 +67,9 @@ const SliderHabitaciones = () => {
       </SwiperSlide>
       <SwiperSlide className="text-white h-screen text-center flex items-center">
         <div className="relative w-full h-full">
-          <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+          <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
           <Image
-            src="/images/habitacionSection.webp"
+            src="/images/habitacionSection.gif"
             alt="Habitación Small"
             layout="fill"
             objectFit="cover"

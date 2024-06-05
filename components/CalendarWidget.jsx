@@ -176,7 +176,11 @@ export function CalendarWidget() {
             </FormItem>
           )}
         />
-        <Button variant="secondary" type="submit">
+        <Button
+          variant="secondary"
+          type="submit"
+          onClick={() => console.log("Button clicked")}
+        >
           BOOK NOW
         </Button>
       </form>

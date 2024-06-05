@@ -31,7 +31,7 @@ const SliderHabSmall = () => {
       <div className="relative w-full h-screen">
         <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
         <Image
-          src="/images/habitacionSmall/smallPrincipal.webp"
+          src="/images/habitacionSmall/smallPrincipal.gif"
           alt="Piscina Image"
           layout="fill"
           objectFit="cover"
@@ -112,7 +112,7 @@ const SliderHabSmall = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionSmall/smalldetalles.webp"
+              src="/images/habitacionSmall/smalldetalles.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
@@ -122,7 +122,7 @@ const SliderHabSmall = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionSmall/smalldetalles2.webp"
+              src="/images/habitacionSmall/smalldetalles2.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
@@ -132,7 +132,7 @@ const SliderHabSmall = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionSmall/smalldetalles3.webp"
+              src="/images/habitacionSmall/smalldetalles3.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
@@ -144,13 +144,10 @@ const SliderHabSmall = () => {
           <div className="">
             <h2 className="h5 py-8">ESTÁNDAR</h2>
             <p className="p-light-16 pl-12">
-              Bienvenido a nuestra acogedora <b>Habitación Estándar</b> de 20
-              metros cuadrados, diseñada para ofrecer confort y funcionalidad.
-              Ideal para viajeros que buscan una estancia cómoda y conveniente.
-              Aunque esta habitación no cuenta con balcón, su diseño inteligente
-              y acogedor garantiza una estancia placentera y relajante. <br />
-              ¡Reserva ahora y disfruta de una experiencia cómoda y práctica en
-              nuestra Habitación Estándar! Está habitación cuenta con:
+              Bienvenido a nuestra acogedora <b>Habitación Estándar</b> de
+              20mt2, diseñada para ofrecer confort y funcionalidad. Su diseño
+              inteligente y acogedor garantiza una estancia placentera y
+              relajante.
             </p>
           </div>
           {/* ICONOS */}

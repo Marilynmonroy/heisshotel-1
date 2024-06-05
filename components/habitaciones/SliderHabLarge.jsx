@@ -63,7 +63,7 @@ const SliderHabLarge = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largecarrousel1.webp"
+              src="/images/habitacionLarge/largecarrousel1.gif"
               alt="Piscina Image"
               height={"70vh"}
               layout="fill"
@@ -112,7 +112,7 @@ const SliderHabLarge = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largedetalles.webp"
+              src="/images/habitacionLarge/largedetalles.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
@@ -122,7 +122,7 @@ const SliderHabLarge = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largedetalles2.webp"
+              src="/images/habitacionLarge/largedetalles2.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
@@ -132,7 +132,7 @@ const SliderHabLarge = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largedetalles3.webp"
+              src="/images/habitacionLarge/largedetalles3.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"

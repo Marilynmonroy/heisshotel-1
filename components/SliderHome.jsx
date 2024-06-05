@@ -75,7 +75,7 @@ const SliderHome = () => {
         {/* Home */}
         <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
           <div className="relative w-full h-full ">
-            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
             <Image
               src="/images/Fachada_Heiss_R3.webp"
               alt="Fachada Heiss"
@@ -91,7 +91,7 @@ const SliderHome = () => {
         {/* Habitaciones */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
           <div className="relative w-full h-full">
-            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
             <Image
               src="/images/Habitacion_Small_Front.webp"
               alt="Habitación Small"
@@ -215,7 +215,7 @@ const SliderHome = () => {
 
             {/* Imagen estatica 
             <div
-              className="relative md:col-span-3 rounded-3xl flex flex-col justify-center items-center p-8 inset-0 bg-black opacity-25 z-10"
+              className="relative md:col-span-3 rounded-3xl flex flex-col justify-center items-center p-8 inset-0 bg-black opacity-20 z-10"
               style={{ width: "100%", height: "95%" }}
             >
               <Image
@@ -255,7 +255,7 @@ const SliderHome = () => {
               overflow: "hidden",
             }}
           >
-            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+            <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
 
             <video
               autoPlay

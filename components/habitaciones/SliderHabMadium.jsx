@@ -31,7 +31,7 @@ const SliderHabMedium = () => {
       <div className="relative w-full h-screen">
         <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
         <Image
-          src="/images/habitacionMedium/mediumprincipal.webp"
+          src="/images/habitacionMedium/mediumprincipal.gif"
           alt="Piscina Image"
           layout="fill"
           objectFit="cover"
@@ -112,7 +112,7 @@ const SliderHabMedium = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionMedium/mediumdetalles1.webp"
+              src="/images/habitacionMedium/mediumdetalles1.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
@@ -122,7 +122,7 @@ const SliderHabMedium = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionMedium/mediumdetalles2.webp"
+              src="/images/habitacionMedium/mediumdetalles2.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
@@ -132,7 +132,7 @@ const SliderHabMedium = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionMedium/mediumdetalles3.webp"
+              src="/images/habitacionMedium/mediumdetalles3.gif"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
