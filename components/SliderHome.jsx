@@ -10,7 +10,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css";
 import Image from "next/image";
-
+import { useEffect } from "react";
 import { register } from "swiper/element/bundle";
 register();
 import {
