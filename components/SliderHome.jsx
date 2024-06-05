@@ -10,7 +10,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css";
 import Image from "next/image";
-import { useEffect } from "react";
+
 import { register } from "swiper/element/bundle";
 register();
 import {
@@ -26,27 +26,13 @@ import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 
 const SliderHome = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div>
       <Swiper
         direction={"vertical"}
         spaceBetween={30}
-        effect={isMobile ? "slide" : "fade"}
-        fadeEffect={isMobile ? undefined : { crossFade: true }}
-        speed={600}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
         mousewheel={true}
         keyboard={true}
         pagination={{
@@ -55,17 +41,14 @@ const SliderHome = () => {
           bulletClass: "swiper-pagination-bullet",
           modifierClass: "swiper-pagination",
         }}
-        modules={[
-          Keyboard,
-          Pagination,
-          ...(isMobile ? [] : [Mousewheel, EffectFade]),
-        ]}
-        className="w-full h-screen"
+        modules={[Keyboard, Mousewheel, Pagination, EffectFade]}
+        className=" w-full h-screen"
         slidesPerView={2}
         breakpoints={{
           640: {
             slidesPerView: 1,
             fadeEffect: false,
+            effect: "slide",
           },
         }}
       >
