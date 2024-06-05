@@ -26,32 +26,37 @@ import { CalendarWidget } from "./CalendarWidget";
 
 const SliderHome = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [swiperKey, setSwiperKey] = useState(0);
 
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 640);
         };
-
-        // Initial check
         handleResize();
-
         window.addEventListener("resize", handleResize);
         return () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
 
-    // Configure modules and props based on isMobile state
+    useEffect(() => {
+        // Esse codigo é para forçar o swiper a re-renderizar quando o isMobile muda
+        setSwiperKey((prevKey) => prevKey + 1);
+    }, [isMobile]);
+
+    // Configura os módulos do swiper
     const swiperModules = isMobile
         ? [Keyboard, Pagination]
         : [Keyboard, Mousewheel, Pagination, EffectFade];
 
+    // Configura as propriedades do swiper
     const swiperProps = isMobile
-        ? {} // No effect for mobile
-        : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true };
+        ? { effect: "slide", fadeEffect: { crossFade: true }, mousewheel: true } // Efeito de slide para mobile
+        : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true }; // Efeito de fade para desktop
 
     return (
         <Swiper
+            key={swiperKey}
             direction={"vertical"}
             spaceBetween={30}
             speed={600}
