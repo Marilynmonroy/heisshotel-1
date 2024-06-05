@@ -49,7 +49,7 @@ function Header() {
                             <li onClick={handleMenuOptionClick}>
                                 <Link href="/habitaciones">HABITACIONES</Link>
                             </li>
-                            <li onClick={handleMenuOptionClick} className="hidden md:block">
+                            <li onClick={handleMenuOptionClick} className="block">
                                 <Link href="/espacios">ESPACIOS</Link>
                             </li>
                         </ul>
