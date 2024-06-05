@@ -28,22 +28,25 @@ import Link from "next/link";
 const SliderHabLarge = () => {
   return (
     <section className="overflow-y-auto">
-      <section
-        className="bg-center bg-cover w-full h-screen flex flex-col justify-center"
-        style={{
-          backgroundImage: `url(/images/habitacionLarge/largeprincipal.jpg)`,
-        }}
-      >
-        <div className="items-center text-center flex flex-col gap-3 text-white">
-          <span className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
+      <div className="relative w-full h-screen">
+        <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+        <Image
+          src="/images/habitacionLarge/largeprincipal.webp"
+          alt="Piscina Image"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+        <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
+          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
             HOTEL HEISS MEDELLÍN
           </span>
-          <h2 className="h2">JUNIOR SUITE</h2>
+          <h2 className="h3">JUNIOR SUITE</h2>
+          <div className="mt-5">
+            <CalendarWidget />
+          </div>
         </div>
-        <div className="mt-5">
-          <CalendarWidget />
-        </div>
-      </section>
+      </div>
       {/* carrousel 1 */}
       <div className="text-white h-3/4 text-center flex items-center w-full">
         <Swiper
@@ -61,7 +64,7 @@ const SliderHabLarge = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionLarge/largecarrousel1.jpg)`,
+                backgroundImage: `url(/images/habitacionLarge/largecarrousel1.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -71,7 +74,7 @@ const SliderHabLarge = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionLarge/largecarrousel2.jpg)`,
+                backgroundImage: `url(/images/habitacionLarge/largecarrousel2.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -81,7 +84,7 @@ const SliderHabLarge = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionLarge/largecarrousel3.jpg)`,
+                backgroundImage: `url(/images/habitacionLarge/largecarrousel3.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -107,7 +110,7 @@ const SliderHabLarge = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionLarge/largedetalles.jpg)`,
+                backgroundImage: `url(/images/habitacionLarge/largedetalles.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",
@@ -118,7 +121,7 @@ const SliderHabLarge = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionLarge/largedetalles2.jpg)`,
+                backgroundImage: `url(/images/habitacionLarge/largedetalles2.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",
@@ -129,7 +132,7 @@ const SliderHabLarge = () => {
             <div
               className="bg-cover bg-center"
               style={{
-                backgroundImage: `url(/images/habitacionLarge/largedetalles3.jpg)`,
+                backgroundImage: `url(/images/habitacionLarge/largedetalles3.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",
@@ -140,7 +143,7 @@ const SliderHabLarge = () => {
         <div className="flex flex-col w-[45%] gap-10 h-full p-8 md:p-16 items-end justify-end text-right">
           {/* ICONOS */}
           <div className="">
-            <h2 className="h5 py-8">JUNIOR SUITE</h2>
+            <h2 className="h2 py-8">JUNIOR SUITE</h2>
             <p className="p-light-16 pl-12">
               Descubre la elegancia y el confort de nuestra{" "}
               <b>Junior Suite, </b>una espaciosa habitación de 20 m2 con un
@@ -157,14 +160,14 @@ const SliderHabLarge = () => {
             <Image
               src="/icons/camas.svg"
               alt="Camas Queen"
-              width={40}
+              width={20}
               height={29.1}
               className="md:w-[40px] lg:w-[50px]"
             />
             <Image
               src="/icons/wifi.svg"
               alt="Wifi"
-              width={40}
+              width={20}
               height={29.1}
               className="md:w-[40px] lg:w-[50px]"
             />
@@ -172,7 +175,7 @@ const SliderHabLarge = () => {
             <Image
               src="/icons/armario.svg"
               alt="Armario"
-              width={40}
+              width={20}
               height={29.1}
               className="md:w-[40px] lg:w-[50px]"
             />
@@ -180,7 +183,7 @@ const SliderHabLarge = () => {
             <Image
               src="/icons/ducha.svg"
               alt="Ducha"
-              width={40}
+              width={20}
               height={62.42}
               className="md:w-[40px] lg:w-[50px]"
             />

@@ -28,22 +28,25 @@ import Link from "next/link";
 const SliderHabMedium = () => {
   return (
     <section className="overflow-y-auto">
-      <section
-        className="bg-center bg-cover w-full h-screen flex flex-col justify-center"
-        style={{
-          backgroundImage: `url(/images/habitacionMedium/mediumprincipal.jpg)`,
-        }}
-      >
-        <div className="items-center text-center flex flex-col gap-3 text-white">
-          <span className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
+      <div className="relative w-full h-screen">
+        <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+        <Image
+          src="/images/habitacionMedium/mediumprincipal.webp"
+          alt="Piscina Image"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+        <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
+          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
             HOTEL HEISS MEDELLÍN
           </span>
-          <h2 className="h2">SUPERIOR</h2>
+          <h2 className="h3">SUPERIOR</h2>
+          <div className="mt-5">
+            <CalendarWidget />
+          </div>
         </div>
-        <div className="mt-5">
-          <CalendarWidget />
-        </div>
-      </section>
+      </div>
       {/* carrousel 1 */}
       <div className="text-white h-3/4 text-center flex items-center w-full">
         <Swiper
@@ -61,7 +64,7 @@ const SliderHabMedium = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel.jpg)`,
+                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -71,7 +74,7 @@ const SliderHabMedium = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel2.jpg)`,
+                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel2.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -81,7 +84,7 @@ const SliderHabMedium = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel3.jpg)`,
+                backgroundImage: `url(/images/habitacionMedium/mediumcarrousel3.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -107,7 +110,7 @@ const SliderHabMedium = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumdetalles1.jpg)`,
+                backgroundImage: `url(/images/habitacionMedium/mediumdetalles1.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",
@@ -118,7 +121,7 @@ const SliderHabMedium = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumdetalles2.jpg)`,
+                backgroundImage: `url(/images/habitacionMedium/mediumdetalles2.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",
@@ -129,7 +132,7 @@ const SliderHabMedium = () => {
             <div
               className="bg-cover bg-center"
               style={{
-                backgroundImage: `url(/images/habitacionMedium/mediumdetalles3.jpg)`,
+                backgroundImage: `url(/images/habitacionMedium/mediumdetalles3.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",

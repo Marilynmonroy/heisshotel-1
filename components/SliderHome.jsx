@@ -47,20 +47,22 @@ const SliderHome = () => {
         breakpoints={{
           640: {
             slidesPerView: 1,
+            fadeEffect: false,
           },
         }}
       >
         {/* Home */}
         <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full ">
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/Fachada_Heiss_R3.jpg"
+              src="/images/Fachada_Heiss_R3.webp"
               alt="Fachada Heiss"
               layout="fill"
               objectFit="cover"
               priority
             />{" "}
-            <div className="absolute inset-0 flex flex-col justify-center items-center">
+            <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
               <CalendarWidget />
             </div>
           </div>
@@ -68,36 +70,37 @@ const SliderHome = () => {
         {/* Habitaciones */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
           <div className="relative w-full h-full">
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/Habitacion_Small_Front.jpg"
+              src="/images/Habitacion_Small_Front.webp"
               alt="Habitación Small"
               layout="fill"
               objectFit="cover"
               priority
             />
-            <div className="absolute inset-0 flex flex-col justify-center p-8 md:p-16 lg:pr-44 lg:text-right">
-              <div className="flex flex-col gap-3 md:gap-5 items-center lg:items-end md:mt-36">
-                <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
-                <h2 className="h5">CONOCE NUESTRAS HABITACIONES</h2>
-                <p className="parrafo-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:float-right">
+            <div className="absolute inset-0 flex z-20 flex-col justify-center">
+              <div className="flex flex-col gap-3 items-center">
+                <span className="p-regular-16">HEISS MEDELLÍN</span>
+                <h2 className="h2">CONOCE NUESTRAS HABITACIONES</h2>
+                <p className="p-light-24 md:2/5 lg:w-3/5 xl:w-2/6">
                   El espacio que buscabas, con las comodidades que necesitas
                   para vivir una gran experiencia.
                 </p>
               </div>
-              <div className="py-5 md:py-8 xl:py-10">
+              <div className="py-6">
                 <Button asChild>
                   <Link href="/habitaciones">HABITACIONES</Link>
                 </Button>
               </div>
-              <div className="flex justify-center md:justify-center gap-4">
+              <div className="flex justify-center gap-4">
                 <Button variant="destructive" size="sm" asChild>
-                  <Link href="/habitaciones/habitacionSmall">S</Link>
+                  <Link href="/habitaciones/habitacionSmall">E</Link>
                 </Button>
                 <Button variant="destructive" size="sm" asChild>
-                  <Link href="/habitaciones/habitacionMedium">M</Link>
+                  <Link href="/habitaciones/habitacionMedium">S</Link>
                 </Button>
                 <Button variant="destructive" size="sm" asChild>
-                  <Link href="/habitaciones/habitacionLarge">L</Link>
+                  <Link href="/habitaciones/habitacionLarge">J</Link>
                 </Button>
               </div>
             </div>
@@ -120,7 +123,7 @@ const SliderHome = () => {
                 <SwiperSlide style={{ height: "25rem" }}>
                   <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
                     <Image
-                      src="/images/Terraza.jpg"
+                      src="/images/Terraza.webp"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="center"
@@ -149,7 +152,7 @@ const SliderHome = () => {
               style={{ width: "100%", height: "100%" }}
             >
               <Image
-                src="/images/Zona_Comercial.jpg"
+                src="/images/Zona_Comercial.webp"
                 alt="Zona Comercial"
                 layout="fill"
                 objectFit="cover"
@@ -164,7 +167,7 @@ const SliderHome = () => {
                     para vivir una gran experiencia.
                   </p>
                   <Button asChild>
-                    <Link href="/">CONOCE MÁS</Link>
+                    <Link href="/espacios">CONOCE MÁS</Link>
                   </Button>
                 </div>
               </div>
@@ -175,7 +178,7 @@ const SliderHome = () => {
         {/* Experiencias */}
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
           <div
-            className="flex flex-col"
+            className="flex flex-col justify-center"
             style={{
               position: "relative",
               width: "100vw",
@@ -183,6 +186,8 @@ const SliderHome = () => {
               overflow: "hidden",
             }}
           >
+            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+
             <video
               autoPlay
               loop
@@ -200,8 +205,8 @@ const SliderHome = () => {
             >
               <source src="/images/Experiencias_Heiss.mp4" type="video/mp4" />
             </video>
-            <div className="text-center p-8 md:p-16 flex flex-col lg:text-left lg:pl-44 lg:mt-56">
-              <div className="mt-28 mb-5 md:my-8">
+            <div className="text-center flex flex-col content-center z-20 lg:text-left lg:pl-44 ">
+              <div className="mb-5 md:my-8">
                 <Button asChild>
                   <Link href="https://wa.me/573178946768" target="_blank">
                     EXPLORAR
@@ -209,9 +214,9 @@ const SliderHome = () => {
                 </Button>
               </div>
               <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
-                <span className="parrafo-regular-18">EXPLORA MEDELLÍN</span>
-                <h2 className="h5">SUMÉRGETE EN SU AUTENTICIDAD</h2>
-                <p className="parrafo-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:text-left lg:float-left">
+                <span className="p-regular-16">EXPLORA MEDELLÍN</span>
+                <h2 className="h2">SUMÉRGETE EN SU AUTENTICIDAD</h2>
+                <p className="p-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:text-left lg:float-left">
                   El espacio que buscabas, con las comodidades que necesitas
                   para vivir una gran experiencia.
                 </p>

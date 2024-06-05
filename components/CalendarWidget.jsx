@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
@@ -21,37 +21,38 @@ import {
 } from "@/components/ui/popover";
 
 const FormSchema = z.object({
-  arrival: z.date({
-    required_error: "Arrival date is required.",
-  }),
-  departure: z.date({
-    required_error: "Departure date is required.",
-  }),
+  arrival: z.date().optional(),
+  departure: z.date().optional(),
 });
 
 export function CalendarWidget() {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const [isDepartureOpen, setIsDepartureOpen] = useState(false);
+  const departureTriggerRef = useRef(null);
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
   };
+
   const selectionRange = {
     startDate: startDate,
     endDate: endDate,
     key: "selection",
   };
+
   const currentDate = new Date();
   currentDate.setDate(currentDate.getDate() + 1);
 
   const form = useForm({
     resolver: zodResolver(FormSchema),
   });
+
   const onSubmit = async (data) => {
     const { arrival, departure } = data;
-    const arrivalDate = format(arrival, "yyyy-MM-dd");
-    const departureDate = format(departure, "yyyy-MM-dd");
+    const arrivalDate = arrival ? format(arrival, "yyyy-MM-dd") : "";
+    const departureDate = departure ? format(departure, "yyyy-MM-dd") : "";
     const cloudbedsUrl = `https://hotels.cloudbeds.com/es/reservation/lLxxdq?checkin=${arrivalDate}&checkout=${departureDate}`;
     try {
       const response = await fetch(cloudbedsUrl, {
@@ -86,18 +87,18 @@ export function CalendarWidget() {
                     <Button
                       variant="ghost"
                       className={cn(
-                        "w-[240px] px-8 text-muted-foreground text-lg font-light",
+                        "w-[180px] px-4 text-muted-foreground text-md font-light",
                         !field.value
                       )}
                     >
                       {field.value
                         ? format(field.value, "dd/MM/yyyy")
                         : format(new Date(), "dd/MM/yyyy")}
-                      <CalendarIcon className="ml-auto h-6 w-6 opacity-80" />
+                      <CalendarIcon className="ml-auto h-5 w-5 opacity-80" />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
+                <PopoverContent className="w-auto" align="start">
                   <Calendar
                     ranges={[selectionRange]}
                     onChange={handleSelect}
@@ -105,11 +106,16 @@ export function CalendarWidget() {
                     selected={field.value}
                     onSelect={(date) => {
                       field.onChange(date);
+                      setIsDepartureOpen(true);
                     }}
                     disabled={(date) => date < new Date()}
                     fromYear={2023}
                     initialFocus
-                    className={"rounded-md border shadow"}
+                    className={""}
+                    style={{ width: "220px", height: "260px" }}
+                    dayStyle={(date) => ({
+                      ...(date && date.getDate() === new Date().getDate()),
+                    })}
                   />
                 </PopoverContent>
               </Popover>
@@ -122,13 +128,14 @@ export function CalendarWidget() {
           name="departure"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <Popover>
+              <Popover open={isDepartureOpen} onOpenChange={setIsDepartureOpen}>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+                      ref={departureTriggerRef}
                       variant="ghost"
                       className={cn(
-                        "w-[240px] px-8 text-muted-foreground text-lg font-light",
+                        "w-[180px] px-4 text-muted-foreground text-md font-light",
                         !field.value
                       )}
                     >
@@ -143,11 +150,25 @@ export function CalendarWidget() {
                   <Calendar
                     mode="single"
                     selected={field.value}
-                    onSelect={field.onChange}
+                    onSelect={(date) => {
+                      field.onChange(date);
+                      setIsDepartureOpen(false);
+                    }}
                     disabled={(date) =>
                       date < form.watch("arrival") || date < new Date()
                     }
                     initialFocus
+                    className={"rounded-md border shadow"}
+                    style={{ width: "220px", height: "250px" }} // Adjusted size
+                    dayStyle={(date) => ({
+                      ...(date &&
+                        date.getDate() === new Date().getDate() && {
+                          backgroundColor: "lightblue",
+                        }),
+                    })}
+                    dayHoverStyle={(date) => ({
+                      backgroundColor: "lightblue",
+                    })}
                   />
                 </PopoverContent>
               </Popover>
@@ -155,11 +176,7 @@ export function CalendarWidget() {
             </FormItem>
           )}
         />
-        <Button
-          variant="secondary"
-          type="submit"
-          className="w-[60%] md:w-[10%]"
-        >
+        <Button variant="secondary" type="submit">
           BOOK NOW
         </Button>
       </form>

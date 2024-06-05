@@ -10,7 +10,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css";
 import { CalendarWidget } from "./CalendarWidget";
-
+import Image from "next/image";
 import { register } from "swiper/element/bundle";
 register();
 import {
@@ -25,43 +25,48 @@ import {
 const SliderComponent = () => {
   return (
     <section className="overflow-y-auto">
-      <section
-        className="bg-center bg-cover w-full h-screen flex flex-col justify-center"
-        style={{
-          backgroundImage: `url(/images/Piscina.jpg)`,
-        }}
-      >
-        <div className="items-center text-center flex flex-col gap-3 text-white">
+      <div className="relative w-full h-screen">
+        <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+        <Image
+          src="/images/Piscina.webp"
+          alt="Piscina Image"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+        <div className="items-center justify-center text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <h2 className="h2">CAMBIA DE AMBIENTE</h2>
-          <span className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
-            El espacio que buscas, con las comodidades que necesitas para vivir
-            una gran experiencia.
+          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
+            El espacio que buscas, con las comodidades que necesitas para una
+            gran experiencia.
           </span>
+          <div className="p-5">
+            <CalendarWidget />
+          </div>
         </div>
-        <div className="mt-5">
-          <CalendarWidget />
-        </div>
-      </section>
+      </div>
       {/* Rooftop */}
       <div className="text-white h-screen text-center flex items-center w-full">
         <div className="p-8 md:p-16 lg:pb-36 xl:pb-36 w-[45%] pl-10 h-full items-right justify-end text-left flex flex-col gap-3 md:gap-5 mb-[18.375rem]">
-          <span className="parrafo-regular-18 pl-20">HEISS MEDELLÍN</span>
-          <h2 className="h5 pl-20">ROOFTOP</h2>
-          <p className="parrafo-light-24 pr-14 pl-20">
+          <span className="p-regular-18 pl-20">HEISS MEDELLÍN</span>
+          <h2 className="h2 pl-20">ROOFTOP</h2>
+          <p className="p-light-16 pr-14 pl-20">
             El espacio que buscabas, con las comodidades que necesitas para
             vivir una gran experiencia.
           </p>
         </div>
         <Swiper slidesPerView={1} className="w-[55%] h-screen">
-          <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/Terraza.jpg)`,
-                width: "100%",
-                height: "100%",
-              }}
-            ></div>
+          <SwiperSlide className="w-[55%] h-screen">
+            <div className="relative w-full h-screen">
+              <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+              <Image
+                src="/images/Terraza.webp"
+                alt="Piscina Image"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -70,21 +75,22 @@ const SliderComponent = () => {
       <div className="text-white h-screen text-center flex items-center w-full">
         <Swiper slidesPerView={1} className="w-[55%] h-screen">
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/Lobby.jpg)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="relative w-full h-screen">
+              <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+              <Image
+                src="/images/Lobby.webp"
+                alt="Piscina Image"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
           </SwiperSlide>
         </Swiper>
         <div className="p-8 md:p-16 lg:pb-36 xl:pb-36 w-[45%] h-full items-right justify-start text-right flex flex-col gap-3 md:gap-5 mt-[18.375rem]">
-          <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
-          <h2 className="h5">LOBBY</h2>
-          <p className="parrafo-light-24 pl-20">
+          <span className="p-regular-18 ">HEISS MEDELLÍN</span>
+          <h2 className="h2">LOBBY</h2>
+          <p className="p-light-16 pl-20">
             El espacio que buscabas, con las comodidades que necesitas para
             vivir una gran experiencia.
           </p>
@@ -94,9 +100,9 @@ const SliderComponent = () => {
       {/* Piscina con jacuzzi */}
       <div className="text-white h-screen text-center flex items-center w-full">
         <div className="p-8 md:p-16 lg:pb-36 xl:pb-36 w-[45%] h-full items-right justify-end text-left flex flex-col gap-3 md:gap-5 mb-[18.375rem]">
-          <span className="parrafo-regular-18 pl-20">HEISS MEDELLÍN</span>
-          <h2 className="h5 pl-20">PISCINA CON JACUZZI</h2>
-          <p className="parrafo-light-24 pr-14 pl-20">
+          <span className="p-regular-18 pl-20">HEISS MEDELLÍN</span>
+          <h2 className="h2 pl-20">PISCINA CON JACUZZI</h2>
+          <p className="p-light-16 pr-14 pl-20">
             El espacio que buscabas, con las comodidades que necesitas para
             vivir una gran experiencia.
           </p>
@@ -104,15 +110,16 @@ const SliderComponent = () => {
 
         <Swiper slidesPerView={1} className="w-[55%] h-screen">
           <SwiperSlide>
-            <div
-              className="bg-cover bg-center"
-              style={{
-                backgroundImage: `url(/images/Piscina.jpg)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="relative w-full h-screen">
+              <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+              <Image
+                src="/images/Piscina.webp"
+                alt="Piscina Image"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -120,21 +127,22 @@ const SliderComponent = () => {
       <div className="text-white h-screen text-center flex items-center w-full">
         <Swiper slidesPerView={1} className="w-[55%] h-screen">
           <SwiperSlide>
-            <div
-              className="bg-cover bg-left"
-              style={{
-                backgroundImage: `url(/images/gimnasio.jpg)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="relative w-full h-screen">
+              <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+              <Image
+                src="/images/gimnasio.webp"
+                alt="Piscina Image"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
           </SwiperSlide>
         </Swiper>
         <div className="p-8 md:p-16 lg:pb-36 xl:pb-36 w-[45%] h-full items-right justify-start text-right flex flex-col gap-3 md:gap-5 mt-[18.375rem]">
-          <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
-          <h2 className="h5">GIMNASIO</h2>
-          <p className="parrafo-light-24 pl-20">
+          <span className="p-regular-18 ">HEISS MEDELLÍN</span>
+          <h2 className="h2">GIMNASIO</h2>
+          <p className="p-light-16 pl-20">
             El espacio que buscabas, con las comodidades que necesitas para
             vivir una gran experiencia.
           </p>
@@ -143,9 +151,9 @@ const SliderComponent = () => {
       {/* Sala de masajes */}
       <div className="text-white flex h-screen text-center items-center w-full">
         <div className="p-8 md:p-16 lg:pb-36 xl:pb-36 w-[45%] h-full items-right justify-end text-left flex flex-col gap-3 md:gap-5 mb-[18.375rem]">
-          <span className="parrafo-regular-18 pl-20">HEISS MEDELLÍN</span>
-          <h2 className="h5 pl-20">SALA DE MASAJES</h2>
-          <p className="parrafo-light-24 pr-14 pl-20">
+          <span className="p-regular-18 pl-20">HEISS MEDELLÍN</span>
+          <h2 className="h2 pl-20">SALA DE MASAJES</h2>
+          <p className="p-light-16 pr-14 pl-20">
             El espacio que buscabas, con las comodidades que necesitas para
             vivir una gran experiencia.
           </p>
@@ -153,15 +161,16 @@ const SliderComponent = () => {
 
         <Swiper slidesPerView={1} className="w-[55%] h-screen">
           <SwiperSlide>
-            <div
-              className="bg-cover bg-center"
-              style={{
-                backgroundImage: `url(/images/salademasajes.jpg)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="relative w-full h-screen">
+              <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+              <Image
+                src="/images/salademasajes.webp"
+                alt="Piscina Image"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -169,21 +178,22 @@ const SliderComponent = () => {
       <div className="flex text-white h-screen text-center items-center w-full">
         <Swiper slidesPerView={1} className="w-[55%] h-screen">
           <SwiperSlide>
-            <div
-              className="bg-cover bg-right"
-              style={{
-                backgroundImage: `url(/images/Zona_Comercial.jpg)`,
-                width: "100%",
-                height: "100%",
-                display: "flex",
-              }}
-            ></div>
+            <div className="relative w-full h-screen">
+              <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+              <Image
+                src="/images/Zona_Comercial.webp"
+                alt="Piscina Image"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
           </SwiperSlide>
         </Swiper>
         <div className="p-8 md:p-16 lg:pb-36 xl:pb-36 w-[45%] h-full items-right justify-start text-right flex flex-col gap-3 md:gap-5 mt-[18.375rem]">
-          <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
-          <h2 className="h5">ZONA COMERCIAL</h2>
-          <p className="parrafo-light-24 pl-20">
+          <span className="p-regular-18 ">HEISS MEDELLÍN</span>
+          <h2 className="h2">ZONA COMERCIAL</h2>
+          <p className="p-light-16 pl-20">
             El espacio que buscabas, con las comodidades que necesitas para
             vivir una gran experiencia.
           </p>

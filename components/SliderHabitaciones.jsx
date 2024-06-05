@@ -45,49 +45,45 @@ const SliderHabitaciones = () => {
       }}
     >
       <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
-        <div
-          className="bg-cover bg-center"
-          style={{
-            backgroundImage: `url(/images/Habitacion_L_Balcón.jpg)`,
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          {" "}
-          <section className="mt-56">
+        <div className="relative w-full h-full">
+          <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+          <Image
+            src="/images/Habitacion_L_Balcón.webp"
+            alt="Habitación Small"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          <div className="absolute inset-0 flex z-20 flex-col justify-center mb-10">
             <div className="items-center text-center flex flex-col gap-3">
-              <span className="p-regular-20">HEISS MEDELLÍN</span>
-              <h2 className="h2">ROOMS</h2>
+              <span className="p-regular-16">HEISS MEDELLÍN</span>
+              <h3 className="h3">ROOMS</h3>
             </div>
-            <div className="p-10">
+            <div className="p-5">
               <CalendarWidget />
             </div>
-          </section>
+          </div>
         </div>
       </SwiperSlide>
       <SwiperSlide className="text-white h-screen text-center flex items-center">
-        <div
-          className="bg-cover bg-center flex flex-col justify-center md:justify-end "
-          style={{
-            backgroundImage: `url(/images/habitacionSection.jpg)`,
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <div className="text-center p-8 md:p-16 flex flex-col lg:text-center md:pb-24 lg:pb-28 xl:pb-36">
-            <div className="items-center text-center flex flex-col gap-3 md:gap-5">
-              <span className="p-medium-24">DESCUBRE</span>
-              <p className="parrafo-light-24 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
+        <div className="relative w-full h-full">
+          <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+          <Image
+            src="/images/habitacionSection.webp"
+            alt="Habitación Small"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          <div className="absolute inset-0 flex z-20 flex-col justify-center w-full gap-5">
+            <div className="items-center text-center flex flex-col gap-2">
+              <span className="p-medium-16">DESCUBRE</span>
+              <p className="p-light-24 w-3/4 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
                 Ofrecemos diferentes categorías de habitaciones escoge la que
-                mejor se acomode a tu estadia
+                mejor se acomode a tu estadia.
               </p>
             </div>
-            <div className="py-5 md:py-8">
+            <div className="">
               <Drawer>
                 <DrawerTrigger asChild>
                   <Button>DESCRIPCIÓN</Button>
@@ -174,15 +170,15 @@ const SliderHabitaciones = () => {
                 </DrawerContent>
               </Drawer>
             </div>
-            <div className="flex justify-center md:justify-center gap-4 mt-10 md:mt-9 lg:mt-8 xl:mt-28">
+            <div className="flex justify-center md:justify-center gap-4 pt-7">
               <Button variant="destructive" size="sm" asChild>
-                <Link href="/habitaciones/habitacionSmall">S</Link>
+                <Link href="/habitaciones/habitacionSmall">E</Link>
               </Button>
               <Button variant="destructive" size="sm" asChild>
-                <Link href="/habitaciones/habitacionMedium">M</Link>
+                <Link href="/habitaciones/habitacionMedium">S</Link>
               </Button>
               <Button variant="destructive" size="sm" asChild>
-                <Link href="/habitaciones/habitacionLarge">L</Link>
+                <Link href="/habitaciones/habitacionLarge">J</Link>
               </Button>
             </div>
           </div>

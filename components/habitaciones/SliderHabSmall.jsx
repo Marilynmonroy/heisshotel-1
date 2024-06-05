@@ -31,7 +31,7 @@ const SliderHabSmall = () => {
       <section
         className="bg-center bg-cover w-full h-screen flex flex-col justify-center"
         style={{
-          backgroundImage: `url(/images/habitacionSmall/smallPrincipal.jpg)`,
+          backgroundImage: `url(/images/habitacionSmall/smallPrincipal.webp)`,
         }}
       >
         <div className="items-center text-center flex flex-col gap-3 text-white">
@@ -61,7 +61,7 @@ const SliderHabSmall = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionSmall/smallcarrousel.jpg)`,
+                backgroundImage: `url(/images/habitacionSmall/smallcarrousel.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -71,7 +71,7 @@ const SliderHabSmall = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionSmall/smallcarrousel2.jpg)`,
+                backgroundImage: `url(/images/habitacionSmall/smallcarrousel2.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -81,7 +81,7 @@ const SliderHabSmall = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionSmall/smallcarrousel3.jpg)`,
+                backgroundImage: `url(/images/habitacionSmall/smallcarrousel3.webp)`,
                 width: "100%",
                 height: "70vh",
               }}
@@ -107,7 +107,7 @@ const SliderHabSmall = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionSmall/smalldetalles.jpg)`,
+                backgroundImage: `url(/images/habitacionSmall/smalldetalles.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",
@@ -118,7 +118,7 @@ const SliderHabSmall = () => {
             <div
               className="bg-cover bg-right"
               style={{
-                backgroundImage: `url(/images/habitacionSmall/smalldetalles2.jpg)`,
+                backgroundImage: `url(/images/habitacionSmall/smalldetalles2.webp)`,
                 width: "100%",
                 height: "100%",
                 display: "flex",
