@@ -4,7 +4,12 @@ import { IoMenu } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,6 +47,11 @@ function Header() {
             side="left"
             className="bg-black/45 border-none px-9 py-32 md:px-12 lg:px-20"
           >
+            <div className="absolute top-8 right-8">
+              <SheetClose className="text-white text-xl font-medium">
+                X
+              </SheetClose>
+            </div>
             <ul className="flex flex-col gap-6 font-medium text-xl text-white md:text-2xl">
               <li onClick={handleMenuOptionClick}>
                 <Link href="/">HOME</Link>
