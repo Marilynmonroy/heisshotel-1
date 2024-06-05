@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import "swiper/css/bundle";
@@ -10,7 +10,6 @@ import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css";
 import Image from "next/image";
-import { useEffect } from "react";
 import { register } from "swiper/element/bundle";
 register();
 import {
@@ -33,101 +32,160 @@ const SliderHome = () => {
             setIsMobile(window.innerWidth < 640);
         };
 
+        // Initial check
         handleResize();
+
         window.addEventListener("resize", handleResize);
         return () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
 
+    // Configure modules and props based on isMobile state
     const swiperModules = isMobile
         ? [Keyboard, Pagination]
         : [Keyboard, Mousewheel, Pagination, EffectFade];
 
     const swiperProps = isMobile
-        ? {}
+        ? {} // No effect for mobile
         : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true };
 
     return (
-        <div>
-            <Swiper
-                direction={"vertical"}
-                spaceBetween={30}
-                speed={600}
-                keyboard={true}
-                pagination={{
-                    clickable: true,
-                    bulletActiveClass: "swiper-pagination-bullet-active",
-                    bulletClass: "swiper-pagination-bullet",
-                    modifierClass: "swiper-pagination",
-                }}
-                modules={swiperModules}
-                className="w-full h-screen"
-                slidesPerView={2}
-                breakpoints={{
-                    640: {
-                        slidesPerView: 1,
-                        crossFade: false,
-                    },
-                }}
-                {...swiperProps}
-            >
-                {/* Home */}
-                <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
-                    <div className="relative w-full h-full ">
-                        <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
-                        <Image
-                            src="/images/Fachada_Heiss_R3.webp"
-                            alt="Fachada Heiss"
-                            layout="fill"
-                            objectFit="cover"
-                            priority
-                        />{" "}
-                        <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
-                            <CalendarWidget />
+        <Swiper
+            direction={"vertical"}
+            spaceBetween={30}
+            speed={600}
+            keyboard={true}
+            pagination={{
+                clickable: true,
+                bulletActiveClass: "swiper-pagination-bullet-active",
+                bulletClass: "swiper-pagination-bullet",
+                modifierClass: "swiper-pagination",
+            }}
+            modules={swiperModules}
+            {...swiperProps}
+            className="w-full h-screen"
+            slidesPerView={1}
+            breakpoints={{
+                640: {
+                    slidesPerView: 1,
+                },
+            }}
+        >
+            {/* Home */}
+            <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
+                <div className="relative w-full h-full ">
+                    <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+                    <Image
+                        src="/images/Fachada_Heiss_R3.webp"
+                        alt="Fachada Heiss"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
+                        <CalendarWidget />
+                    </div>
+                </div>
+            </SwiperSlide>
+            {/* Habitaciones */}
+            <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
+                <div className="relative w-full h-full">
+                    <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+                    <Image
+                        src="/images/Habitacion_Small_Front.webp"
+                        alt="Habitación Small"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 flex z-20 flex-col justify-center px-5">
+                        <div className="flex flex-col gap-3 items-center">
+                            <span className="p-regular-16">HEISS MEDELLÍN</span>
+                            <h2 className="h2">CONOCE NUESTRAS HABITACIONES</h2>
+                            <p className="p-light-24 md:2/5 lg:w-3/5 xl:w-2/6">
+                                El espacio que buscabas, con las comodidades que necesitas para
+                                vivir una gran experiencia.
+                            </p>
+                        </div>
+                        <div className="py-6">
+                            <Button asChild>
+                                <Link href="/habitaciones">HABITACIONES</Link>
+                            </Button>
+                        </div>
+                        <div className="flex justify-center gap-4">
+                            <Button variant="destructive" size="sm" asChild>
+                                <Link href="/habitaciones/habitacionSmall">E</Link>
+                            </Button>
+                            <Button variant="destructive" size="sm" asChild>
+                                <Link href="/habitaciones/habitacionMedium">S</Link>
+                            </Button>
+                            <Button variant="destructive" size="sm" asChild>
+                                <Link href="/habitaciones/habitacionLarge">J</Link>
+                            </Button>
                         </div>
                     </div>
-                </SwiperSlide>
-                {/* Habitaciones */}
-                <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
-                    <div className="relative w-full h-full">
-                        <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
-                        <Image
-                            src="/images/Habitacion_Small_Front.webp"
-                            alt="Habitación Small"
-                            layout="fill"
-                            objectFit="cover"
-                            priority
-                        />
-                        <div className="absolute inset-0 flex z-20 flex-col justify-center">
-                            <div className="flex flex-col gap-3 items-center">
-                                <span className="p-regular-16">HEISS MEDELLÍN</span>
-                                <h2 className="h2">CONOCE NUESTRAS HABITACIONES</h2>
-                                <p className="p-light-24 md:2/5 lg:w-3/5 xl:w-2/6">
-                                    El espacio que buscabas, con las comodidades que necesitas para
-                                    vivir una gran experiencia.
-                                </p>
-                            </div>
-                            <div className="py-6">
-                                <Button asChild>
-                                    <Link href="/habitaciones">HABITACIONES</Link>
-                                </Button>
-                            </div>
-                            <div className="flex justify-center gap-4">
-                                <Button variant="destructive" size="sm" asChild>
-                                    <Link href="/habitaciones/habitacionSmall">E</Link>
-                                </Button>
-                                <Button variant="destructive" size="sm" asChild>
-                                    <Link href="/habitaciones/habitacionMedium">S</Link>
-                                </Button>
-                                <Button variant="destructive" size="sm" asChild>
-                                    <Link href="/habitaciones/habitacionLarge">J</Link>
-                                </Button>
-                            </div>
+                </div>
+            </SwiperSlide>
+            {/* AQUI IA OS ESPACIOS NA LATERAL */}
+            {/* Experiencias */}
+            <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
+                <div
+                    className="flex flex-col justify-center"
+                    style={{
+                        position: "relative",
+                        width: "100vw",
+                        height: "100vh",
+                        overflow: "hidden",
+                    }}
+                >
+                    <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            zIndex: -1,
+                        }}
+                    >
+                        <source src="/images/Experiencias_Heiss.mp4" type="video/mp4" />
+                    </video>
+                    <div className="text-center flex flex-col content-center z-20 lg:text-left lg:pl-44 px-5 ">
+                        <div className="mb-5 md:my-8">
+                            <Button asChild>
+                                <Link href="https://wa.me/573178946768" target="_blank">
+                                    EXPLORAR
+                                </Link>
+                            </Button>
+                        </div>
+                        <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start ">
+                            <span className="p-regular-16">EXPLORA MEDELLÍN</span>
+                            <h2 className="h2">SUMÉRGETE EN SU AUTENTICIDAD</h2>
+                            <p className="p-light-24  md:w-2/5 lg:w-3/5 xl:w-2/6 lg:text-left lg:float-left">
+                                En Heiss Hotel, no solo te ofrecemos una estancia de lujo y
+                                comodidad, sino también la oportunidad de vivir experiencias
+                                turísticas únicas en la vibrante ciudad de Medellín. Nuestra
+                                ubicación privilegiada y nuestra dedicación a la excelencia en el
+                                servicio nos permiten ofrecerte lo mejor de esta fascinante ciudad.
+                            </p>
                         </div>
                     </div>
-                </SwiperSlide>
-                {/* Especios 
+                </div>
+            </SwiperSlide>
+        </Swiper>
+    );
+};
+export default SliderHome;
+{
+    /* Especios 
         <SwiperSlide className="text-white h-screen text-center flex justify-center items-center bg-black">
           {/* Para móviles 
           <div className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center p-8">
@@ -242,63 +300,5 @@ const SliderHome = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>*/}
-
-                {/* Experiencias */}
-                <SwiperSlide className="text-white h-screen text-center flex justify-center items-center">
-                    <div
-                        className="flex flex-col justify-center"
-                        style={{
-                            position: "relative",
-                            width: "100vw",
-                            height: "100vh",
-                            overflow: "hidden",
-                        }}
-                    >
-                        <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
-
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                zIndex: -1,
-                            }}
-                        >
-                            <source src="/images/Experiencias_Heiss.mp4" type="video/mp4" />
-                        </video>
-                        <div className="text-center flex flex-col content-center z-20 lg:text-left lg:pl-44 ">
-                            <div className="mb-5 md:my-8">
-                                <Button asChild>
-                                    <Link href="https://wa.me/573178946768" target="_blank">
-                                        EXPLORAR
-                                    </Link>
-                                </Button>
-                            </div>
-                            <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
-                                <span className="p-regular-16">EXPLORA MEDELLÍN</span>
-                                <h2 className="h2">SUMÉRGETE EN SU AUTENTICIDAD</h2>
-                                <p className="p-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:text-left lg:float-left">
-                                    En Heiss Hotel, no solo te ofrecemos una estancia de lujo y
-                                    comodidad, sino también la oportunidad de vivir experiencias
-                                    turísticas únicas en la vibrante ciudad de Medellín. Nuestra
-                                    ubicación privilegiada y nuestra dedicación a la excelencia en
-                                    el servicio nos permiten ofrecerte lo mejor de esta fascinante
-                                    ciudad.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </div>
-    );
-};
-export default SliderHome;
+        </SwiperSlide>*/
+}
