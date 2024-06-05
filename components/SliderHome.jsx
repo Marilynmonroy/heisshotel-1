@@ -33,7 +33,7 @@ const SliderHome = () => {
       setIsMobile(window.innerWidth < 640);
     };
 
-    handleResize(); // Ejecutar la función al montar el componente para establecer el estado inicial
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -67,7 +67,7 @@ const SliderHome = () => {
         breakpoints={{
           640: {
             slidesPerView: 1,
-            fadeEffect: false,
+            crossFade: false,
           },
         }}
         {...swiperProps}
@@ -286,8 +286,12 @@ const SliderHome = () => {
                 <span className="p-regular-16">EXPLORA MEDELLÍN</span>
                 <h2 className="h2">SUMÉRGETE EN SU AUTENTICIDAD</h2>
                 <p className="p-light-24 md:2/5 lg:w-3/5 xl:w-2/6 lg:text-left lg:float-left">
-                  El espacio que buscabas, con las comodidades que necesitas
-                  para vivir una gran experiencia.
+                  En Heiss Hotel, no solo te ofrecemos una estancia de lujo y
+                  comodidad, sino también la oportunidad de vivir experiencias
+                  turísticas únicas en la vibrante ciudad de Medellín. Nuestra
+                  ubicación privilegiada y nuestra dedicación a la excelencia en
+                  el servicio nos permiten ofrecerte lo mejor de esta fascinante
+                  ciudad.
                 </p>
               </div>
             </div>

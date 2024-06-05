@@ -36,6 +36,8 @@ const SliderHabMedium = () => {
           layout="fill"
           objectFit="cover"
           priority
+          placeholder="blur"
+          blurDataURL="/images/habitacionMedium/mediumprincipal-blur.gif" // Ruta de una imagen pequeña y borrosa
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
@@ -59,16 +61,18 @@ const SliderHabMedium = () => {
             modifierClass: "swiper-pagination",
           }}
           modules={[Pagination]}
+          lazy={true} // Lazy loading
         >
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
               src="/images/habitacionMedium/mediumcarrousel.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionMedium/mediumcarrousel-blur.webp" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -76,10 +80,11 @@ const SliderHabMedium = () => {
             <Image
               src="/images/habitacionMedium/mediumcarrousel2.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionMedium/mediumcarrousel2-blur.webp" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -87,10 +92,11 @@ const SliderHabMedium = () => {
             <Image
               src="/images/habitacionMedium/mediumcarrousel3.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionMedium/mediumcarrousel3-blur.webp" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
         </Swiper>
@@ -108,6 +114,7 @@ const SliderHabMedium = () => {
             modifierClass: "swiper-pagination",
           }}
           modules={[Pagination]}
+          lazy={true} // Lazy loading
         >
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
@@ -117,6 +124,8 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionMedium/mediumdetalles1-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -127,6 +136,8 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionMedium/mediumdetalles2-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -137,6 +148,8 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionMedium/mediumdetalles3-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
         </Swiper>
@@ -145,12 +158,12 @@ const SliderHabMedium = () => {
           <div className="">
             <h2 className="h5 py-8">SUPERIOR</h2>
             <p className="p-light-16 pl-2">
-              Descubre nuestra cómoda <b>Habitación Superior</b> de 20 metros
-              cuadrados con un balcón adicional de 4.5 metros cuadrados,
-              diseñada para ofrecer una estancia relajante y funcional. Ideal
-              para viajeros que buscan comodidad y conveniencia. Esta habitación
-              combina comodidad interior con un espacio exterior privado,
-              garantizando una estancia placentera y relajante. <br />
+              Descubre nuestra cómoda <b>Habitación Superior</b> de 20 mt2 con
+              un balcón adicional de 4.5 mt2, diseñada para ofrecer una estancia
+              relajante y funcional. Esta habitación combina comodidad interior
+              con un espacio exterior privado. ¡Reserva ahora y disfruta de una
+              experiencia completa en nuestra Habitación Superior con Balcón!
+              <br />
               ¡Reserva ahora y disfruta de una experiencia completa en nuestra
               Habitación Superior con Balcón!
             </p>

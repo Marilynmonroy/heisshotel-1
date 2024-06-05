@@ -36,6 +36,8 @@ const SliderHabLarge = () => {
           layout="fill"
           objectFit="cover"
           priority
+          placeholder="blur"
+          blurDataURL="/images/habitacionLarge/largeprincipal-blur.webp" // Ruta de una imagen pequeña y borrosa
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
@@ -59,16 +61,18 @@ const SliderHabLarge = () => {
             modifierClass: "swiper-pagination",
           }}
           modules={[Pagination]}
+          lazy={true} // Lazy loading
         >
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
               src="/images/habitacionLarge/largecarrousel1.gif"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionLarge/largecarrousel1-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -76,10 +80,11 @@ const SliderHabLarge = () => {
             <Image
               src="/images/habitacionLarge/largecarrousel2.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionLarge/largecarrousel2-blur.webp" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -87,10 +92,11 @@ const SliderHabLarge = () => {
             <Image
               src="/images/habitacionLarge/largecarrousel3.webp"
               alt="Piscina Image"
-              height={"70vh"}
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionLarge/largecarrousel3-blur.webp" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
         </Swiper>
@@ -108,6 +114,7 @@ const SliderHabLarge = () => {
             modifierClass: "swiper-pagination",
           }}
           modules={[Pagination]}
+          lazy={true} // Lazy loading
         >
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
@@ -117,6 +124,8 @@ const SliderHabLarge = () => {
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionLarge/largedetalles-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -127,6 +136,8 @@ const SliderHabLarge = () => {
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionLarge/largedetalles2-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -137,6 +148,8 @@ const SliderHabLarge = () => {
               layout="fill"
               objectFit="cover"
               priority
+              placeholder="blur"
+              blurDataURL="/images/habitacionLarge/largedetalles3-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
         </Swiper>
@@ -145,14 +158,11 @@ const SliderHabLarge = () => {
           <div className="">
             <h2 className="h2 py-8">JUNIOR SUITE</h2>
             <p className="p-light-16 pl-12">
-              Descubre la elegancia y el confort de nuestra{" "}
-              <b>Junior Suite, </b>una espaciosa habitación de 20 m2 con un
-              balcón privado de 10 m2. Perfecta para aquellos que buscan un poco
-              más de lujo durante su estancia. Esta Junior Suite combina
-              espacios interiores y exteriores generosos con detalles elegantes,
-              garantizando una estancia memorable y relajante. ¡Reserva ahora y
-              experimenta el lujo y la comodidad de nuestra Junior Suite con
-              Balcón!
+              Descubre la elegancia y el confort de nuestra <b>Junior Suite,</b>
+              una espaciosa habitación de 20 mt2 con un balcón privado de 10
+              mt2. Perfecta para aquellos que buscan un poco más de lujo durante
+              su estancia. Esta Junior Suite combina espacios interiores y
+              exteriores generosos con detalles elegantes
             </p>
           </div>
 
@@ -160,14 +170,14 @@ const SliderHabLarge = () => {
             <Image
               src="/icons/camas.svg"
               alt="Camas Queen"
-              width={20}
+              width={40}
               height={29.1}
               className="md:w-[40px] lg:w-[50px]"
             />
             <Image
               src="/icons/wifi.svg"
               alt="Wifi"
-              width={20}
+              width={40}
               height={29.1}
               className="md:w-[40px] lg:w-[50px]"
             />
@@ -175,7 +185,7 @@ const SliderHabLarge = () => {
             <Image
               src="/icons/armario.svg"
               alt="Armario"
-              width={20}
+              width={40}
               height={29.1}
               className="md:w-[40px] lg:w-[50px]"
             />
@@ -183,7 +193,7 @@ const SliderHabLarge = () => {
             <Image
               src="/icons/ducha.svg"
               alt="Ducha"
-              width={20}
+              width={40}
               height={62.42}
               className="md:w-[40px] lg:w-[50px]"
             />
