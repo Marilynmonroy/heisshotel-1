@@ -51,7 +51,7 @@ const SliderHome = () => {
 
   // Configura as propriedades do swiper
   const swiperProps = isMobile
-    ? { effect: "slide", fadeEffect: { crossFade: true }, mousewheel: true } // Efeito de slide para mobile
+    ? { effect: "slide", fadeEffect: { crossFade: false }, mousewheel: true } // Efeito de slide para mobile
     : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true }; // Efeito de fade para desktop
 
   return (
