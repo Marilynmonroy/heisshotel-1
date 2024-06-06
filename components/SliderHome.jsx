@@ -25,25 +25,32 @@ import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 
 const SliderHome = () => {
+    // Estado para verificar se o dispositivo é móvel
     const [isMobile, setIsMobile] = useState(false);
 
+    // Efeito para atualizar o estado `isMobile` com base na largura da janela
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 640);
         };
-        handleResize();
-        window.addEventListener("resize", handleResize);
+        handleResize(); // Verifica inicialmente
+        window.addEventListener("resize", handleResize); // Adiciona evento de redimensionamento
         return () => {
-            window.removeEventListener("resize", handleResize);
+            window.removeEventListener("resize", handleResize); // Limpa o evento no desmontar
         };
     }, []);
 
-    const swiperModules = isMobile ? [] : [Keyboard, Mousewheel, Pagination, EffectFade];
+    // Módulos do Swiper baseados no estado `isMobile`
+    const swiperModules = isMobile
+        ? [] // Sem módulos para mobile
+        : [Keyboard, Mousewheel, Pagination, EffectFade]; // Módulos para desktop
 
+    // Propriedades do Swiper baseadas no estado `isMobile`
     const swiperProps = isMobile
-        ? {} // Sem efeito e funcionalidades do Swiper para mobile
-        : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true };
+        ? {} // Sem efeitos para mobile
+        : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true }; // Efeito de fade para desktop
 
+    // Função para renderizar slides de forma estática (para mobile)
     const renderSlides = () => (
         <>
             <div className="text-white h-screen flex justify-center items-center text-center">
@@ -110,6 +117,7 @@ const SliderHome = () => {
                     }}
                 >
                     <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+
                     <video
                         autoPlay
                         loop
@@ -155,8 +163,10 @@ const SliderHome = () => {
     return (
         <>
             {isMobile ? (
+                // Renderização estática para mobile
                 <div className="w-full h-screen overflow-auto">{renderSlides()}</div>
             ) : (
+                // Usando Swiper para desktop
                 <Swiper
                     direction={"vertical"}
                     spaceBetween={0}
