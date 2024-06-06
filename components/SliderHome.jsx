@@ -69,11 +69,6 @@ const SliderHome = () => {
       {...swiperProps}
       className="w-full h-screen"
       slidesPerView={1}
-      breakpoints={{
-        640: {
-          slidesPerView: 1,
-        },
-      }}
     >
       {/* Home */}
       <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
