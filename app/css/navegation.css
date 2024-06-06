@@ -1,6 +1,19 @@
-.swiper-button-next {
+.swiper-vertical .swiper-button-prev,
+.swiper-vertical .swiper-button-next {
   color: #fff;
+  transform: rotate(90deg);
+  left: 90%;
+  transform-origin: left center;
+  padding: 5%;
+  border: 1px solid;
+  border-radius: 100%;
 }
-.swiper-button-prev {
-  color: #fff;
+
+.swiper-vertical .swiper-button-prev {
+  top: 44%;
+  bottom: auto;
+}
+.swiper-vertical .swiper-button-next {
+  top: auto;
+  bottom: 44%;
 }
