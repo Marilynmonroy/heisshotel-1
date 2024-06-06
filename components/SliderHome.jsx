@@ -54,7 +54,7 @@ const SliderHome = () => {
         effect: "slide",
         fadeEffect: { crossFade: false },
         mousewheel: true,
-        FreeMode: true,
+        FreeMode: { enabled: true },
       } // Efeito de slide para mobile
     : {
         effect: "fade",
