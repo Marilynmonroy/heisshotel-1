@@ -48,7 +48,7 @@ const SliderHabitaciones = () => {
         <div className="relative w-full h-full">
           <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
           <Image
-            src="/images/Habitacion_L_Balcón.gif"
+            src="/images/Habitacion_L_Balcón.webp"
             alt="Habitación Small"
             layout="fill"
             objectFit="cover"
@@ -69,7 +69,7 @@ const SliderHabitaciones = () => {
         <div className="relative w-full h-full">
           <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
           <Image
-            src="/images/habitacionSection.gif"
+            src="/images/habitacionSection.webp"
             alt="Habitación Small"
             layout="fill"
             objectFit="cover"
