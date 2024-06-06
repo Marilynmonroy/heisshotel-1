@@ -19,7 +19,6 @@ import {
   EffectFade,
   Keyboard,
   FreeMode,
-  Scrollbar,
 } from "swiper/modules";
 import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
@@ -46,8 +45,8 @@ const SliderHome = () => {
 
   // Configura os módulos do swiper
   const swiperModules = isMobile
-    ? [Keyboard, Pagination, Scrollbar]
-    : [Keyboard, Mousewheel, Pagination, EffectFade, Scrollbar];
+    ? [Keyboard, Pagination, FreeMode]
+    : [Keyboard, Mousewheel, Pagination, EffectFade];
 
   // Configura as propriedades do swiper
   const swiperProps = isMobile
@@ -55,7 +54,7 @@ const SliderHome = () => {
         effect: "slide",
         fadeEffect: { crossFade: false },
         mousewheel: true,
-        scrollbar: { enable: false, hide: false },
+        FreeMode: true,
       } // Efeito de slide para mobile
     : {
         effect: "fade",
