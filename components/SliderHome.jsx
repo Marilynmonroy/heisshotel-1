@@ -46,13 +46,22 @@ const SliderHome = () => {
 
   // Configura os módulos do swiper
   const swiperModules = isMobile
-    ? [Keyboard, Pagination]
-    : [Keyboard, Mousewheel, Pagination, EffectFade];
+    ? [Keyboard, Pagination, Scrollbar]
+    : [Keyboard, Mousewheel, Pagination, EffectFade, Scrollbar];
 
   // Configura as propriedades do swiper
   const swiperProps = isMobile
-    ? { effect: "slide", fadeEffect: { crossFade: false }, mousewheel: true } // Efeito de slide para mobile
-    : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true }; // Efeito de fade para desktop
+    ? {
+        effect: "slide",
+        fadeEffect: { crossFade: false },
+        mousewheel: true,
+        scrollbar: { enable: false, hide: false },
+      } // Efeito de slide para mobile
+    : {
+        effect: "fade",
+        fadeEffect: { crossFade: true },
+        mousewheel: true,
+      }; // Efeito de fade para desktop
 
   return (
     <Swiper
@@ -68,12 +77,6 @@ const SliderHome = () => {
       modules={swiperModules}
       {...swiperProps}
       className="w-full h-screen"
-      slidesPerView={1}
-      breakpoints={{
-        640: {
-          slidesPerView: "auto",
-        },
-      }}
     >
       {/* Home */}
       <SwiperSlide className="text-white h-screen flex justify-center items-center text-center">
