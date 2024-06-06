@@ -45,16 +45,15 @@ const SliderHome = () => {
 
   // Configura os módulos do swiper
   const swiperModules = isMobile
-    ? [Keyboard, Pagination, FreeMode]
+    ? [Keyboard, Pagination]
     : [Keyboard, Mousewheel, Pagination, EffectFade];
 
   // Configura as propriedades do swiper
   const swiperProps = isMobile
     ? {
-        effect: "slide",
+        effect: "scroll",
         fadeEffect: { crossFade: true },
         mousewheel: true,
-        FreeMode: { enabled: true },
       } // Efeito de slide para mobile
     : {
         effect: "fade",
