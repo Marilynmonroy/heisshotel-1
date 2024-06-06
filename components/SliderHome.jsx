@@ -52,7 +52,7 @@ const SliderHome = () => {
   const swiperProps = isMobile
     ? {
         effect: "slide",
-        fadeEffect: { crossFade: false },
+        fadeEffect: { crossFade: true },
         mousewheel: true,
         FreeMode: { enabled: true },
       } // Efeito de slide para mobile
