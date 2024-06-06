@@ -156,9 +156,6 @@ const SliderHabMedium = () => {
               relajante y funcional. Esta habitación combina comodidad interior
               con un espacio exterior privado. ¡Reserva ahora y disfruta de una
               experiencia completa en nuestra Habitación Superior con Balcón!
-              <br />
-              ¡Reserva ahora y disfruta de una experiencia completa en nuestra
-              Habitación Superior con Balcón!
             </p>
           </div>
 
