@@ -37,7 +37,6 @@ const SliderHabLarge = () => {
           objectFit="cover"
           priority
           placeholder="blur"
-          blurDataURL="/images/habitacionLarge/largeprincipal-blur.webp" // Ruta de una imagen pequeña y borrosa
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
@@ -66,13 +65,12 @@ const SliderHabLarge = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largecarrousel1.gif"
+              src="/images/habitacionLarge/largecarrousel1.webp"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
               priority
               placeholder="blur"
-              blurDataURL="/images/habitacionLarge/largecarrousel1-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -84,7 +82,6 @@ const SliderHabLarge = () => {
               objectFit="cover"
               priority
               placeholder="blur"
-              blurDataURL="/images/habitacionLarge/largecarrousel2-blur.webp" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -96,7 +93,6 @@ const SliderHabLarge = () => {
               objectFit="cover"
               priority
               placeholder="blur"
-              blurDataURL="/images/habitacionLarge/largecarrousel3-blur.webp" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
         </Swiper>
@@ -119,37 +115,34 @@ const SliderHabLarge = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largedetalles.gif"
+              src="/images/habitacionLarge/largedetalles.webp"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
               priority
               placeholder="blur"
-              blurDataURL="/images/habitacionLarge/largedetalles-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largedetalles2.gif"
+              src="/images/habitacionLarge/largedetalles2.webp"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
               priority
               placeholder="blur"
-              blurDataURL="/images/habitacionLarge/largedetalles2-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
           <SwiperSlide>
             <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
             <Image
-              src="/images/habitacionLarge/largedetalles3.gif"
+              src="/images/habitacionLarge/largedetalles3.webp"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
               priority
               placeholder="blur"
-              blurDataURL="/images/habitacionLarge/largedetalles3-blur.gif" // Ruta de una imagen pequeña y borrosa
             />
           </SwiperSlide>
         </Swiper>
