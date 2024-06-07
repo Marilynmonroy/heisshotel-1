@@ -9,6 +9,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css";
+import 'photoswipe/dist/photoswipe.css';
 import Image from "next/image";
 import { CalendarWidget } from "../CalendarWidget";
 import { Button } from "../ui/button";
@@ -24,8 +25,15 @@ import {
   Navigation,
 } from "swiper/modules";
 import Link from "next/link";
+import { Gallery, Item } from "react-photoswipe-gallery";
 
 const SliderHabMedium = () => {
+  const galleryImages = [
+    "/images/habitacionMedium/mediumdetalles1.webp",
+    "/images/habitacionMedium/mediumdetalles2.webp",
+    "/images/habitacionMedium/mediumdetalles3.webp",
+  ];
+
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-screen">
@@ -36,7 +44,7 @@ const SliderHabMedium = () => {
           layout="fill"
           objectFit="cover"
           priority
-          placeholder="blur"
+          /* placeholder="blur" */
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
@@ -70,7 +78,7 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
-              placeholder="blur"
+              /* placeholder="blur" */
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -81,7 +89,7 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
-              placeholder="blur"
+              /* placeholder="blur" */
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -92,61 +100,54 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
-              placeholder="blur"
+              /* placeholder="blur" */
             />
           </SwiperSlide>
         </Swiper>
       </div>
 
       {/* carrousel 2 */}
-      <div className="text-white text-center flex items-center w-full">
-        <Swiper
-          slidesPerView={1}
-          className="w-[55%] h-screen"
-          pagination={{
-            clickable: true,
-            bulletActiveClass: "swiper-pagination-bullet-active",
-            bulletClass: "swiper-pagination-bullet",
-            modifierClass: "swiper-pagination",
-          }}
-          modules={[Pagination]}
-          lazy={true} // Lazy loading
-        >
-          <SwiperSlide>
-            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
-            <Image
-              src="/images/habitacionMedium/mediumdetalles1.webp"
-              alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              priority
-              placeholder="blur"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
-            <Image
-              src="/images/habitacionMedium/mediumdetalles2.webp"
-              alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              priority
-              placeholder="blur"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
-            <Image
-              src="/images/habitacionMedium/mediumdetalles3.webp"
-              alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              priority
-              placeholder="blur"
-            />
-          </SwiperSlide>
-        </Swiper>
-        <div className="flex flex-col w-[45%] gap-10 h-full p-8 md:p-16 items-end justify-end text-right">
+      <div className="text-white text-center flex flex-col md:flex-row items-center w-full">
+        <Gallery>  
+          <Swiper
+            slidesPerView={1}
+            className="w-[100%] md:w-[55%] h-screen"
+            pagination={{
+              clickable: true,
+              bulletActiveClass: "swiper-pagination-bullet-active",
+              bulletClass: "swiper-pagination-bullet",
+              modifierClass: "swiper-pagination",
+            }}
+            modules={[Pagination, Navigation]}
+            lazy={true} // Lazy loading
+          >
+            {galleryImages.map((image) => (
+              <SwiperSlide key={image}>
+                <Item
+                  original={image}
+                  thumbnail={image}
+                  width="8250"
+                  height="5500"
+                >
+                  {({ ref, open }) => (
+                    <div ref={ref} onClick={open} role="button">
+                      <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+                      <Image
+                        src={image}
+                        alt="Piscina Image"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                        /* placeholder="blur" */
+                      />
+                    </div>
+                  )}
+                </Item>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Gallery>
+        <div className="flex flex-col md:w-[45%] gap-10 h-full p-8 pb-32 md:p-16 md:w-[45%] items-end justify-end text-right">
           {/* ICONOS */}
           <div className="">
             <h2 className="h5 py-8">SUPERIOR</h2>
