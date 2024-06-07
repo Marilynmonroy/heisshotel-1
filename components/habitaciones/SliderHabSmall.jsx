@@ -116,7 +116,7 @@ const SliderHabSmall = () => {
         <Gallery>  
           <Swiper
             slidesPerView={1}
-            className="w-[100%] md:w-[55%] h-screen"
+            className="w-[100%] md:w-[55%] h-[50vh] md:h-screen"
             pagination={{
               clickable: true,
               bulletActiveClass: "swiper-pagination-bullet-active",
