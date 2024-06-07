@@ -69,7 +69,7 @@ const SliderHabSmall = () => {
       <div className="text-white h-3/4 text-center flex items-center w-full">
         <Swiper
           slidesPerView={1}
-          className="w-[100%] md:w-[55%] h-[50vh] md:h-screen"
+          className="w-full h-[70%]"
           pagination={{
             clickable: true,
             bulletActiveClass: "swiper-pagination-bullet-active",
