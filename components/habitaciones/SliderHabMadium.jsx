@@ -10,6 +10,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css";
 import 'photoswipe/dist/photoswipe.css';
+import "./navigation.css"
 import Image from "next/image";
 import { CalendarWidget } from "../CalendarWidget";
 import { Button } from "../ui/button";
@@ -29,9 +30,17 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 
 const SliderHabMedium = () => {
   const galleryImages = [
-    "/images/habitacionMedium/mediumdetalles1.webp",
-    "/images/habitacionMedium/mediumdetalles2.webp",
-    "/images/habitacionMedium/mediumdetalles3.webp",
+    "/images/habitacionMedium/all/superior_1.jpg",
+    "/images/habitacionMedium/all/superior_2.jpg",
+    "/images/habitacionMedium/all/superior_3.jpg",
+    "/images/habitacionMedium/all/superior_4.jpg",
+    "/images/habitacionMedium/all/superior_5.jpg",
+    "/images/habitacionMedium/all/superior_6.jpg",
+    "/images/habitacionMedium/all/superior_7.jpg",
+    "/images/habitacionMedium/all/superior_8.jpg",
+    "/images/habitacionMedium/all/superior_9.jpg",
+    "/images/habitacionMedium/all/superior_10.jpg",
+    "/images/habitacionMedium/all/superior_11.jpg",
   ];
 
   return (
@@ -44,7 +53,6 @@ const SliderHabMedium = () => {
           layout="fill"
           objectFit="cover"
           priority
-          /* placeholder="blur" */
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
@@ -67,7 +75,7 @@ const SliderHabMedium = () => {
             bulletClass: "swiper-pagination-bullet",
             modifierClass: "swiper-pagination",
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           lazy={true} // Lazy loading
         >
           <SwiperSlide>
@@ -78,7 +86,6 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
-              /* placeholder="blur" */
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -89,7 +96,6 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
-              /* placeholder="blur" */
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -100,7 +106,6 @@ const SliderHabMedium = () => {
               layout="fill"
               objectFit="cover"
               priority
-              /* placeholder="blur" */
             />
           </SwiperSlide>
         </Swiper>
@@ -111,7 +116,7 @@ const SliderHabMedium = () => {
         <Gallery>  
           <Swiper
             slidesPerView={1}
-            className="w-[100%] md:w-[55%] h-screen"
+            className="w-[100%] md:w-[55%] h-[50vh] md:h-screen"
             pagination={{
               clickable: true,
               bulletActiveClass: "swiper-pagination-bullet-active",
@@ -119,6 +124,7 @@ const SliderHabMedium = () => {
               modifierClass: "swiper-pagination",
             }}
             modules={[Pagination, Navigation]}
+            navigation
             lazy={true} // Lazy loading
           >
             {galleryImages.map((image) => (
@@ -126,8 +132,8 @@ const SliderHabMedium = () => {
                 <Item
                   original={image}
                   thumbnail={image}
-                  width="8250"
-                  height="5500"
+                  width="1621"
+                  height="1081"
                 >
                   {({ ref, open }) => (
                     <div ref={ref} onClick={open} role="button">
@@ -137,8 +143,7 @@ const SliderHabMedium = () => {
                         alt="Piscina Image"
                         layout="fill"
                         objectFit="cover"
-                        priority
-                        /* placeholder="blur" */
+                        loading="lazy"
                       />
                     </div>
                   )}

@@ -10,6 +10,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css";
 import 'photoswipe/dist/photoswipe.css';
+import "./navigation.css"
 import Image from "next/image";
 import { CalendarWidget } from "../CalendarWidget";
 import { Button } from "../ui/button";
@@ -29,9 +30,18 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 
 const SliderHabSmall = () => {
   const galleryImages = [
-    "/images/habitacionSmall/smalldetalles.webp",
-    "/images/habitacionSmall/smalldetalles2.webp",
-    "/images/habitacionSmall/smalldetalles3.webp",
+    "/images/habitacionSmall/all/estandar_1.jpg",
+    "/images/habitacionSmall/all/estandar_2.jpg",
+    "/images/habitacionSmall/all/estandar_3.jpg",
+    "/images/habitacionSmall/all/estandar_4.jpg",
+    "/images/habitacionSmall/all/estandar_5.jpg",
+    "/images/habitacionSmall/all/estandar_6.jpg",
+    "/images/habitacionSmall/all/estandar_7.jpg",
+    "/images/habitacionSmall/all/estandar_8.jpg",
+    "/images/habitacionSmall/all/estandar_9.jpg",
+    "/images/habitacionSmall/all/estandar_10.jpg",
+    "/images/habitacionSmall/all/estandar_11.jpg",
+    "/images/habitacionSmall/all/estandar_12.jpg",
   ];
 
   return (
@@ -59,14 +69,14 @@ const SliderHabSmall = () => {
       <div className="text-white h-3/4 text-center flex items-center w-full">
         <Swiper
           slidesPerView={1}
-          className="w-full h-[70%]"
+          className="w-[100%] md:w-[55%] h-[50vh] md:h-screen"
           pagination={{
             clickable: true,
             bulletActiveClass: "swiper-pagination-bullet-active",
             bulletClass: "swiper-pagination-bullet",
             modifierClass: "swiper-pagination",
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
         >
           <SwiperSlide>
             <div className="relative inset-0 bg-black opacity-25 z-10"></div>
@@ -114,6 +124,7 @@ const SliderHabSmall = () => {
               modifierClass: "swiper-pagination",
             }}
             modules={[Pagination, Navigation]}
+            navigation
             lazy={true} // Lazy loading
           >
             {galleryImages.map((image) => (
@@ -121,8 +132,8 @@ const SliderHabSmall = () => {
                 <Item
                   original={image}
                   thumbnail={image}
-                  width="8250"
-                  height="5500"
+                  width="1621"
+                  height="1081"
                 >
                   {({ ref, open }) => (
                     <div ref={ref} onClick={open} role="button">
@@ -132,8 +143,8 @@ const SliderHabSmall = () => {
                         alt="Piscina Image"
                         layout="fill"
                         objectFit="cover"
-                        priority
-                        /* placeholder="blur" */
+                        loading="lazy"
+                        
                       />
                     </div>
                   )}

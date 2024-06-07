@@ -1,0 +1,17 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+.swiper-button-prev {
+  left: 2rem;
+  @media (min-width: 768px) { 
+    left: 10rem;
+  }
+}
+
+.swiper-button-next {
+  right: 2rem;
+  @media (min-width: 768px) { 
+    right: 4rem;
+  }
+}
