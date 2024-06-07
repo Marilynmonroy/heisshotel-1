@@ -33,7 +33,6 @@ const SliderHabSmall = () => {
     "/images/habitacionSmall/all/estandar_1.jpg",
     "/images/habitacionSmall/all/estandar_2.jpg",
     "/images/habitacionSmall/all/estandar_3.jpg",
-    "/images/habitacionSmall/all/estandar_4.jpg",
     "/images/habitacionSmall/all/estandar_5.jpg",
     "/images/habitacionSmall/all/estandar_6.jpg",
     "/images/habitacionSmall/all/estandar_7.jpg",
