@@ -92,15 +92,15 @@ const SliderHome = () => {
                 <Link href="/habitaciones">HABITACIONES</Link>
               </Button>
             </div>
-            <div className="flex justify-center gap-4">
-              <Button variant="destructive" size="sm" asChild>
-                <Link href="/habitaciones/habitacionSmall">E</Link>
+            <div className="flex flex-col md:flex-row justify-center gap-4 max-w-max mx-auto">
+              <Button variant="destructive" size="lg" asChild>
+                <Link href="/habitaciones/habitacionSmall">ESTÁNDAR</Link>
               </Button>
-              <Button variant="destructive" size="sm" asChild>
-                <Link href="/habitaciones/habitacionMedium">S</Link>
+              <Button variant="destructive" size="lg" asChild>
+                <Link href="/habitaciones/habitacionMedium">SUPERIOR</Link>
               </Button>
-              <Button variant="destructive" size="sm" asChild>
-                <Link href="/habitaciones/habitacionLarge">J</Link>
+              <Button variant="destructive" size="lg" asChild>
+                <Link href="/habitaciones/habitacionLarge">SUITE</Link>
               </Button>
             </div>
           </div>
