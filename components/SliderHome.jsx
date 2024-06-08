@@ -55,7 +55,7 @@ const SliderHome = () => {
     <>
       <div className="text-white h-screen flex justify-center items-center text-center">
         <div className="relative w-full h-full ">
-          <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+          <div className="absolute inset-0 p-1 bg-black opacity-20 z-10"></div>
           <Image
             src="/images/Fachada_Heiss_R3.webp"
             alt="Fachada Heiss"
