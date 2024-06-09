@@ -1,12 +1,12 @@
 "use client";
-import "/app/css/paginationhorizontal.css";
-import "/app/css/navigationhorizontal.css";
 import { IoMdSearch } from "react-icons/io";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import "swiper/css/zoom";
+import "/app/css/paginationhorizontal.css";
+import "/app/css/navigationhorizontal.css";
 import "swiper/css";
+import "swiper/css/zoom";
 import Modal from "../Modal";
 import Image from "next/image";
 import { CalendarWidget } from "../CalendarWidget";
@@ -53,6 +53,7 @@ const SliderHabLarge = () => {
       {/* carrousel 1 */}
       <div className="text-white h-3/4 text-center md:flex items-center w-full hidden md:visible">
         <Swiper
+          id="carrousel"
           className="w-full"
           navigation={true}
           cssMode={true}
@@ -98,6 +99,7 @@ const SliderHabLarge = () => {
       {/* carrousel 2 */}
       <div className="text-white text-center flex items-center flex-col-reverse md:flex-row w-full">
         <Swiper
+          id="carrousel"
           className="md:w-[55%] w-full h-[50vh] md:h-screen"
           navigation={true}
           zoom={true}
@@ -145,6 +147,7 @@ const SliderHabLarge = () => {
         {modalOpen && (
           <Modal onClose={closeModal}>
             <Swiper
+              id="carrousel"
               className="w-full h-full flex flex-col md:flex-row"
               navigation={true}
               zoom={true}
@@ -198,7 +201,7 @@ const SliderHabLarge = () => {
             </Swiper>
           </Modal>
         )}
-        <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
+        <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full md:py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
             <h2 className="h5 py-8">JUNIOR SUITE</h2>
             <p className="p-light-16 md:pl-12">

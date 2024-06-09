@@ -1,11 +1,11 @@
-.swiper-button-prev,
-.swiper-button-next {
+#carousel-1 .swiper-button-prev,
+#carousel-1 .swiper-button-next {
   padding: 5%;
   color: white;
 }
 
 @media (max-width: 768px) {
-  .swiper-button-prev {
+  #carousel-1 .swiper-button-prev {
     width: 5px;
     height: 5px;
   }
