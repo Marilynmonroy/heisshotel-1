@@ -12,8 +12,8 @@ import { Button } from "../ui/button";
 import { register } from "swiper/element/bundle";
 register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
-import "/app/css/paginationhorizontal.css";
 import "/app/css/navigationhorizontal.css";
+import "/app/css/paginationhorizontal.css";
 import Link from "next/link";
 
 const SliderHabSmall = () => {
