@@ -61,7 +61,7 @@ const SliderHabSmall = () => {
             clickable: true,
             bulletActiveClass: "swiper-pagination-bullet-active",
             bulletClass: "swiper-pagination-bullet",
-            modifierClass: "swiper-pagination",
+            modifierClass: "swiper-pagination-horizontal",
           }}
           modules={[Navigation, Pagination]}
         >
