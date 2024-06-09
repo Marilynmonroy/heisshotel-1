@@ -44,7 +44,7 @@ const SliderHabMedium = () => {
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
             HOTEL HEISS MEDELLÍN
           </span>
-          <h2 className="h3">MEDIUM</h2>
+          <h2 className="h3">SUPERIOR</h2>
           <div className="mt-5">
             <CalendarWidget />
           </div>
