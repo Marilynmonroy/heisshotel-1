@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Drawer, DrawerTrigger, DrawerContent, DrawerClose } from "@/components/ui/drawer";
+import {
+  Drawer,
+  DrawerTrigger,
+  DrawerContent,
+  DrawerClose,
+} from "@/components/ui/drawer";
 
 const SliderHabitaciones = () => {
   return (
@@ -31,7 +36,9 @@ const SliderHabitaciones = () => {
                 </DrawerTrigger>
                 <DrawerContent>
                   <section className="md:flex md:grid-col-3 bg-black text-white gap-4 py-8 md:px-12 md:py-8 lg:py-10 lg:px-16 xl:py-12 xl:px-32 justify-center lg:justify-between items-end relative">
-                    <DrawerClose className="absolute top-8 right-8 text-2xl">X</DrawerClose>
+                    <DrawerClose className="absolute top-8 right-8 text-2xl">
+                      X
+                    </DrawerClose>
                     <div className="flex px-8 md:px-5 col-span-2 gap-5 md:gap-9 lg:gap-10 xl:gap-36 justify-center">
                       <div className="flex flex-col grid-col-2 h-40 md:gap-7 md:w-40 md:h-52 lg:w-60 lg:h-60 xl:w-72 xl:h-64 xl:gap-10 justify-between">
                         <div className="flex gap-5 lg:gap-10 items-center text-left">
@@ -120,10 +127,10 @@ const SliderHabitaciones = () => {
                 <Link href="/habitaciones/habitacionSmall">ESTÁNDAR</Link>
               </Button>
               <Button variant="destructive" size="lg" asChild>
-                <Link href="/habitaciones/habitacionMedium">SUPERIOR</Link>
+                <Link href="/habitaciones/habitacionLarge">SUITE</Link>
               </Button>
               <Button variant="destructive" size="lg" asChild>
-                <Link href="/habitaciones/habitacionLarge">SUITE</Link>
+                <Link href="/habitaciones/habitacionMedium">SUPERIOR</Link>
               </Button>
             </div>
           </div>

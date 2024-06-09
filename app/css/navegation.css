@@ -1,19 +1,28 @@
 .swiper-vertical .swiper-button-prev,
 .swiper-vertical .swiper-button-next {
-  color: #fff;
+  color: white;
   transform: rotate(90deg);
   left: 90%;
+  background-color: rgba(255, 255, 255, 0.262);
   transform-origin: left center;
   padding: 5%;
-  border: 1px solid;
-  border-radius: 100%;
+  opacity: 0;
 }
 
 .swiper-vertical .swiper-button-prev {
-  top: 44%;
+  top: 38%;
   bottom: auto;
+  border: 2px solid;
+  border-radius: 100%;
 }
 .swiper-vertical .swiper-button-next {
   top: auto;
-  bottom: 44%;
+  bottom: 46%;
+  border: 2px solid;
+  border-radius: 100%;
+}
+
+.swiper-vertical:hover .swiper-button-prev,
+.swiper-vertical:hover .swiper-button-next {
+  opacity: 1;
 }

@@ -23,6 +23,7 @@ import {
 } from "swiper/modules";
 import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
+import CardExperiencias from "./CardExperiencias";
 
 const SliderHome = () => {
   // Estado para verificar se o dispositivo é móvel
@@ -53,6 +54,7 @@ const SliderHome = () => {
   // Função para renderizar slides de forma estática (para mobile)
   const renderSlides = () => (
     <>
+      {/* Inicio */}
       <div className="text-white h-screen flex justify-center items-center text-center">
         <div className="relative w-full h-full ">
           <div className="absolute inset-0 p-1 bg-black opacity-20 z-10"></div>
@@ -64,10 +66,12 @@ const SliderHome = () => {
             priority
           />
           <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
+            <h1 className="h1">Hotel Heiss</h1>
             <CalendarWidget />
           </div>
         </div>
       </div>
+      {/* Habitaciones */}
       <div className="text-white h-screen text-center flex justify-center items-center">
         <div className="relative w-full h-full">
           <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
@@ -82,30 +86,159 @@ const SliderHome = () => {
             <div className="flex flex-col gap-3 items-center">
               <span className="p-regular-16">HEISS MEDELLÍN</span>
               <h2 className="h2">CONOCE NUESTRAS HABITACIONES</h2>
-              <p className="p-light-24 md:2/5 lg:w-3/5 xl:w-2/6">
+              <p className="p-light-24 w-3/4 md:w-2/5 lg:w-2/5 xl:w-2/5">
                 El espacio que buscabas, con las comodidades que necesitas para
                 vivir una gran experiencia.
               </p>
             </div>
             <div className="py-6">
-              <Button asChild>
+              <Button asChild variant="secondary">
                 <Link href="/habitaciones">HABITACIONES</Link>
               </Button>
             </div>
-            <div className="flex flex-col md:flex-row justify-center gap-4 max-w-max mx-auto">
+            <div className="flex flex-col pt-6 md:flex-row justify-center gap-4 max-w-max mx-auto">
               <Button variant="destructive" size="lg" asChild>
                 <Link href="/habitaciones/habitacionSmall">ESTÁNDAR</Link>
               </Button>
               <Button variant="destructive" size="lg" asChild>
-                <Link href="/habitaciones/habitacionMedium">SUPERIOR</Link>
+                <Link href="/habitaciones/habitacionLarge">SUITE</Link>
               </Button>
               <Button variant="destructive" size="lg" asChild>
-                <Link href="/habitaciones/habitacionLarge">SUITE</Link>
+                <Link href="/habitaciones/habitacionMedium">SUPERIOR</Link>
               </Button>
             </div>
           </div>
         </div>
       </div>
+      {/* Espacios */}
+      <div className="text-white h-screen text-center flex justify-center items-center">
+        {/* Para móviles  */}
+        <div className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center">
+          <div className="relative w-full h-full ">
+            <div className="absolute inset-0 p-1 bg-black opacity-25 z-10"></div>
+            <Image
+              src="/images/Zona_Comercial.webp"
+              objectFit="cover"
+              layout="fill"
+              objectPosition="center"
+              alt="Zona Comercial"
+            />
+            <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
+              <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
+                <span className="p-regular-16">HEISS MEDELLÍN</span>
+                <h2 className="h2">CAMBIA DE AMBIENTE</h2>
+                <p className="text-white p-light-24 w-3/4 md:w-2/5 lg:w-1/2 xl:w-1/2 lg:text-left lg:float-left">
+                  En Heiss Hotel, nos enorgullecemos de ofrecer una variedad de
+                  espacios excepcionales diseñados para brindar una experiencia
+                  inigualable a nuestros huéspedes. Desde nuestras elegantes
+                  habitaciones hasta nuestras instalaciones de primer nivel,
+                  cada rincón de nuestro hotel está pensado para su confort y
+                  satisfacción.
+                </p>
+              </div>
+              <div className="my-5 md:my-8">
+                <Button asChild>
+                  <Link href="/espacios">CONOCE MÁS</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Para dispositivos grandes */}
+        <div className="hidden md:relative md:grid md:grid-cols-4 gap-6 p-8 overscroll-contain w-full h-full">
+          <div className="md:flex hidden">
+            <Swiper
+              direction={"vertical"}
+              freeMode={true}
+              navigation={true}
+              spaceBetween={30}
+              slidesPerView={"auto"}
+              modules={[Navigation, FreeMode]}
+              className="w-full h-screen"
+              style={{
+                "--swiper-navigation-size": "25px",
+                "--swiper-navigation-weight": "300px",
+              }}
+            >
+              <div className="flex flex-col h-full">
+                {/* Rooftop  */}
+                <SwiperSlide style={{ height: "25rem" }}>
+                  <CardExperiencias
+                    imageUrl="/images/Terraza.webp"
+                    altText="Rooftop heiss"
+                    title="ROOFTOP"
+                    height="25rem"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{ height: "25rem" }}>
+                  <CardExperiencias
+                    imageUrl="/images/Piscina.webp"
+                    altText="Piscina heiss"
+                    title="PISCINA CON JACUZZI"
+                    height="25rem"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{ height: "25rem" }}>
+                  <CardExperiencias
+                    imageUrl="/images/Lobby.webp"
+                    altText="Lobby heiss"
+                    title="LOBBY"
+                    height="25rem"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{ height: "25rem" }}>
+                  <CardExperiencias
+                    imageUrl="/images/gimnasio.webp"
+                    altText="Gimnasio heiss"
+                    title="GIMNASIO"
+                    height="25rem"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{ height: "29rem" }}>
+                  <CardExperiencias
+                    imageUrl="/images/salademasajes.webp"
+                    altText="Sala de masajes heiss"
+                    title="SALA DE MASAJES"
+                    height="25rem"
+                  />
+                </SwiperSlide>
+              </div>
+            </Swiper>
+          </div>
+          {/* Imagen estatica */}
+          <div className="relative bg-cover w-[100%] h-[93%] bg-center md:col-span-3 rounded-3xl z-10 inset-0">
+            <Image
+              src="/images/Zona_Comercial.webp"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              className="rounded-3xl bg-black opacity-60"
+              alt="Zona comercial"
+            />
+            <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-center p-8 md:p-16 lg:text-left lg:pl-32 md:mt-36 z-20">
+              <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
+                <span className="text-white text-parrafo-regular-18">
+                  HEISS MEDELLÍN
+                </span>
+                <h2 className="text-white h2">CAMBIA DE AMBIENTE</h2>
+                <p className="text-white p-light-24 w-3/4 md:w-4/5 lg:w-4/5 xl:w-3/4 lg:text-left lg:float-left">
+                  En Heiss Hotel, nos enorgullecemos de ofrecer una variedad de
+                  espacios excepcionales diseñados para brindar una experiencia
+                  inigualable a nuestros huéspedes. Desde nuestras elegantes
+                  habitaciones hasta nuestras instalaciones de primer nivel,
+                  cada rincón de nuestro hotel está pensado para su confort y
+                  satisfacción.
+                </p>
+                <Button asChild>
+                  <Link href="/espacios">CONOCE MÁS</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Experiencias */}
       <div className="text-white h-screen text-center flex justify-center items-center">
         <div
           className="flex flex-col justify-center"
@@ -146,7 +279,7 @@ const SliderHome = () => {
             <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start ">
               <span className="p-regular-16">EXPLORA MEDELLÍN</span>
               <h2 className="h2">SUMÉRGETE EN SU AUTENTICIDAD</h2>
-              <p className="p-light-24  md:w-2/5 lg:w-3/5 xl:w-2/6 lg:text-left lg:float-left">
+              <p className="p-light-24 w-3/4 md:w-4/5 lg:w-4/5 xl:w-3/4 lg:text-left lg:float-left">
                 En Heiss Hotel, no solo te ofrecemos una estancia de lujo y
                 comodidad, sino también la oportunidad de vivir experiencias
                 turísticas únicas en la vibrante ciudad de Medellín. Nuestra
@@ -192,6 +325,7 @@ const SliderHome = () => {
           <SwiperSlide>{renderSlides().props.children[0]}</SwiperSlide>
           <SwiperSlide>{renderSlides().props.children[1]}</SwiperSlide>
           <SwiperSlide>{renderSlides().props.children[2]}</SwiperSlide>
+          <SwiperSlide>{renderSlides().props.children[3]}</SwiperSlide>
         </Swiper>
       )}
     </>
@@ -199,122 +333,3 @@ const SliderHome = () => {
 };
 
 export default SliderHome;
-
-{
-  /* Especios 
-        <SwiperSlide className="text-white h-screen text-center flex justify-center items-center bg-black">
-          {/* Para móviles 
-          <div className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center p-8">
-            <Image
-              src="/images/Zona_Comercial.webp"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              alt="Terraza"
-            />
-            <div className="text-center flex flex-col gap-5">
-              <span className="parrafo-regular-18">HEISS MEDELLÍN</span>
-              <h2 className="h5">CAMBIA DE AMBIENTE</h2>
-              <p className="parrafo-light-24">
-                El espacio que buscabas, con las comodidades que necesitas para
-                vivir una gran experiencia.
-              </p>
-              <div className="my-5">
-                <Button asChild>
-                  <Link href="/espacios">CONOCE MÁS</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Para dispositivos grandes 
-          <div className="hidden md:absolute md:grid md:grid-cols-4 gap-6 p-5 overscroll-contain">
-            <div className="md:flex hidden">
-              <Swiper
-                direction={"vertical"}
-                freeMode={true}
-                navigation={true}
-                slidesPerView={"auto"}
-                spaceBetween={150}
-                modules={[FreeMode, Navigation]}
-                injectStyles={[]}
-                className="w-full h-screen"
-              >
-                <div className="flex flex-col">
-                  <SwiperSlide style={{ height: "25rem" }}>
-                    <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
-                      <Image
-                        src="/images/Terraza.webp"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center"
-                        alt="Terraza"
-                      />
-                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-300 ease-in-out hover:opacity-100 pointer-events-auto">
-                        <h2 className="h6">ROOFTOP</h2>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ height: "25rem" }}>
-                    <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
-                      <Image
-                        src="/images/Piscina.webp"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center"
-                        alt="Terraza"
-                      />
-                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-200 ease-in-out hover:opacity-100 pointer-events-auto">
-                        <h2 className="h6">PISCINA</h2>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ height: "25rem" }}>
-                    <div className="relative bg-black rounded-3xl w-full h-[25rem] overflow-hidden transition duration-200 ease-in-out group">
-                      <Image
-                        src="/images/Fachada_Contrapicada.webp"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center"
-                        alt="Terraza"
-                      />
-                      <div className="relative inset-0 flex flex-col h-[25rem] justify-center items-center p-8 opacity-0 bg-black/65 transition-opacity duration-00 ease-in-out hover:opacity-100 pointer-events-auto">
-                        <h2 className="h6">EDIFICIO HEISS</h2>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                </div>
-              </Swiper>
-            </div>
-
-            {/* Imagen estatica 
-            <div
-              className="relative md:col-span-3 rounded-3xl flex flex-col justify-center items-center p-8 inset-0 bg-black opacity-20 z-10"
-              style={{ width: "100%", height: "95%" }}
-            >
-              <Image
-                src="/images/Zona_Comercial.webp"
-                alt="Zona Comercial"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-3xl absolute inset-0 z-0"
-              />
-              <div className="text-center p-8 md:p-16 flex flex-col lg:text-left lg:pl-32 md:mt-36 z-20">
-                <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
-                  <span className=".parrafo-regular-18">HEISS MEDELLÍN</span>
-                  <h2 className="h5">CAMBIA DE AMBIENTE</h2>
-                  <p className="parrafo-light-24 md:2/5 lg:w-1/2 xl:w-1/2 lg:text-left lg:float-left">
-                    El espacio que buscabas, con las comodidades que necesitas
-                    para vivir una gran experiencia.
-                  </p>
-                </div>
-                <div className="my-5 md:my-8">
-                  <Button asChild>
-                    <Link href="/">CONOCE MÁS</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>*/
-}
