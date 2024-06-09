@@ -22,9 +22,9 @@ import {
 import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 import CardExperiencias from "./CardExperiencias";
+import Footer from "./Footer";
 import "/app/css/pagination.css";
 import "/app/css/navegation.css";
-import Footer from "./Footer";
 
 const SliderHome = () => {
   // Estado para verificar se o dispositivo é móvel

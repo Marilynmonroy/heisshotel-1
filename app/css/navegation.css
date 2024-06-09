@@ -3,20 +3,20 @@
   color: white;
   position: absolute;
   z-index: 60; /* Asegura que las flechas estén por encima de la imagen */
-  opacity: 0;
+  opacity: 1;
   transform: rotate(90deg);
   --swiper-navigation-size: 30px;
 }
 
 /* Posiciona las flechas fuera del Swiper y sobre la imagen estática */
 .swiper-button-prev {
-  left: 5%;
+  left: 4%;
   top: 60%;
   transform: translateY(-50%) rotate(90deg);
 }
 
 .swiper-button-next {
-  left: 5%;
+  left: 4%;
   top: 70%;
   transform: translateY(-50%) rotate(90deg);
 }
