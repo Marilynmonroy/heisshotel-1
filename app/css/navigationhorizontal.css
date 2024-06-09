@@ -2,6 +2,7 @@
 .swiper-button-next {
   padding: 5%;
   color: white;
+  transform: rotate(0deg);
 }
 
 @media (max-width: 768px) {

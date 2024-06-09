@@ -3,7 +3,7 @@
   color: white;
   position: absolute;
   z-index: 60; /* Asegura que las flechas estén por encima de la imagen */
-  opacity: 1;
+  opacity: 0;
   transform: rotate(90deg);
   --swiper-navigation-size: 30px;
 }

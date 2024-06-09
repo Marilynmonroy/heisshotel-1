@@ -1,6 +1,6 @@
 "use client";
 import { IoMdSearch } from "react-icons/io";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import "swiper/css";
@@ -12,13 +12,14 @@ import { Button } from "../ui/button";
 import { register } from "swiper/element/bundle";
 register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
-import "/app/css/navigationhorizontal.css";
 import "/app/css/paginationhorizontal.css";
+import "/app/css/navigationhorizontal.css";
 import Link from "next/link";
 
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
 
   const openModal = (imageSrc) => {
     setSelectedImage(imageSrc);
@@ -29,6 +30,20 @@ const SliderHabSmall = () => {
     setSelectedImage("");
     setModalOpen(false);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-screen">
@@ -141,6 +156,37 @@ const SliderHabSmall = () => {
               }
             />
           </SwiperSlide>
+          {isMobile && (
+            <>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionSmall/smallcarrousel.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="bottom"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionSmall/smallcarrousel2.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionSmall/smallcarrousel3.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="bottom"
+                />
+              </SwiperSlide>
+            </>
+          )}
         </Swiper>
         {modalOpen && (
           <Modal onClose={closeModal}>
@@ -254,6 +300,12 @@ const SliderHabSmall = () => {
             </Link>
           </Button>
         </div>
+
+      </div>
+
+      {/* Otras habitaciones */}
+      <div>
+        
       </div>
     </section>
   );

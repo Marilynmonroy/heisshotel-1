@@ -93,7 +93,6 @@ const SliderHabLarge = () => {
       {/* carrousel 2 */}
       <div className="text-white text-center flex items-center flex-col-reverse md:flex-row w-full">
         <Swiper
-          id="carrousel"
           className="md:w-[55%] w-full h-[50vh] md:h-screen"
           navigation={true}
           zoom={true}
@@ -101,47 +100,86 @@ const SliderHabLarge = () => {
           modules={[Navigation, Zoom]}
         >
           <IoMdSearch className="absolute bottom-44 hidden sm:block  md:bottom-10 md:left-[12rem] lg:left-[16rem] xl:left-[25rem] z-50 text-[40px] opacity-9" />
-          <SwiperSlide className="md:w-[55%] w-full md:h-screen h-full">
+          <SwiperSlide>
             <Image
-              src="/images/habitacionLarge/largedetalles.webp"
+              src="/images/habitacionMedium/mediumdetalles1.webp"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
               priority
               onClick={() =>
-                openModal("/images/habitacionLarge/largedetalles.webp")
+                openModal("/images/habitacionMedium/mediumdetalles1.webp")
               }
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/habitacionLarge/largedetalles2.webp"
+              src="/images/habitacionMedium/mediumdetalles2.webp"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
               priority
               onClick={() =>
-                openModal("/images/habitacionLarge/largedetalles2.webp")
+                openModal("/images/habitacionMedium/mediumdetalles2.webp")
               }
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/habitacionLarge/largedetalles3.webp"
+              src="/images/habitacionMedium/mediumdetalles3.webp"
               alt="Piscina Image"
               layout="fill"
               objectFit="cover"
               priority
               onClick={() =>
-                openModal("/images/habitacionLarge/largedetalles3.webp")
+                openModal("/images/habitacionMedium/mediumdetalles3.webp")
               }
             />
           </SwiperSlide>
+          {isMobile && (
+            <>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionhabitacionLarge/largecarrousel.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="bottom"
+                  onClick={() =>
+                    openModal("/images/habitacionMedium/mediumcarrousel.webp")
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionhabitacionLarge/largecarrousel2.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  onClick={() =>
+                    openModal("/images/habitacionMedium/mediumcarrousel3.webp")
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionhabitacionLarge/largecarrousel3.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="bottom"
+                  onClick={() =>
+                    openModal("/images/habitacionMedium/mediumcarrousel3.webp")
+                  }
+                />
+              </SwiperSlide>
+            </>
+          )}
         </Swiper>
         {modalOpen && (
           <Modal onClose={closeModal}>
             <Swiper
-              id="carrousel"
               className="w-full h-full flex flex-col md:flex-row"
               navigation={true}
               zoom={true}
@@ -192,6 +230,52 @@ const SliderHabLarge = () => {
                   }
                 />
               </SwiperSlide>
+              {isMobile && (
+                <>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionhabitacionLarge/largecarrousel1.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="bottom"
+                      onClick={() =>
+                        openModal(
+                          "/images/habitacionhabitacionLarge/largecarrousel1.webp"
+                        )
+                      }
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionhabitacionLarge/largecarrousel2.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                      onClick={() =>
+                        openModal(
+                          "/images/habitacionhabitacionLarge/largecarrousel2.webp"
+                        )
+                      }
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionhabitacionLarge/largecarrousel3.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="bottom"
+                      onClick={() =>
+                        openModal(
+                          "/images/habitacionhabitacionLarge/largecarrousel3.webp"
+                        )
+                      }
+                    />
+                  </SwiperSlide>
+                </>
+              )}
             </Swiper>
           </Modal>
         )}

@@ -135,6 +135,46 @@ const SliderHabMedium = () => {
               }
             />
           </SwiperSlide>
+          {isMobile && (
+            <>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionhabitacionMedium/mediumcarrousel.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="bottom"
+                  onClick={() =>
+                    openModal("/images/habitacionMedium/mediumcarrousel.webp")
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionhabitacionMedium/mediumcarrousel2.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  onClick={() =>
+                    openModal("/images/habitacionMedium/mediumcarrousel2.webp")
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src="/images/habitacionhabitacionMedium/mediumcarrousel3.webp"
+                  alt="Piscina Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="bottom"
+                  onClick={() =>
+                    openModal("/images/habitacionMedium/mediumcarrousel3.webp")
+                  }
+                />
+              </SwiperSlide>
+            </>
+          )}
         </Swiper>
         {modalOpen && (
           <Modal onClose={closeModal}>
@@ -189,18 +229,66 @@ const SliderHabMedium = () => {
                   }
                 />
               </SwiperSlide>
+              {isMobile && (
+                <>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionhabitacionMedium/mediumcarrousel.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="bottom"
+                      onClick={() =>
+                        openModal(
+                          "/images/habitacionMedium/mediumcarrousel.webp"
+                        )
+                      }
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionhabitacionMedium/mediumcarrousel2.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                      onClick={() =>
+                        openModal(
+                          "/images/habitacionMedium/mediumcarrousel2.webp"
+                        )
+                      }
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionhabitacionMedium/mediumcarrousel3.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="bottom"
+                      onClick={() =>
+                        openModal(
+                          "/images/habitacionMedium/mediumcarrousel3.webp"
+                        )
+                      }
+                    />
+                  </SwiperSlide>
+                </>
+              )}
             </Swiper>
           </Modal>
         )}
         <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
-            <h2 className="h5 py-8">SUPERIOR</h2>
+            <h2 className="h5 py-8">ESTÁNDAR</h2>
             <p className="p-light-16 md:pl-12">
-              Descubre nuestra cómoda <b>Habitación Superior</b> de 20 mt2 con
-              un balcón adicional de 4.5 mt2, diseñada para ofrecer una estancia
-              relajante y funcional. Esta habitación combina comodidad interior
-              con un espacio exterior privado. ¡Reserva ahora y disfruta de una
-              experiencia completa en nuestra Habitación Superior con Balcón!
+              Bienvenido a nuestra acogedora <b>Habitación Estándar</b> de 20
+              metros cuadrados, diseñada para ofrecer confort y funcionalidad.
+              Ideal para viajeros que buscan una estancia cómoda y conveniente.
+              Aunque esta habitación no cuenta con balcón, su diseño inteligente
+              y acogedor garantiza una estancia placentera y relajante. <br />
+              ¡Reserva ahora y disfruta de una experiencia cómoda y práctica en
+              nuestra Habitación Estándar! Está habitación cuenta con:
             </p>
           </div>
           {/* ICONOS */}
