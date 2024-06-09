@@ -57,12 +57,6 @@ const SliderHabMedium = () => {
           navigation={true}
           cssMode={true}
           loop={true}
-          pagination={{
-            clickable: true,
-            bulletActiveClass: "swiper-pagination-bullet-active",
-            bulletClass: "swiper-pagination-bullet",
-            modifierClass: "swiper-pagination",
-          }}
           modules={[Navigation, Pagination]}
         >
           <SwiperSlide style={{ height: "35rem" }}>

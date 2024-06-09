@@ -66,7 +66,7 @@ const SliderHome = () => {
             priority
           />
           <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
-            <h1 className="h1">Hotel Heiss</h1>
+            <h1 className="h1">Heiss Hotel</h1>
             <CalendarWidget />
           </div>
         </div>

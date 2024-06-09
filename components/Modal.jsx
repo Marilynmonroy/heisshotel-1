@@ -20,7 +20,7 @@ const Modal = ({ children, onClose }) => {
     >
       <div
         ref={modalRef}
-        className="bg-black rounded-lg w-3/4 h-1/3 md:h-3/4 relative"
+        className="bg-black rounded-lg w-full md:w-3/4 h-1/3 md:h-3/4 relative"
       >
         <button
           className="absolute top-0 right-0 p-3 md:p-5 z-50"
