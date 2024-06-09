@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import SocialMedia from "@/components/SocialMedia";
 
 const now = localFont({
   src: [
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         <div className="relative">
           <Header />
           {children}
-          <Footer />
+          <SocialMedia />
         </div>
       </body>
     </html>

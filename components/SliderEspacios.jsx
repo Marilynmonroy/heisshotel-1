@@ -13,6 +13,7 @@ import { CalendarWidget } from "./CalendarWidget";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
 import { register } from "swiper/element/bundle";
+import Footer from "./Footer";
 register();
 import {
   Mousewheel,
@@ -259,6 +260,15 @@ const SliderComponent = () => {
           </p>
         </div>
       </div>
+      <Footer>
+        <div className="h-[30vh] w-full relative">
+          <Image
+            src={"/images/map-provisional.jpg"}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      </Footer>
     </section>
   );
 };

@@ -102,7 +102,7 @@
   }
 
   .h6 {
-    @apply text-xl md:text-[23px] lg:text-[26px] font-medium;
+    @apply text-[16px] md:text-[16px] lg:text-[22px] font-medium;
   }
 
   .p-medium-16 {
@@ -135,5 +135,14 @@
   }
   .p-light-16 {
     @apply text-xs md:text-xs lg:text-sm xl:text-xl font-light;
+  }
+  .p-light-14 {
+    @apply text-[10px] md:text-[11px] lg:text-[13px] xl:text-base font-light;
+  }
+  .p-light-12 {
+    @apply text-[8px] md:text-[9px] lg:text-[11px] xl:text-sm font-light;
+  }
+  .p-light-10 {
+    @apply text-[10px] md:text-[10px] lg:text-[10px] xl:text-xs font-light;
   }
 }

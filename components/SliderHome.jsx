@@ -24,6 +24,7 @@ import { CalendarWidget } from "./CalendarWidget";
 import CardExperiencias from "./CardExperiencias";
 import "/app/css/pagination.css";
 import "/app/css/navegation.css";
+import Footer from "./Footer";
 
 const SliderHome = () => {
   // Estado para verificar se o dispositivo é móvel
@@ -151,18 +152,20 @@ const SliderHome = () => {
             <Swiper
               direction={"vertical"}
               freeMode={true}
-              navigation={true}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
               spaceBetween={30}
               slidesPerView={"auto"}
               modules={[Navigation, FreeMode]}
               className="w-full h-screen"
               style={{
-                "--swiper-navigation-size": "25px",
-                "--swiper-navigation-weight": "300px",
+                "--swiper-navigation-size": "10px",
+                "--swiper-navigation-weight": "10px",
               }}
             >
               <div className="flex flex-col h-full">
-                {/* Rooftop  */}
                 <SwiperSlide style={{ height: "25rem" }}>
                   <CardExperiencias
                     imageUrl="/images/Terraza.webp"
@@ -206,8 +209,8 @@ const SliderHome = () => {
               </div>
             </Swiper>
           </div>
-          {/* Imagen estatica */}
-          <div className="relative bg-cover w-[100%] h-[93%] bg-center md:col-span-3 rounded-3xl z-10 inset-0">
+          {/* Imagen estática con flechas de navegación */}
+          <div className="relative bg-cover w-[100%] h-[93%] bg-center md:col-span-3 rounded-3xl z-10 inset-0 relative-image">
             <Image
               src="/images/Zona_Comercial.webp"
               layout="fill"
@@ -235,6 +238,8 @@ const SliderHome = () => {
                 </Button>
               </div>
             </div>
+            <div className="swiper-button-prev"></div>
+            <div className="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -291,6 +296,19 @@ const SliderHome = () => {
           </div>
         </div>
       </div>
+
+      {/* footer */}
+      <div>
+        <Footer>
+          <div className="h-[42vh] w-full relative">
+            <Image
+              src={"/images/map-provisional.jpg"}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </Footer>
+      </div>
     </>
   );
 
@@ -326,6 +344,7 @@ const SliderHome = () => {
           <SwiperSlide>{renderSlides().props.children[1]}</SwiperSlide>
           <SwiperSlide>{renderSlides().props.children[2]}</SwiperSlide>
           <SwiperSlide>{renderSlides().props.children[3]}</SwiperSlide>
+          <SwiperSlide>{renderSlides().props.children[4]}</SwiperSlide>
         </Swiper>
       )}
     </>
