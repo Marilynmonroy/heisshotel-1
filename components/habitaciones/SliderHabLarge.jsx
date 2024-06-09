@@ -201,7 +201,7 @@ const SliderHabLarge = () => {
             </Swiper>
           </Modal>
         )}
-        <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full md:py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
+        <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
             <h2 className="h5 py-8">JUNIOR SUITE</h2>
             <p className="p-light-16 md:pl-12">
