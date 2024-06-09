@@ -3,8 +3,6 @@ import { IoMdSearch } from "react-icons/io";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import "/app/css/paginationhorizontal.css";
-import "/app/css/navigationhorizontal.css";
 import "swiper/css";
 import "swiper/css/zoom";
 import Modal from "../Modal";
@@ -15,6 +13,8 @@ import { register } from "swiper/element/bundle";
 register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Link from "next/link";
+import "/app/css/paginationhorizontal.css";
+import "/app/css/navigationhorizontal.css";
 
 const SliderHabLarge = () => {
   const [modalOpen, setModalOpen] = useState(false);
