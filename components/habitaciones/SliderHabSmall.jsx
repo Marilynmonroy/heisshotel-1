@@ -309,7 +309,7 @@ const SliderHabSmall = () => {
           <Link href="/habitaciones/habitacionSmall">
             <div className="absolute inset-0 bg-black opacity-80 z-10">
               <Image
-                src="/images/habitacionSmall/smallCarrousel.webp"
+                src="/images/habitacionSmall/smallcarrousel.webp"
                 layout="fill"
                 objectFit="cover"
                 alt="Habitación Estándar"
@@ -342,10 +342,7 @@ const SliderHabSmall = () => {
           </Link>
         </div>
         <div className="w-1/3 h-full relative">
-          <Link
-            href="/habitaciones/habitacionMedium
-          "
-          >
+          <Link href="/habitaciones/habitacionMedium">
             <div className="absolute inset-0 bg-black opacity-80 z-10">
               <Image
                 src="/images/habitacionMedium/mediumcarrousel2.webp"
