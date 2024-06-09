@@ -4,8 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
-import "/app/css/pagination.css";
-import "/app/css/navegation.css";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
 import "swiper/css";
@@ -24,6 +22,8 @@ import {
 import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 import CardExperiencias from "./CardExperiencias";
+import "/app/css/pagination.css";
+import "/app/css/navegation.css";
 
 const SliderHome = () => {
   // Estado para verificar se o dispositivo é móvel
