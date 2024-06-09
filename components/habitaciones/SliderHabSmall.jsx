@@ -13,9 +13,9 @@ import { register } from "swiper/element/bundle";
 register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Footer from "../Footer";
-import "/app/css/navigationhorizontal.css";
-import "/app/css/paginationhorizontal.css";
 import Link from "next/link";
+import "/app/css/paginationhorizontal.css";
+import "/app/css/navigationhorizontal.css";
 
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -71,7 +71,6 @@ const SliderHabSmall = () => {
         <Swiper
           className="w-full"
           navigation={true}
-          cssMode={true}
           loop={true}
           pagination={{
             clickable: true,

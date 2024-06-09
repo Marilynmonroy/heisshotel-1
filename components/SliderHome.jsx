@@ -112,7 +112,7 @@ const SliderHome = () => {
         </div>
       </div>
       {/* Espacios */}
-      <div className="text-white h-screen text-center flex justify-center items-center">
+      <div className="text-white h-screen text-center flex justify-center items-center sliderHome">
         {/* Para móviles  */}
         <div className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center">
           <div className="relative w-full h-full ">
@@ -153,8 +153,8 @@ const SliderHome = () => {
               direction={"vertical"}
               freeMode={true}
               navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next-vertical",
+                prevEl: ".swiper-button-prev-vertical",
               }}
               spaceBetween={30}
               slidesPerView={"auto"}
