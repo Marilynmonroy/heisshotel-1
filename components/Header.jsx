@@ -55,13 +55,16 @@ function Header() {
             </div>
             <ul className="flex flex-col gap-6 font-medium text-xl text-white md:text-2xl">
               <li onClick={handleMenuOptionClick}>
-                <Link href="/">HOME</Link>
+                <Link href="/">INICIO</Link>
               </li>
               <li onClick={handleMenuOptionClick}>
                 <Link href="/habitaciones">HABITACIONES</Link>
               </li>
               <li onClick={handleMenuOptionClick} className="block">
                 <Link href="/espacios">ESPACIOS</Link>
+              </li>
+              <li onClick={handleMenuOptionClick} className="block">
+                <Link href="/contacto">CONTACTO</Link>
               </li>
             </ul>
           </SheetContent>
