@@ -1,12 +1,12 @@
 "use client";
+import "/app/css/paginationhorizontal.css";
+import "/app/css/navigationhorizontal.css";
 import { IoMdSearch } from "react-icons/io";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import "/app/css/paginationhorizontal.css";
-import "/app/css/navigationhorizontal.css";
-import "swiper/css";
 import "swiper/css/zoom";
+import "swiper/css";
 import Modal from "../Modal";
 import Image from "next/image";
 import { CalendarWidget } from "../CalendarWidget";
