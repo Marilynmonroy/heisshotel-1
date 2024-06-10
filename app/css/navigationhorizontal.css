@@ -1,12 +1,12 @@
-.swiper-button-prev,
-.swiper-button-next {
-  padding: 5%;
+.horizontal .swiper-button-prev,
+.horizontal .swiper-button-next {
   color: white;
+  padding: 5%;
   transform: rotate(0deg);
 }
 
 @media (max-width: 768px) {
-  .swiper-button-prev {
+  .horizontal .swiper-button-prev {
     width: 5px;
     height: 5px;
   }

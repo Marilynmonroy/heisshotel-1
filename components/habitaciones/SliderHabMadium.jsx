@@ -68,7 +68,7 @@ const SliderHabMedium = () => {
         </div>
       </div>
       {/* carrousel 1 */}
-      <div className="text-white h-3/4 text-center md:flex items-center w-full hidden md:visible">
+      <div className="text-white h-3/4 text-center md:flex items-center w-full hidden md:visible horizontal">
         <Swiper
           className="w-full"
           navigation={true}
@@ -107,7 +107,7 @@ const SliderHabMedium = () => {
       </div>
 
       {/* carrousel 2 */}
-      <div className="text-white text-center flex items-center flex-col-reverse md:flex-row w-full">
+      <div className="text-white text-center flex items-center flex-col-reverse md:flex-row w-full horizontal">
         <Swiper
           className="md:w-[55%] w-full h-[50vh] md:h-screen"
           navigation={true}
@@ -196,7 +196,7 @@ const SliderHabMedium = () => {
         {modalOpen && (
           <Modal onClose={closeModal}>
             <Swiper
-              className="w-full h-full flex flex-col md:flex-row"
+              className="w-full h-full flex flex-col md:flex-row horizontal"
               navigation={true}
               zoom={true}
               loop={true}
