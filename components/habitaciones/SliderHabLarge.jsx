@@ -16,6 +16,7 @@ import Link from "next/link";
 import Footer from "../Footer";
 import "/app/css/paginationhorizontal.css";
 import "/app/css/navigationhorizontal.css";
+import CardsHabitaciones from "../CardsHabitaciones";
 
 const SliderHabLarge = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -78,7 +79,7 @@ const SliderHabLarge = () => {
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionLarge/largecarrousel1.webp"
-              alt="Piscina Image"
+              alt="Cama Junior Suite"
               layout="fill"
               objectFit="cover"
               objectPosition="bottom"
@@ -87,7 +88,7 @@ const SliderHabLarge = () => {
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionLarge/largecarrousel2.webp"
-              alt="Piscina Image"
+              alt="Cocina Junior Suite"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
@@ -96,7 +97,7 @@ const SliderHabLarge = () => {
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionLarge/largecarrousel3.webp"
-              alt="Piscina Image"
+              alt="Centro Junior Suite"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
@@ -117,37 +118,37 @@ const SliderHabLarge = () => {
           <IoMdSearch className="absolute bottom-44 hidden sm:block  md:bottom-10 md:left-[12rem] lg:left-[16rem] xl:left-[25rem] z-50 text-[40px] opacity-9" />
           <SwiperSlide>
             <Image
-              src="/images/habitacionMedium/mediumdetalles1.webp"
-              alt="Piscina Image"
+              src="/images/habitacionLarge/largedetalles.webp"
+              alt="Mesa Junior Suite"
               layout="fill"
               objectFit="cover"
               priority
               onClick={() =>
-                openModal("/images/habitacionMedium/mediumdetalles1.webp")
+                openModal("/images/habitacionLarge/largedetalles.webp")
               }
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/habitacionMedium/mediumdetalles2.webp"
-              alt="Piscina Image"
+              src="/images/habitacionLarge/largedetalles2.webp"
+              alt="Detalle Junior Suite"
               layout="fill"
               objectFit="cover"
               priority
               onClick={() =>
-                openModal("/images/habitacionMedium/mediumdetalles2.webp")
+                openModal("/images/habitacionLarge/largedetalles2.webp")
               }
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
-              src="/images/habitacionMedium/mediumdetalles3.webp"
-              alt="Piscina Image"
+              src="/images/habitacionLarge/largedetalles3.webp"
+              alt="Sofa Junior Suite"
               layout="fill"
               objectFit="cover"
               priority
               onClick={() =>
-                openModal("/images/habitacionMedium/mediumdetalles3.webp")
+                openModal("/images/habitacionLarge/largedetalles3.webp")
               }
             />
           </SwiperSlide>
@@ -155,20 +156,20 @@ const SliderHabLarge = () => {
             <>
               <SwiperSlide>
                 <Image
-                  src="/images/habitacionLarge/largecarrousel.webp"
-                  alt="Piscina Image"
+                  src="/images/habitacionLarge/largecarrousel1.webp"
+                  alt="Cama Junior Suite"
                   layout="fill"
                   objectFit="cover"
                   objectPosition="bottom"
                   onClick={() =>
-                    openModal("/images/habitacionLarge/largecarrousel.webp")
+                    openModal("/images/habitacionLarge/largecarrousel1.webp")
                   }
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
                   src="/images/habitacionLarge/largecarrousel2.webp"
-                  alt="Piscina Image"
+                  alt="Cocina Junior Suite"
                   layout="fill"
                   objectFit="cover"
                   objectPosition="center"
@@ -180,7 +181,7 @@ const SliderHabLarge = () => {
               <SwiperSlide>
                 <Image
                   src="/images/habitacionLarge/largecarrousel3.webp"
-                  alt="Piscina Image"
+                  alt="Centro Junior Suite"
                   layout="fill"
                   objectFit="cover"
                   objectPosition="bottom"
@@ -212,7 +213,7 @@ const SliderHabLarge = () => {
               <SwiperSlide>
                 <Image
                   src="/images/habitacionLarge/largedetalles.webp"
-                  alt="Piscina Image"
+                  alt="Mesa Junior Suite"
                   layout="fill"
                   objectFit="cover"
                   priority
@@ -224,7 +225,7 @@ const SliderHabLarge = () => {
               <SwiperSlide>
                 <Image
                   src="/images/habitacionLarge/largedetalles2.webp"
-                  alt="Piscina Image"
+                  alt="Detalle Junior Suite"
                   layout="fill"
                   objectFit="cover"
                   priority
@@ -236,7 +237,7 @@ const SliderHabLarge = () => {
               <SwiperSlide>
                 <Image
                   src="/images/habitacionLarge/largedetalles3.webp"
-                  alt="Piscina Image"
+                  alt="Sofa Junior Suite"
                   layout="fill"
                   objectFit="cover"
                   priority
@@ -249,20 +250,20 @@ const SliderHabLarge = () => {
                 <>
                   <SwiperSlide>
                     <Image
-                      src="/images/habitacionLarge/largecarrousel.webp"
-                      alt="Piscina Image"
+                      src="/images/habitacionLarge/largecarrousel1.webp"
+                      alt="Cama Junior Suite"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="bottom"
                       onClick={() =>
-                        openModal("/images/habitacionLarge/largecarrousel.webp")
+                        openModal("/images/habitacionLarge/largecarrousel1.webp")
                       }
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
                       src="/images/habitacionLarge/largecarrousel2.webp"
-                      alt="Piscina Image"
+                      alt="Cocina Junior Suite"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="center"
@@ -276,7 +277,7 @@ const SliderHabLarge = () => {
                   <SwiperSlide>
                     <Image
                       src="/images/habitacionLarge/largecarrousel3.webp"
-                      alt="Piscina Image"
+                      alt="Centro Junior Suite"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="bottom"
@@ -350,62 +351,7 @@ const SliderHabLarge = () => {
       </div>
 
       {/* Otras habitaciones */}
-      <div className="relative flex w-full h-[50vh] mx-auto">
-        <div className="w-1/3 h-full relative ">
-          <Link href="/habitaciones/habitacionSmall">
-            <div className="absolute inset-0 bg-black opacity-80 z-10">
-              <Image
-                src="/images/habitacionSmall/smallcarrousel.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Habitación Estándar"
-                className="absolute"
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <Button variant="destructive" size="lg">
-                ESTÁNDAR
-              </Button>
-            </div>
-          </Link>
-        </div>
-        <div className="w-1/3 h-full relative shadow-2xl shadow-black">
-          <Link href="/habitaciones/habitacionLarge">
-            <div className="absolute inset-0 bg-black opacity-80 z-10">
-              <Image
-                src="/images/habitacionLargeCard.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Habitación Suite"
-                className="absolute"
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <Button variant="destructive" size="lg">
-                SUITE
-              </Button>
-            </div>
-          </Link>
-        </div>
-        <div className="w-1/3 h-full relative">
-          <Link href="/habitaciones/habitacionMedium">
-            <div className="absolute inset-0 bg-black opacity-80 z-10">
-              <Image
-                src="/images/habitacionMedium/mediumcarrousel2.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Habitación Superior"
-                className="absolute"
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <Button variant="destructive" size="lg">
-                SUPERIOR
-              </Button>
-            </div>
-          </Link>
-        </div>
-      </div>
+      <CardsHabitaciones />
 
       <Footer />
     </section>

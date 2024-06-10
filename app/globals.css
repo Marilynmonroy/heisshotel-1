@@ -93,7 +93,7 @@
 
   /* 45px */
   .h4 {
-    @apply text-5xl font-bold;
+    @apply text-[34px] leading-10 md:text-[38px] xl:text-[42px] font-bold;
   }
 
   /* 24px */
@@ -144,5 +144,11 @@
   }
   .p-light-10 {
     @apply text-[10px] md:text-[10px] lg:text-[10px] xl:text-xs font-light;
+  }
+}
+
+@layer components {
+  .espacios {
+    @apply w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-28 md:pr-16 lg:pl-32 lg:pr-18 xl:pl-48 xl:pr-36;
   }
 }

@@ -22,7 +22,7 @@ export default function Footer({ children }) {
               </Link>
             </div>
             <div className="w-full pb-4 md:pb-4 gap-2 flex flex-col md:px-20 md:flex-row md:justify-around justify-center items-center">
-              <Link href="https://wa.me/573178946768" target="_blank">
+              <Link href="/contacto" target="_blank">
                 <h6 className="h6">CONTÁCTENOS</h6>
               </Link>
               <Link href="/" target="_blank">

@@ -23,6 +23,9 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        "3xl": "0 45px 0 15px rgba(0, 0, 0, 0.3)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -77,6 +80,14 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      spacing: {
+        16: "4rem",
+        18: "4.5rem",
+        28: "7rem",
+        32: "8rem",
+        36: "9rem",
+        48: "12rem",
       },
     },
   },

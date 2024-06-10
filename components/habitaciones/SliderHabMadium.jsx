@@ -8,6 +8,7 @@ import "swiper/css/zoom";
 import Modal from "../Modal";
 import Image from "next/image";
 import { CalendarWidget } from "../CalendarWidget";
+import CardsHabitaciones from "../CardsHabitaciones";
 import { Button } from "../ui/button";
 import { register } from "swiper/element/bundle";
 register();
@@ -254,9 +255,7 @@ const SliderHabMedium = () => {
                       objectFit="cover"
                       objectPosition="bottom"
                       onClick={() =>
-                        openModal(
-                          "/images/Medium/mediumcarrousel.webp"
-                        )
+                        openModal("/images/Medium/mediumcarrousel.webp")
                       }
                     />
                   </SwiperSlide>
@@ -352,62 +351,7 @@ const SliderHabMedium = () => {
       </div>
 
       {/* Otras habitaciones */}
-      <div className="relative flex w-full h-[50vh] mx-auto">
-        <div className="w-1/3 h-full relative ">
-          <Link href="/habitaciones/habitacionSmall">
-            <div className="absolute inset-0 bg-black opacity-80 z-10">
-              <Image
-                src="/images/habitacionSmall/smallcarrousel.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Habitación Estándar"
-                className="absolute"
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <Button variant="destructive" size="lg">
-                ESTÁNDAR
-              </Button>
-            </div>
-          </Link>
-        </div>
-        <div className="w-1/3 h-full relative shadow-2xl shadow-black">
-          <Link href="/habitaciones/habitacionLarge">
-            <div className="absolute inset-0 bg-black opacity-80 z-10">
-              <Image
-                src="/images/habitacionLargeCard.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Habitación Suite"
-                className="absolute"
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <Button variant="destructive" size="lg">
-                SUITE
-              </Button>
-            </div>
-          </Link>
-        </div>
-        <div className="w-1/3 h-full relative">
-          <Link href="/habitaciones/habitacionMedium">
-            <div className="absolute inset-0 bg-black opacity-80 z-10">
-              <Image
-                src="/images/habitacionMedium/mediumcarrousel2.webp"
-                layout="fill"
-                objectFit="cover"
-                alt="Habitación Superior"
-                className="absolute"
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <Button variant="destructive" size="lg">
-                SUPERIOR
-              </Button>
-            </div>
-          </Link>
-        </div>
-      </div>
+      <CardsHabitaciones />
 
       <Footer />
     </section>

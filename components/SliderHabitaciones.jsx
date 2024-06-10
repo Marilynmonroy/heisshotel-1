@@ -29,7 +29,7 @@ const SliderHabitaciones = () => {
           <div className="absolute inset-0 flex z-20 flex-col justify-center w-full gap-5">
             <div className="items-center text-center flex flex-col gap-3">
               <span className="p-regular-16">HEISS MEDELLÍN</span>
-              <h3 className="h2">HABITACIONES</h3>
+              <h3 className="h4">HABITACIONES</h3>
             </div>
             <div className="md:p-5">
               <CalendarWidget />{" "}

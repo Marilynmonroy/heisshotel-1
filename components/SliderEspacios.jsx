@@ -54,7 +54,7 @@ const SliderComponent = () => {
         id="rooftop-section"
         className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full"
       >
-        <div className="w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-24 md:pr-16 lg:px-28 xl:px-44">
+        <div className="espacios">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">ROOFTOP</h2>
@@ -129,7 +129,7 @@ const SliderComponent = () => {
         id="piscina-section"
         className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full"
       >
-        <div className="w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-24 md:pr-16 lg:px-28 xl:px-44">
+        <div className="espacios">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">PISCINA CON JACUZZI</h2>
@@ -198,7 +198,7 @@ const SliderComponent = () => {
         id="salamasajes-section"
         className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full"
       >
-        <div className="w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-24 md:pr-16 lg:px-28 xl:px-44">
+        <div className="espacios">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
 
@@ -260,6 +260,8 @@ const SliderComponent = () => {
           </p>
         </div>
       </div>
+
+      {/* Footer */}
       <Footer>
         <div className="h-[30vh] w-full relative">
           <Image

@@ -17,7 +17,7 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setMenuOpen(false); // Fecha o menu ao fazer scroll
+      setMenuOpen(false); // Close the menu on scroll
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,63 +32,70 @@ function Header() {
   };
 
   const handleMenuOptionClick = () => {
-    setMenuOpen(false); // Fecha o menu ao clicar em uma opção
+    setMenuOpen(false); // Close the menu on option click
   };
 
   return (
-    <div className="fixed flex items-center z-30 justify-around w-full ease-in duration-300 gap-7 py-9 md:gap-6 lg:gap-24 xl:gap-24">
-      <div>
-        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
-          <SheetTrigger asChild>
-            <button onClick={handleMenuToggle}>
-              <IoMenu color="#fff" size={50} />
-            </button>
-          </SheetTrigger>
-          <SheetContent
-            side="left"
-            className="bg-black/45 border-none px-9 py-32 md:px-12 lg:px-20"
-          >
-            <div className="absolute top-8 right-8">
-              <SheetClose className="text-white text-xl font-medium">
-                <IoMdClose />
-              </SheetClose>
-            </div>
-            <ul className="flex flex-col gap-6 font-medium text-xl text-white md:text-2xl">
-              <li onClick={handleMenuOptionClick}>
-                <Link href="/">INICIO</Link>
-              </li>
-              <li onClick={handleMenuOptionClick}>
-                <Link href="/habitaciones">HABITACIONES</Link>
-              </li>
-              <li onClick={handleMenuOptionClick} className="block">
-                <Link href="/espacios">ESPACIOS</Link>
-              </li>
-              <li onClick={handleMenuOptionClick} className="block">
-                <Link href="/contacto">CONTACTO</Link>
-              </li>
-            </ul>
-          </SheetContent>
-        </Sheet>
+    <div className="fixed top-0 left-0 w-full z-30 py-9 bg-transparent">
+      <div className="flex items-center justify-center w-full">
+        <div className="flex items-center w-[90%] max-w-[90rem]">
+          <div className="flex items-center justify-start flex-grow">
+            <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+              <SheetTrigger asChild>
+                <button onClick={handleMenuToggle}>
+                  <IoMenu color="#fff" size={50} />
+                </button>
+              </SheetTrigger>
+              <SheetContent
+                side="left"
+                className="bg-black/45 border-none px-9 py-32 md:px-12 lg:px-20"
+              >
+                <div className="absolute top-8 right-8">
+                  <SheetClose className="text-white text-xl font-medium">
+                    <IoMdClose />
+                  </SheetClose>
+                </div>
+                <ul className="flex flex-col gap-6 font-medium text-xl text-white md:text-2xl">
+                  <li onClick={handleMenuOptionClick}>
+                    <Link href="/">INICIO</Link>
+                  </li>
+                  <li onClick={handleMenuOptionClick}>
+                    <Link href="/habitaciones">HABITACIONES</Link>
+                  </li>
+                  <li onClick={handleMenuOptionClick} className="block">
+                    <Link href="/espacios">ESPACIOS</Link>
+                  </li>
+                  <li onClick={handleMenuOptionClick} className="block">
+                    <Link href="/contacto">CONTACTO</Link>
+                  </li>
+                </ul>
+              </SheetContent>
+            </Sheet>
+          </div>
+          <div className="hidden sm:flex justify-center flex-grow pl-[106px]">
+            {" "}
+            <Link href="/">
+              <Image
+                src="/icons/heiss.svg"
+                alt="Heiss logo"
+                width={120}
+                height={30}
+                priority
+              />
+            </Link>
+          </div>
+          <div className="flex items-center justify-end flex-grow">
+            <Button variant="outline" asChild className="text-white">
+              <Link
+                href="https://hotels.cloudbeds.com/es/reservation/lLxxdq"
+                target="_blank"
+              >
+                BOOK NOW
+              </Link>
+            </Button>
+          </div>
+        </div>
       </div>
-      <div className="hidden sm:block pl-28">
-        <Link href="/">
-          <Image
-            src="/icons/heiss.svg"
-            alt="Heiss logo"
-            width={120}
-            height={30}
-            priority
-          />
-        </Link>
-      </div>
-      <Button variant="outline" asChild className="text-white">
-        <Link
-          href="https://hotels.cloudbeds.com/es/reservation/lLxxdq"
-          target="_blank"
-        >
-          BOOK NOW
-        </Link>
-      </Button>
     </div>
   );
 }
