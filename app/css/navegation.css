@@ -1,5 +1,5 @@
-.vertical .swiper-button-prev,
-.vertical .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   color: white;
   position: absolute;
   z-index: 60; /* Asegura que las flechas estén por encima de la imagen */
@@ -9,21 +9,21 @@
 }
 
 /* Posiciona las flechas fuera del Swiper y sobre la imagen estática */
-.vertical .swiper-button-prev {
+.swiper-button-prev {
   left: 4%;
   top: 60%;
   transform: translateY(-50%) rotate(90deg);
 }
 
-.vertical .swiper-button-next {
+.swiper-button-next {
   left: 4%;
   top: 70%;
   transform: translateY(-50%) rotate(90deg);
 }
 
 /* Mantén la opacidad al 1 cuando se hace hover sobre el Swiper */
-.vertical .swiper:hover .swiper-button-prev,
-.vertical .swiper:hover .swiper-button-next {
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
   opacity: 1;
 }
 
