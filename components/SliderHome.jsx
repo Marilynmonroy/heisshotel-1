@@ -148,7 +148,7 @@ const SliderHome = () => {
         </div>
 
         {/* Para dispositivos grandes */}
-        <div className="hidden md:relative md:grid md:grid-cols-4 gap-6 p-8 overscroll-contain w-full h-full">
+        <div className="hidden md:relative md:grid md:grid-cols-4 gap-6 p-8 overscroll-contain w-full h-full vertical">
           <div className="md:flex hidden">
             <Swiper
               direction={"vertical"}
