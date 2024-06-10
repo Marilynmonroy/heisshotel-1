@@ -1,28 +1,11 @@
 "use client";
 
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
-import "swiper/css/effect-fade";
-import "/app/css/pagination.css";
-import "swiper/css/scrollbar";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css";
 import Image from "next/image";
-import { register } from "swiper/element/bundle";
-import Footer from "@/components/Footer";
-register();
-import {
-  Mousewheel,
-  Pagination,
-  EffectFade,
-  Keyboard,
-  FreeMode,
-  Navigation,
-} from "swiper/modules";
 import ContactForm from "@/components/ContactForm";
-import IconMessage from "@/components/iconMessage";
+import IconMessage from "@/components/IconMessage";
+import Footer from "@/components/Footer";
+
 const Contacto = () => {
   return (
     <section className="overflow-y-auto">
