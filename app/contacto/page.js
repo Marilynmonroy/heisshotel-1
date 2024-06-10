@@ -10,13 +10,12 @@ const Contacto = () => {
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-[120vh] md:h-screen">
-        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+        <div className="absolute inset-0 z-20"></div>
         <Image
-          src="/images/contacto.webp"
+          src="/images/Contacto.webp"
           alt="Contacto image"
           layout="fill"
           objectFit="cover"
-          objectPosition="bottom"
         />
         <section className="flex flex-col gap-14 md:flex-row items-center justify-center md:gap-10 xl:gap-28 text-white z-20 absolute inset-0 md:px-12 lg:px-16 xl:px-36">
           <div className="px-16 pt-11 md:px-0 md:w-3/5 text-center md:text-left flex flex-col">
@@ -83,7 +82,7 @@ const Contacto = () => {
         </section>
       </div>
       <Footer>
-        <div className="h-[30vh] w-full relative">
+        <div className="h-[40vh] w-full relative">
           <Image
             src={"/images/map-provisional.jpg"}
             layout="fill"

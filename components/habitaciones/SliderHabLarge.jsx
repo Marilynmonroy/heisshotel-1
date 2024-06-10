@@ -256,7 +256,9 @@ const SliderHabLarge = () => {
                       objectFit="cover"
                       objectPosition="bottom"
                       onClick={() =>
-                        openModal("/images/habitacionLarge/largecarrousel1.webp")
+                        openModal(
+                          "/images/habitacionLarge/largecarrousel1.webp"
+                        )
                       }
                     />
                   </SwiperSlide>
@@ -353,7 +355,7 @@ const SliderHabLarge = () => {
       {/* Otras habitaciones */}
       <CardsHabitaciones />
 
-      <Footer />
+      <Footer minHeight="min-h-[50vh]" />
     </section>
   );
 };

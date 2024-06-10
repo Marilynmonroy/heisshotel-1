@@ -135,20 +135,20 @@ const SliderHabitaciones = () => {
             </div>
             <div className="flex md:flex-row justify-center gap-4 max-w-max mx-auto mb-3">
               <Button variant="destructive" size="lg" asChilds>
-                <Link href="/habitaciones/habitacionSmall">ESTÁNDAR</Link>
+                <Link href="/habitaciones/habitacionEstandar">ESTÁNDAR</Link>
               </Button>
               <Button variant="destructive" size="lg" asChild>
-                <Link href="/habitaciones/habitacionLarge">SUITE</Link>
+                <Link href="/habitaciones/habitacionSuite">SUITE</Link>
               </Button>
               <Button variant="destructive" size="lg" asChild>
-                <Link href="/habitaciones/habitacionMedium">SUPERIOR</Link>
+                <Link href="/habitaciones/habitacionSuperior">SUPERIOR</Link>
               </Button>
             </div>
           </div>
         </div>
       </div>
       {/* footer */}
-      <Footer />
+      <Footer minHeight="min-h-[50vh]" />
     </div>
   );
 };

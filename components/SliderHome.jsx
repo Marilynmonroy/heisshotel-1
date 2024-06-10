@@ -6,6 +6,7 @@ import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 import "swiper/css/scrollbar";
 import "swiper/css/free-mode";
+import "swiper/css/navigation";
 import "swiper/css";
 import Image from "next/image";
 import { register } from "swiper/element/bundle";
@@ -22,8 +23,9 @@ import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 import CardExperiencias from "./CardExperiencias";
 import Footer from "./Footer";
-import "/app/css/pagination.css";
 import "/app/css/navegation.css";
+import "/app/css/pagination.css";
+import GoogleMaps from "./GoogleMaps";
 
 const SliderHome = () => {
   // Estado para verificar se o dispositivo é móvel
@@ -152,13 +154,13 @@ const SliderHome = () => {
               direction={"vertical"}
               freeMode={true}
               navigation={{
-                nextEl: ".swiper-button-next-vertical",
-                prevEl: ".swiper-button-prev-vertical",
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
               }}
               spaceBetween={30}
               slidesPerView={"auto"}
               modules={[Navigation, FreeMode]}
-              className="w-full h-screen"
+              className="w-full h-screen vertical"
               style={{
                 "--swiper-navigation-size": "10px",
                 "--swiper-navigation-weight": "10px",
@@ -238,7 +240,7 @@ const SliderHome = () => {
               </div>
             </div>
             <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
+            <div className="swiper-button-next"></div>{" "}
           </div>
         </div>
       </div>
@@ -297,26 +299,26 @@ const SliderHome = () => {
       </div>
 
       {/* Mapa */}
-      <div className="hidden sm:flex text-white h-screen text-center  justify-center items-center">
-        <Image
-          src={"/images/map-provisional.jpg"}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          alt="Mapa"
-        />
+      <div className=" text-white h-screen text-center flex justify-center items-center">
+        <GoogleMaps />
       </div>
       {/* footer */}
 
       <div>
         <Footer>
-          <div className="h-[35vh]">
+          <div className="max-h-[25vh]">
             <Image
-              src={"/images/map-provisional.jpg"}
+              src={"/images/habitacionLarge/largedetalles.webp"}
               layout="fill"
               objectFit="cover"
             />
           </div>
+
+          {isMobile && (
+            <div className="h-[35vh]">
+              <GoogleMaps />
+            </div>
+          )}
         </Footer>
       </div>
     </>

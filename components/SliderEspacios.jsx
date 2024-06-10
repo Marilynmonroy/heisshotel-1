@@ -23,6 +23,7 @@ import {
   FreeMode,
   Navigation,
 } from "swiper/modules";
+import GoogleMaps from "./GoogleMaps";
 const SliderComponent = () => {
   return (
     <section className="overflow-y-auto">
@@ -263,12 +264,8 @@ const SliderComponent = () => {
 
       {/* Footer */}
       <Footer>
-        <div className="h-[30vh] w-full relative">
-          <Image
-            src={"/images/map-provisional.jpg"}
-            layout="fill"
-            objectFit="cover"
-          />
+        <div className="h-[40vh] w-full relative">
+          <GoogleMaps />
         </div>
       </Footer>
     </section>

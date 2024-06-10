@@ -5,9 +5,9 @@ import { Button } from "./ui/button";
 
 function CardsHabitaciones() {
   return (
-    <div className="relative flex w-full h-[50vh] mx-auto z-0">
-      <div className="w-1/3 h-full relative ">
-        <Link href="/habitaciones/habitacionSmall">
+    <div className="relative flex w-full h-[15vh] md:h-[50vh] mx-auto z-0">
+      <div className="w-1/3 h-full relative">
+        <Link href="/habitaciones/habitacionEstandar">
           <div className="absolute inset-0 bg-black opacity-80 z-10">
             <Image
               src="/images/habitacionSmall/smallcarrousel.webp"
@@ -25,7 +25,7 @@ function CardsHabitaciones() {
         </Link>
       </div>
       <div className="w-1/3 h-full relative">
-        <Link href="/habitaciones/habitacionLarge">
+        <Link href="/habitaciones/habitacionSuite">
           <div className="absolute inset-0 bg-black opacity-80 z-20">
             <Image
               src="/images/habitacionLargeCard.webp"
@@ -43,7 +43,7 @@ function CardsHabitaciones() {
         </Link>
       </div>
       <div className="w-1/3 h-full relative">
-        <Link href="/habitaciones/habitacionMedium">
+        <Link href="/habitaciones/habitacionSuperior">
           <div className="absolute inset-0 bg-black opacity-80 z-10">
             <Image
               src="/images/habitacionMedium/mediumcarrousel2.webp"
