@@ -45,9 +45,9 @@ function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="bg-white/30 p-10 rounded-2xl flex flex-col gap-5 w-[90%]"
+        className="bg-white/30 p-5 md:p-10 rounded-2xl flex flex-col gap-2 md:gap-5 w-full"
       >
-        <span className="text-[24px] font-bold text-left">
+        <span className="md:text-[19px] lg:text-[18px] xl:text-[24px] font-bold text-left">
           Recibe más información
         </span>
         <FormField
@@ -55,7 +55,9 @@ function ContactForm() {
           name="nombre"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nombre completo</FormLabel>
+              <FormLabel className="text-xs lg:text-sm">
+                Nombre completo
+              </FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
@@ -68,7 +70,7 @@ function ContactForm() {
           name="celular"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Celular</FormLabel>
+              <FormLabel className="text-xs lg:text-sm">Celular</FormLabel>
               <FormControl>
                 <Input type="number" {...field} />
               </FormControl>
@@ -83,7 +85,9 @@ function ContactForm() {
           name="correo"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Correo electrónico</FormLabel>
+              <FormLabel className="text-xs lg:text-sm">
+                Correo electrónico
+              </FormLabel>
               <FormControl>
                 <Input type="email" {...field} />
               </FormControl>

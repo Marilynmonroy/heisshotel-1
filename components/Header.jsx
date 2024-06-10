@@ -36,7 +36,7 @@ function Header() {
   };
 
   return (
-    <div className="fixed flex items-center z-30 justify-around w-full ease-in duration-300 gap-7 py-9 md:gap-11 xl:gap-56">
+    <div className="fixed flex items-center z-30 justify-around w-full ease-in duration-300 gap-7 py-9 md:gap-6 lg:gap-24 xl:gap-24">
       <div>
         <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
           <SheetTrigger asChild>

@@ -19,8 +19,8 @@ const Contacto = () => {
           objectFit="cover"
           objectPosition="bottom"
         />
-        <section className="flex items-center justify-center gap-28 text-white z-20 absolute inset-0 px-36">
-          <div className="w-3/5 text-left flex flex-col">
+        <section className="flex flex-col md:flex-row gap-9 items-center justify-center md:gap-10 xl:gap-28 text-white z-20 absolute inset-0 md:px-12 lg:px-16 xl:px-36">
+          <div className="px-16 md:px-0 md:w-3/5 text-center md:text-left flex flex-col">
             <h2 className="h2">CONTÁCTANOS</h2>
             <span className="p-light-16 pt-5 flex flex-col gap-3">
               <IconMessage
@@ -67,7 +67,7 @@ const Contacto = () => {
               />
             </span>
           </div>
-          <div className="w-2/5">
+          <div className="md:w-4/5 lg:w-3/5 xl:w-2/5">
             <ContactForm />
           </div>
         </section>

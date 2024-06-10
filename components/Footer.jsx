@@ -8,7 +8,7 @@ export default function Footer({ children }) {
       <div className="bottom-0 w-full">
         <div className="h-full">
           <div className="">{children}</div>
-          <section className=" pt-6 px-6 flex flex-col items-center pb-20 md:pb-9">
+          <section className="pt-6 px-6 flex flex-col items-center pb-20 md:pb-9">
             <div className="text-center md:hidden pb-5 mx-auto">
               <Link href="/">
                 <Image
