@@ -54,11 +54,11 @@ const SliderComponent = () => {
         id="rooftop-section"
         className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full"
       >
-        <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:px-44">
+        <div className="w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-24 md:pr-16 lg:px-28 xl:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">ROOFTOP</h2>
-          <p className="p-light-16">
+          <p className="p-light-16 w-full">
             Descubre el encanto del Rooftop del Heiss Hotel, un espacio
             exclusivo donde la elegancia y la vista panorámica de Medellín se
             fusionan para ofrecerte momentos inolvidables. Ideal para relajarse
@@ -108,7 +108,7 @@ const SliderComponent = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left  md:items-end md:text-right md:gap-5 md:px-44">
+        <div className="w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:items-end md:text-right md:gap-5 md:px-12 lg:px-[4rem] xl:px-36">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">LOBBY</h2>
@@ -129,7 +129,7 @@ const SliderComponent = () => {
         id="piscina-section"
         className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full"
       >
-        <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:px-44">
+        <div className="w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-24 md:pr-16 lg:px-28 xl:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
           <h2 className="h2">PISCINA CON JACUZZI</h2>
@@ -176,7 +176,7 @@ const SliderComponent = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center md:items-end text-left md:text-right md:gap-5 md:px-44">
+        <div className="w-[75%] md:w-[50%] lg:[60%] h-full flex flex-col gap-3 justify-center text-left  md:items-end md:text-right md:gap-5 md:px-12 lg:px-[4rem] xl:px-36">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
 
@@ -198,7 +198,7 @@ const SliderComponent = () => {
         id="salamasajes-section"
         className="text-white h-screen justify-center items-center text-center flex-col flex md:flex-row w-full"
       >
-        <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:px-44">
+        <div className="w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-24 md:pr-16 lg:px-28 xl:px-44">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
 
@@ -246,7 +246,7 @@ const SliderComponent = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        <div className="w-[75%] md:w-[45%] h-full flex flex-col gap-3 justify-center text-left md:items-end md:text-right md:gap-5  md:px-44">
+        <div className="w-[75%] md:w-[54%] h-full flex flex-col gap-3 justify-center text-left  md:items-end md:text-right md:gap-5 md:px-12 lg:px-[4rem] xl:px-36">
           <span className="p-regular-18">HEISS MEDELLÍN</span>
           <Badge className="w-28">Próximamente</Badge>
 

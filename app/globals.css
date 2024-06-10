@@ -78,7 +78,7 @@
 @layer utilities {
   /* 90px */
   .h1 {
-    @apply text-[30px] lg:text-[40px] xl:text-[80px] font-bold;
+    @apply text-[40px] lg:text-[40px] xl:text-[80px] font-bold;
   }
 
   /* 75px */

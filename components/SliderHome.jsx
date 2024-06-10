@@ -96,7 +96,7 @@ const SliderHome = () => {
                 <Link href="/habitaciones">HABITACIONES</Link>
               </Button>
             </div>
-            <div className="flex flex-col pt-6 md:flex-row justify-center gap-4 max-w-max mx-auto">
+            <div className="flex md:flex-row justify-center gap-4 max-w-max mx-auto">
               <Button variant="destructive" size="lg" asChild>
                 <Link href="/habitaciones/habitacionSmall">ESTÁNDAR</Link>
               </Button>
