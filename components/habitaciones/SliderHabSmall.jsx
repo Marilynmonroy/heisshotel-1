@@ -241,6 +241,37 @@ const SliderHabSmall = () => {
                   }
                 />
               </SwiperSlide>
+              {isMobile && (
+                <>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionSmall/smallcarrousel.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="bottom"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionSmall/smallcarrousel2.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image
+                      src="/images/habitacionSmall/smallcarrousel3.webp"
+                      alt="Piscina Image"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="bottom"
+                    />
+                  </SwiperSlide>
+                </>
+              )}
             </Swiper>
           </Modal>
         )}
@@ -303,7 +334,7 @@ const SliderHabSmall = () => {
       </div>
 
       {/* Otras habitaciones */}
-      <div className="relative flex w-full h-[50vh] mx-auto">
+      <div className="relative flex w-full h-[20vh] md:h-[50vh] mx-auto">
         <div className="w-1/3 h-full relative ">
           <Link href="/habitaciones/habitacionSmall">
             <div className="absolute inset-0 bg-black opacity-80 z-10">
