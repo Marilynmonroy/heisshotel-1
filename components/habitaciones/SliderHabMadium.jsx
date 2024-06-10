@@ -49,7 +49,7 @@ const SliderHabMedium = () => {
       <div className="relative w-full h-screen">
         <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
         <Image
-          src="/images/habitacionMedium/mediumPrincipal.webp"
+          src="/images/habitacionMedium/mediumprincipal.webp"
           alt="Piscina Image"
           layout="fill"
           objectFit="cover"
@@ -357,7 +357,7 @@ const SliderHabMedium = () => {
           <Link href="/habitaciones/habitacionSmall">
             <div className="absolute inset-0 bg-black opacity-80 z-10">
               <Image
-                src="/images/habitacionSmall/smallCarrousel.webp"
+                src="/images/habitacionSmall/smallcarrousel.webp"
                 layout="fill"
                 objectFit="cover"
                 alt="Habitación Estándar"

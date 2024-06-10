@@ -83,7 +83,7 @@
 
   /* 75px */
   .h2 {
-    @apply text-[25px] md:text-[28px] lg:text-[32px] font-bold;
+    @apply text-[25px] md:text-[28px] lg:text-[35px] font-bold;
   }
 
   /* 54px */
