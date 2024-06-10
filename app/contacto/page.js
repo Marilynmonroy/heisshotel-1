@@ -21,12 +21,14 @@ import {
   FreeMode,
   Navigation,
 } from "swiper/modules";
+import ContactForm from "@/components/ContactForm";
+import IconMessage from "@/components/iconMessage";
 const Contacto = () => {
   return (
     <section className="overflow-y-auto">
       {/* Cambia de Ambiente */}
       <div className="relative w-full h-screen">
-        <div className="absolute inset-0 bg-black opacity-25 z-10"></div>
+        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
         <Image
           src="/images/contacto.webp"
           alt="Contacto image"
@@ -34,15 +36,57 @@ const Contacto = () => {
           objectFit="cover"
           objectPosition="bottom"
         />
-        <section>
-          <div className="items-center justify-center text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
-            <h2 className="h2">Contáctanos</h2>
-            <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center px-5">
-              El espacio que buscas, con las comodidades que necesitas para una
-              gran experiencia.
+        <section className="flex items-center justify-center gap-28 text-white z-20 absolute inset-0 px-36">
+          <div className="w-3/5 text-left flex flex-col">
+            <h2 className="h2">CONTÁCTANOS</h2>
+            <span className="p-light-16 pt-5 flex flex-col gap-3">
+              <IconMessage
+                imageSrc={"/icons/ubication.svg"}
+                altText={"Ubicación icono"}
+                width={5}
+                height={5}
+                className={"w-5"}
+                text={
+                  "Dirección: Cra. 43F # 14-60, El Poblado, Medellín - Manila"
+                }
+              />
+              <IconMessage
+                imageSrc={"/icons/mail.svg"}
+                altText={"frontdesk@heiss.com.co"}
+                width={5}
+                height={5}
+                className={"w-5"}
+                text={"frontdesk@heiss.com.co"}
+              />
+              <IconMessage
+                imageSrc={"/icons/phone.svg"}
+                altText={"3135250564"}
+                width={5}
+                height={5}
+                className={"w-5"}
+                text={"313 738 30 98 | Front desk"}
+              />
+              <IconMessage
+                imageSrc={"/icons/phone.svg"}
+                altText={"313 525 05 64"}
+                width={5}
+                height={5}
+                className={"w-5"}
+                text={"313 525 05 64 | Comercial mercadeo"}
+              />
+              <IconMessage
+                imageSrc={"/icons/mail.svg"}
+                altText={"argemiroquintero@heiss.com.co"}
+                width={5}
+                height={5}
+                className={"w-5"}
+                text={"argemiroquintero@heiss.com.co"}
+              />
             </span>
           </div>
-          <div></div>
+          <div className="w-2/5">
+            <ContactForm />
+          </div>
         </section>
       </div>
       <Footer>
