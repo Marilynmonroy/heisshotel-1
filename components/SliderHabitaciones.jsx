@@ -35,7 +35,7 @@ const SliderHabitaciones = () => {
               <CalendarWidget />{" "}
             </div>
             <div className="items-center text-center flex flex-col gap-2">
-              <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center px-5">
+              <span className="p-light-16 w-11/12 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center px-5">
                 Ofrecemos diferentes categorías de habitaciones escoge la que
                 mejor se acomode a tu estadia.
               </span>
