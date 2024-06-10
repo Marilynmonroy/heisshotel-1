@@ -155,37 +155,37 @@ const SliderHabLarge = () => {
             <>
               <SwiperSlide>
                 <Image
-                  src="/images/habitacionhabitacionLarge/largecarrousel.webp"
+                  src="/images/habitacionLarge/largecarrousel.webp"
                   alt="Piscina Image"
                   layout="fill"
                   objectFit="cover"
                   objectPosition="bottom"
                   onClick={() =>
-                    openModal("/images/habitacionMedium/mediumcarrousel.webp")
+                    openModal("/images/habitacionLarge/largecarrousel.webp")
                   }
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/habitacionhabitacionLarge/largecarrousel2.webp"
+                  src="/images/habitacionLarge/largecarrousel2.webp"
                   alt="Piscina Image"
                   layout="fill"
                   objectFit="cover"
                   objectPosition="center"
                   onClick={() =>
-                    openModal("/images/habitacionMedium/mediumcarrousel3.webp")
+                    openModal("/images/habitacionLarge/largecarrousel2.webp")
                   }
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/habitacionhabitacionLarge/largecarrousel3.webp"
+                  src="/images/habitacionLarge/largecarrousel3.webp"
                   alt="Piscina Image"
                   layout="fill"
                   objectFit="cover"
                   objectPosition="bottom"
                   onClick={() =>
-                    openModal("/images/habitacionMedium/mediumcarrousel3.webp")
+                    openModal("/images/habitacionLarge/largecarrousel3.webp")
                   }
                 />
               </SwiperSlide>
@@ -249,42 +249,40 @@ const SliderHabLarge = () => {
                 <>
                   <SwiperSlide>
                     <Image
-                      src="/images/habitacionhabitacionLarge/largecarrousel1.webp"
+                      src="/images/habitacionLarge/largecarrousel.webp"
                       alt="Piscina Image"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="bottom"
                       onClick={() =>
-                        openModal(
-                          "/images/habitacionhabitacionLarge/largecarrousel1.webp"
-                        )
+                        openModal("/images/habitacionLarge/largecarrousel.webp")
                       }
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
-                      src="/images/habitacionhabitacionLarge/largecarrousel2.webp"
+                      src="/images/habitacionLarge/largecarrousel2.webp"
                       alt="Piscina Image"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="center"
                       onClick={() =>
                         openModal(
-                          "/images/habitacionhabitacionLarge/largecarrousel2.webp"
+                          "/images/habitacionLarge/largecarrousel2.webp"
                         )
                       }
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
-                      src="/images/habitacionhabitacionLarge/largecarrousel3.webp"
+                      src="/images/habitacionLarge/largecarrousel3.webp"
                       alt="Piscina Image"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="bottom"
                       onClick={() =>
                         openModal(
-                          "/images/habitacionhabitacionLarge/largecarrousel3.webp"
+                          "/images/habitacionLarge/largecarrousel3.webp"
                         )
                       }
                     />

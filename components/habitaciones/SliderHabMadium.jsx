@@ -154,7 +154,7 @@ const SliderHabMedium = () => {
             <>
               <SwiperSlide>
                 <Image
-                  src="/images/habitacionhabitacionMedium/mediumcarrousel.webp"
+                  src="/images/habitacionMedium/mediumcarrousel.webp"
                   alt="Piscina Image"
                   layout="fill"
                   objectFit="cover"
@@ -166,7 +166,7 @@ const SliderHabMedium = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/habitacionhabitacionMedium/mediumcarrousel2.webp"
+                  src="/images/habitacionMedium/mediumcarrousel2.webp"
                   alt="Piscina Image"
                   layout="fill"
                   objectFit="cover"
@@ -178,7 +178,7 @@ const SliderHabMedium = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/habitacionhabitacionMedium/mediumcarrousel3.webp"
+                  src="/images/habitacionMedium/mediumcarrousel3.webp"
                   alt="Piscina Image"
                   layout="fill"
                   objectFit="cover"
@@ -248,21 +248,21 @@ const SliderHabMedium = () => {
                 <>
                   <SwiperSlide>
                     <Image
-                      src="/images/habitacionhabitacionMedium/mediumcarrousel.webp"
+                      src="/images/habitacionMedium/mediumcarrousel.webp"
                       alt="Piscina Image"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="bottom"
                       onClick={() =>
                         openModal(
-                          "/images/habitacionMedium/mediumcarrousel.webp"
+                          "/images/Medium/mediumcarrousel.webp"
                         )
                       }
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
-                      src="/images/habitacionhabitacionMedium/mediumcarrousel2.webp"
+                      src="/images/habitacionMedium/mediumcarrousel2.webp"
                       alt="Piscina Image"
                       layout="fill"
                       objectFit="cover"
@@ -276,7 +276,7 @@ const SliderHabMedium = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
-                      src="/images/habitacionhabitacionMedium/mediumcarrousel3.webp"
+                      src="/images/habitacionMedium/mediumcarrousel3.webp"
                       alt="Piscina Image"
                       layout="fill"
                       objectFit="cover"
