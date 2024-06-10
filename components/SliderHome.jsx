@@ -17,14 +17,13 @@ import {
   EffectFade,
   Keyboard,
   FreeMode,
-  Scrollbar,
 } from "swiper/modules";
 import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
 import CardExperiencias from "./CardExperiencias";
 import Footer from "./Footer";
-import "/app/css/navegation.css";
 import "/app/css/pagination.css";
+import "/app/css/navegation.css";
 
 const SliderHome = () => {
   // Estado para verificar se o dispositivo é móvel

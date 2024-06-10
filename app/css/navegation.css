@@ -2,13 +2,12 @@
 .swiper-button-next {
   color: white;
   position: absolute;
-  z-index: 60; /* Asegura que las flechas estén por encima de la imagen */
+  z-index: 60; 
   opacity: 1;
   transform: rotate(90deg);
-  --swiper-navigation-size: 20px;
+  --swiper-navigation-size: 30px;
 }
 
-/* Posiciona las flechas fuera del Swiper y sobre la imagen estática */
 .swiper-button-prev {
   left: 4%;
   top: 60%;
@@ -21,13 +20,11 @@
   transform: translateY(-50%) rotate(90deg);
 }
 
-/* Mantén la opacidad al 1 cuando se hace hover sobre el Swiper */
 .swiper:hover .swiper-button-prev,
 .swiper:hover .swiper-button-next {
   opacity: 1;
 }
 
-/* Asegúrate de que la imagen estática tenga position: relative */
 .relative-image {
   position: relative;
   z-index: 50;

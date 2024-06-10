@@ -14,8 +14,8 @@ register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Footer from "../Footer";
 import Link from "next/link";
-import "/app/css/paginationhorizontal.css";
 import "/app/css/navigationhorizontal.css";
+import "/app/css/paginationhorizontal.css";
 
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
