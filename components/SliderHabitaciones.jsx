@@ -133,7 +133,7 @@ const SliderHabitaciones = () => {
                 </DrawerContent>
               </Drawer>
             </div>
-            <div className="flex md:flex-row justify-center gap-4 max-w-max mx-auto">
+            <div className="flex md:flex-row justify-center gap-4 max-w-max mx-auto mb-3">
               <Button variant="destructive" size="lg" asChilds>
                 <Link href="/habitaciones/habitacionSmall">ESTÁNDAR</Link>
               </Button>

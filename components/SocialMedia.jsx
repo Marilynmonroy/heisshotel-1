@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function SocialMedia() {
   return (
-    <div className="fixed bottom-0 flex items-center justify-end gap-3 w-full px-9 md:px-12 lg:px-16 xl:px-36 pb-9 z-10">
+    <div className="fixed bottom-0 flex items-center justify-end gap-3 w-full px-9 md:px-12 lg:px-16 xl:px-36 pb-9 z-50">
       <div className="rounded-full bg-white/30 p-3 w-10 h-10">
         <a href="https://www.instagram.com/heisshotel/?hl=es" target="_blank">
           <Image

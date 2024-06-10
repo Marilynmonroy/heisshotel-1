@@ -4,65 +4,44 @@ import Link from "next/link";
 
 export default function Footer({ children }) {
   return (
-    <div className="bg-black text-white w-full">
-      <div className="bottom-0 w-full">
-        <div className="h-full">
-          <div className="">{children}</div>
-          <section className="pt-6 px-6 flex flex-col items-center pb-20 md:pb-9">
-            <div className="text-center md:hidden pb-5 mx-auto">
-              <Link href="/">
-                <Image
-                  src="/icons/heiss.svg"
-                  alt="Heiss logo"
-                  width={120}
-                  height={30}
-                  priority
-                  className="w-24"
-                />
-              </Link>
-            </div>
-            <div className="w-full pb-4 md:pb-4 gap-2 flex flex-col md:px-20 md:flex-row md:justify-around justify-center items-center">
-              <Link href="/contacto" target="_blank">
-                <h6 className="h6">CONTÁCTENOS</h6>
-              </Link>
-              <Link href="/" target="_blank">
-                <h6 className="h6">PÓLITICAS DE USO</h6>
-              </Link>
-              <Link href="/" target="_blank">
-                <h6 className="h6">PÓLITICAS DE PRIVACIDAD</h6>
-              </Link>
-            </div>
-
-            <div className="border-t-2 border-white w-full" />
-            <div className="flex flex-col gap-5">
-              <div className="w-full flex md:justify-between p-light-14 pt-3 mx-auto items-center">
-                <ul className="md:list-disc list-inside w-full gap-2 flex flex-col text-center md:text-left md:grid md:grid-cols-1 md:px-10 lg:px-16 xl:px-36">
-                  <div className="md:flex md:flex-col md:gap-3">
-                    <li className="">
-                      <span className="font-bold">Dirección: </span>
-                      <br />
-                      Cra. 43F # 14-60, El Poblado, Medellín - Manila
-                    </li>
-                    <li className="">frontdesk@heiss.com.co</li>
-                  </div>
-                  <div className="md:col-end-7 md:col-span-2 md:text-right">
-                    <li>
-                      <span className="font-bold">Comercial y Mercadeo:</span>
-                      <br className="md:hidden" />
-                      +57 313 525 0564
-                    </li>
-                    argemiroquintero@heiss.com.co
-                    <li className="pt-2">
-                      <span className="font-bold">Front desk: </span>
-                      <br className="md:hidden" />
-                      +57 313 738 3098
-                    </li>
-                  </div>
-                </ul>
-              </div>
-              <div className="border-t-2 border-white w-full" />
-              <section className="w-[90%] md:w-[70%] text-center p-light-12 mx-auto">
+    <div className="flex flex-col min-h-screen text-white w-full">
+      <div className="w-full relative flex-grow">{children}</div>
+      <footer className="bg-black w-full py-7 md:pt-10 md:px-18 lg:px-24 xl:pt-10 xl:px-44">
+        <div className="w-full">
+          <section className="flex flex-col">
+            <div className="flex flex-col text-center items-center md:flex-row md:pb-10 md:pl-5">
+              <div className="w-full flex flex-col items-center md:items-start md:justify-end p-light-14 pb-2">
+                <Link href="/" className="flex pb-3">
+                  <Image
+                    src="/icons/heiss.svg"
+                    alt="Heiss logo"
+                    width={120}
+                    height={30}
+                    priority
+                    className="w-24"
+                  />
+                </Link>
+                <div className="border-t-2 border-white w-10/12 md:hidden" />
+                <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">
+                  Direccion
+                </h5>
+                <p> Cra. 43F # 14-60, El Poblado, Medellín - Manila</p>
+                <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">
+                  CONTACTO
+                </h5>
                 <p>
+                  <b className="font-medium">Comercial y Mercadeo:</b> +57 313
+                  525 0564
+                </p>
+                <p>argemiroquintero@heiss.com.co</p>
+                <p>
+                  <b className="font-medium">Front desk:</b> +57 313 738 3098
+                </p>
+                <p>frontdesk@heiss.com.co</p>
+              </div>
+              <div className="border-t-2 py-1 border-white w-10/12 md:hidden" />
+              <section className="md:text-left p-light-12 w-[90%] pb-3 xl:w-[65%]">
+                <p className="py-1 lg:py-2">
                   En Heiss Hotel rechazamos rotundamente cualquier tipo de abuso
                   o explotación sexual de Niños, Niñas y Adolescentes.
                 </p>
@@ -73,7 +52,7 @@ export default function Footer({ children }) {
                   1) Cualquier persona que pretenda ofrecer servicios o planes
                   relacionados con la Explotación Sexual Comercial de Niños,
                   Niñas y Adolescentes. <br />
-                  2) de Niños, Niñas y Adolescentes que no estén acompañados por
+                  2) De Niños, Niñas y Adolescentes que no estén acompañados por
                   sus padres o tutores o que no estén debidamente autorizados
                   por estos.
                 </p>
@@ -89,21 +68,21 @@ export default function Footer({ children }) {
                 </p>
               </section>
             </div>
-            <div className="text-center hidden sm:block mx-auto pt-5">
+
+            <div className="w-full flex flex-col pb-20 md:pr-[9rem] md:pb-5 lg:pr-40 lg:pb-5 xl:pr-[11rem] xl:pb-10 md:flex-row md:justify-between justify-center items-center">
+              <Link href="/contacto">
+                <h6 className="h6">CONTÁCTENOS</h6>
+              </Link>
               <Link href="/">
-                <Image
-                  src="/icons/heiss.svg"
-                  alt="Heiss logo"
-                  width={120}
-                  height={30}
-                  priority
-                  className="w-24"
-                />
+                <h6 className="h6">PÓLITICAS DE USO</h6>
+              </Link>
+              <Link href="/">
+                <h6 className="h6">PÓLITICAS DE PRIVACIDAD</h6>
               </Link>
             </div>
           </section>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }

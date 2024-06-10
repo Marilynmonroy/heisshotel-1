@@ -296,10 +296,21 @@ const SliderHome = () => {
         </div>
       </div>
 
+      {/* Mapa */}
+      <div className="hidden sm:flex text-white h-screen text-center  justify-center items-center">
+        <Image
+          src={"/images/map-provisional.jpg"}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          alt="Mapa"
+        />
+      </div>
       {/* footer */}
+
       <div>
         <Footer>
-          <div className="h-[42vh] w-full relative">
+          <div className="h-[35vh]">
             <Image
               src={"/images/map-provisional.jpg"}
               layout="fill"
@@ -344,6 +355,7 @@ const SliderHome = () => {
           <SwiperSlide>{renderSlides().props.children[2]}</SwiperSlide>
           <SwiperSlide>{renderSlides().props.children[3]}</SwiperSlide>
           <SwiperSlide>{renderSlides().props.children[4]}</SwiperSlide>
+          <SwiperSlide>{renderSlides().props.children[5]}</SwiperSlide>
         </Swiper>
       )}
     </>

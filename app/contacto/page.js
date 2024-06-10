@@ -9,8 +9,7 @@ import Footer from "@/components/Footer";
 const Contacto = () => {
   return (
     <section className="overflow-y-auto">
-      {/* Cambia de Ambiente */}
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-[120vh] md:h-screen">
         <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
         <Image
           src="/images/contacto.webp"
@@ -19,10 +18,10 @@ const Contacto = () => {
           objectFit="cover"
           objectPosition="bottom"
         />
-        <section className="flex flex-col md:flex-row gap-9 items-center justify-center md:gap-10 xl:gap-28 text-white z-20 absolute inset-0 md:px-12 lg:px-16 xl:px-36">
-          <div className="px-16 md:px-0 md:w-3/5 text-center md:text-left flex flex-col">
+        <section className="flex flex-col gap-14 md:flex-row items-center justify-center md:gap-10 xl:gap-28 text-white z-20 absolute inset-0 md:px-12 lg:px-16 xl:px-36">
+          <div className="px-16 pt-11 md:px-0 md:w-3/5 text-center md:text-left flex flex-col">
             <h2 className="h2">CONTÁCTANOS</h2>
-            <span className="p-light-16 pt-5 flex flex-col gap-3">
+            <span className="p-light-16 pt-5 flex flex-col justify-center gap-3">
               <IconMessage
                 imageSrc={"/icons/ubication.svg"}
                 altText={"Ubicación icono"}
@@ -30,7 +29,10 @@ const Contacto = () => {
                 height={5}
                 className={"w-5"}
                 text={
-                  "Dirección: Cra. 43F # 14-60, El Poblado, Medellín - Manila"
+                  <span>
+                    Dirección: Cra. 43F # 14-60, El Poblado,{" "}
+                    <b> Medellín - Manila </b>
+                  </span>
                 }
               />
               <IconMessage
@@ -47,7 +49,11 @@ const Contacto = () => {
                 width={5}
                 height={5}
                 className={"w-5"}
-                text={"313 738 30 98 | Front desk"}
+                text={
+                  <span>
+                    313 738 30 98 | <b>Front desk</b>
+                  </span>
+                }
               />
               <IconMessage
                 imageSrc={"/icons/phone.svg"}
@@ -55,7 +61,11 @@ const Contacto = () => {
                 width={5}
                 height={5}
                 className={"w-5"}
-                text={"313 525 05 64 | Comercial mercadeo"}
+                text={
+                  <span>
+                    313 525 05 64 | <b>Comercial mercadeo</b>
+                  </span>
+                }
               />
               <IconMessage
                 imageSrc={"/icons/mail.svg"}

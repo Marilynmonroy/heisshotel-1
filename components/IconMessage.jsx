@@ -11,7 +11,7 @@ function IconMessage({ imageSrc, altText, width, height, text, className }) {
         height={height}
         className={className}
       />
-      <p className="text-left">{text}</p>
+      <p className="text-left ml-1">{text}</p>
     </div>
   );
 }
