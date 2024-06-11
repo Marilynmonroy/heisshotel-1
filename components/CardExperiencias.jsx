@@ -4,10 +4,7 @@ import Image from "next/image";
 function CardExperiencias({ imageUrl, altText, title, height }) {
   return (
     <div className="relative">
-      <div
-        style={{ height: height }}
-        className="full-width image-height flex-container relative cursor-pointer"
-      >
+      <div style={{ height: height }} className="relative cursor-pointer pb-10">
         <Image
           src={imageUrl}
           layout="fill"

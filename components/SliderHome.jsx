@@ -57,7 +57,7 @@ const SliderHome = () => {
   const renderSlides = () => (
     <>
       {/* Inicio */}
-      <div className="text-white h-screen flex justify-center items-center text-center">
+      {/* <div className="text-white h-screen flex justify-center items-center text-center">
         <div className="relative w-full h-full ">
           <div className="absolute inset-0 p-1 bg-black opacity-20 z-10"></div>
           <Image
@@ -73,7 +73,7 @@ const SliderHome = () => {
           </div>
         </div>
       </div>
-      {/* Habitaciones */}
+      {/* Habitaciones 
       <div className="text-white h-screen text-center flex justify-center items-center">
         <div className="relative w-full h-full">
           <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
@@ -111,7 +111,7 @@ const SliderHome = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Espacios */}
       <div className="text-white h-screen text-center flex justify-center items-center sliderHome">
         {/* Para móviles  */}
@@ -148,7 +148,7 @@ const SliderHome = () => {
         </div>
 
         {/* Para dispositivos grandes */}
-        <div className="hidden md:relative md:grid md:grid-cols-4 gap-6 p-8 overscroll-contain w-full h-full vertical">
+        <div className="hidden md:absolute md:grid md:grid-cols-4 gap-6 p-8 overscroll-contain w-full h-full vertical">
           <div className="md:flex hidden">
             <Swiper
               direction={"vertical"}
@@ -157,7 +157,7 @@ const SliderHome = () => {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               }}
-              spaceBetween={30}
+              spaceBetween={15}
               slidesPerView={"auto"}
               modules={[Navigation, FreeMode]}
               className="w-full h-screen vertical"
@@ -166,52 +166,60 @@ const SliderHome = () => {
                 "--swiper-navigation-weight": "10px",
               }}
             >
-              <div className="flex flex-col h-full">
-                <SwiperSlide style={{ height: "25rem" }}>
+              <div className="flex flex-col h-screen">
+                <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/Terraza.webp"
                     altText="Rooftop heiss"
                     title="ROOFTOP"
-                    height="25rem"
+                    height="20rem"
                   />
                 </SwiperSlide>
-                <SwiperSlide style={{ height: "25rem" }}>
+                <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/Piscina.webp"
                     altText="Piscina heiss"
                     title="PISCINA CON JACUZZI"
-                    height="25rem"
+                    height="20rem"
                   />
                 </SwiperSlide>
-                <SwiperSlide style={{ height: "25rem" }}>
+                <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/Lobby.webp"
                     altText="Lobby heiss"
                     title="LOBBY"
-                    height="25rem"
+                    height="20rem"
                   />
                 </SwiperSlide>
-                <SwiperSlide style={{ height: "25rem" }}>
+                <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/gimnasio.webp"
                     altText="Gimnasio heiss"
                     title="GIMNASIO"
-                    height="25rem"
+                    height="20rem"
                   />
                 </SwiperSlide>
-                <SwiperSlide style={{ height: "29rem" }}>
+                <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/salademasajes.webp"
                     altText="Sala de masajes heiss"
                     title="SALA DE MASAJES"
-                    height="25rem"
+                    height="20rem"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{ height: "20rem" }} className="mb-9">
+                  <CardExperiencias
+                    imageUrl="/images/Zona_Comercial.webp"
+                    altText="zona comercial heiss"
+                    title="ZONA COMERCIAL"
+                    height="20rem"
                   />
                 </SwiperSlide>
               </div>
             </Swiper>
           </div>
           {/* Imagen estática con flechas de navegación */}
-          <div className="relative bg-cover w-[100%] h-[93%] bg-center md:col-span-3 rounded-3xl z-10 inset-0 relative-image">
+          <div className="absolute bg-cover w-[100%] h-[93%] bg-center md:col-span-3 rounded-3xl z-10 inset-0 relative-image">
             <Image
               src="/images/Zona_Comercial.webp"
               layout="fill"
