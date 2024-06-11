@@ -157,7 +157,7 @@ const SliderHome = () => {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               }}
-              spaceBetween={17}
+              spaceBetween={20}
               loop={true}
               slidesPerView={"auto"}
               modules={[Navigation, FreeMode]}
