@@ -13,7 +13,7 @@ const Contacto = () => {
       <div className="relative w-full h-[120vh] md:h-screen">
         <div className="absolute inset-0 z-20"></div>
         <Image
-          src="/images/Contacto.webp"
+          src="/images/contact.webp"
           alt="Contacto image"
           layout="fill"
           objectFit="cover"
