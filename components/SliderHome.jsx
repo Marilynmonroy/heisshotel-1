@@ -314,7 +314,7 @@ const SliderHome = () => {
       </div>
 
       {/* Mapa */}
-      <div className=" text-white h-screen relative text-center flex justify-center items-center">
+      <div className=" text-white h-screen hidden sm:flex relative text-center justify-center items-center">
         <GoogleMaps className="h-[75vh]" />
         <div className="hidden sm:flex h-[25vh] relative">
           <Image
