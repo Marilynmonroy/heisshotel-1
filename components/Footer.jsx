@@ -18,7 +18,7 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
                     width={120}
                     height={40}
                     priority
-                    className="w-24 md:w-24 lg:w-28 xl:w-36 "
+                    className="w-24 md:w-24 lg:w-28 xl:w-22"
                   />
                 </Link>
                 <div className="border-t-2 pt-2 border-white w-10/12 md:hidden" />
@@ -71,7 +71,7 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
               </section>
             </div>
 
-            <div className="w-full flex flex-col pb-18 pt-5 md:pt-0 md:pl-10 md:pr-[12rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[10rem] xl:pb-4 md:flex-row md:justify-between justify-center items-center">
+            <div className="w-full flex flex-col pb-18 pt-5 md:pt-0 md:pl-10 md:pr-[12rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[15rem] xl:pb-4 md:flex-row md:justify-between justify-center items-center">
               <Link href="/contacto">
                 <h6 className="h6">CONTÁCTENOS</h6>
               </Link>
