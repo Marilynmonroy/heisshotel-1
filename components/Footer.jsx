@@ -2,10 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer({
-  children,
-  minHeight = "min-h-screen",
-}) {
+export default function Footer({ children, minHeight = "min-h-screen" }) {
   return (
     <div className={`flex flex-col ${minHeight} text-white w-full`}>
       <div className="w-full relative flex-grow">{children}</div>
@@ -13,7 +10,7 @@ export default function Footer({
         <div className="w-full">
           <section className="flex flex-col">
             <div className="flex h-full flex-col text-center items-center md:items-stretch md:flex-row md:pb-10 md:pl-5">
-              <div className="w-full flex flex-col items-center md:items-start md:justify-between p-light-14 pb-2 md:pb-0">
+              <div className="w-full flex flex-col items-center md:items-start md:justify-between p-light-12 pl-5 pb-2 md:pb-0">
                 <Link href="/" className="flex pb-3">
                   <Image
                     src="/icons/heiss.svg"
@@ -27,7 +24,7 @@ export default function Footer({
                 <div className="border-t-2 pt-2 border-white w-10/12 md:hidden" />
                 <div className="md:items-start flex flex-col p-light-14">
                   <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">
-                    Direccion
+                    Dirección
                   </h5>
                   <p> Cra. 43F # 14-60, El Poblado, Medellín - Manila</p>
                   <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">
@@ -45,7 +42,7 @@ export default function Footer({
                 </div>
               </div>
               <div className="border-t-2 py-2 border-white w-10/12 md:hidden" />
-              <section className="md:text-left p-light-14 w-[80%] pb-3 md:pb-0 xl:w-[65%]">
+              <section className="md:text-left p-light-12 w-[80%] pb-3 md:pb-0">
                 <p className="pb-1 lg:pb-2">
                   En Heiss Hotel rechazamos rotundamente cualquier tipo de abuso
                   o explotación sexual de Niños, Niñas y Adolescentes.
@@ -74,7 +71,7 @@ export default function Footer({
               </section>
             </div>
 
-            <div className="w-full flex flex-col pb-18 pt-5 md:pr-[9rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[11rem] xl:pb-10 md:flex-row md:justify-between justify-center items-center">
+            <div className="w-full flex flex-col pb-18 pt-5 md:pt-0 md:pl-10 md:pr-[12rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[10rem] xl:pb-4 md:flex-row md:justify-between justify-center items-center">
               <Link href="/contacto">
                 <h6 className="h6">CONTÁCTENOS</h6>
               </Link>

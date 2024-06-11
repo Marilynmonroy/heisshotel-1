@@ -306,7 +306,7 @@ const SliderHome = () => {
 
       <div>
         <Footer>
-          <div className="max-h-[25vh]">
+          <div className="hidden sm:flex h-[26vh]">
             <Image
               src={"/images/habitacionLarge/largedetalles.webp"}
               layout="fill"

@@ -264,7 +264,7 @@ const SliderComponent = () => {
 
       {/* Footer */}
       <Footer>
-        <div className="h-[40vh] w-full relative">
+        <div className="h-[50vh] w-full relative">
           <GoogleMaps />
         </div>
       </Footer>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import IconMessage from "@/components/IconMessage";
 import Footer from "@/components/Footer";
+import GoogleMaps from "@/components/GoogleMaps";
 
 const Contacto = () => {
   return (
@@ -82,12 +83,8 @@ const Contacto = () => {
         </section>
       </div>
       <Footer>
-        <div className="h-[40vh] w-full relative">
-          <Image
-            src={"/images/map-provisional.jpg"}
-            layout="fill"
-            objectFit="cover"
-          />
+        <div className="h-[50vh] w-full relative">
+          <GoogleMaps />
         </div>
       </Footer>
     </section>

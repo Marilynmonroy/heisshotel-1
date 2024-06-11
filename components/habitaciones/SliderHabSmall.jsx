@@ -16,7 +16,6 @@ import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Footer from "../Footer";
 import Link from "next/link";
 import "/app/css/navigationhorizontal.css";
-import "/app/css/paginationhorizontal.css";
 
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -73,12 +72,6 @@ const SliderHabSmall = () => {
           className="w-full"
           navigation={true}
           loop={true}
-          pagination={{
-            clickable: true,
-            bulletActiveClass: "swiper-pagination-bullet-active",
-            bulletClass: "swiper-pagination-bullet",
-            modifierClass: "swiper-pagination-horizontal",
-          }}
           modules={[Navigation, Pagination]}
         >
           <SwiperSlide style={{ height: "35rem" }}>
@@ -280,11 +273,10 @@ const SliderHabSmall = () => {
           <div className="">
             <h2 className="h5 py-8">ESTÁNDAR</h2>
             <p className="p-light-16 md:pl-12">
-              Bienvenido a nuestra acogedora <b>Habitación Estándar</b> de
-              20mt2, diseñada para ofrecer confort y funcionalidad. Aunque esta
-              habitación no cuenta con balcón, su diseño inteligente y acogedor
-              garantiza una estancia placentera y relajante. Está habitación
-              cuenta con:
+              Bienvenido a nuestra acogedora Habitación Estándar de 20mt2,
+              diseñada para ofrecer confort y funcionalidad. Su diseño
+              inteligente y acogedor garantiza una estancia placentera y
+              relajante.
             </p>
           </div>
           {/* ICONOS */}

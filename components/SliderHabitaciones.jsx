@@ -148,7 +148,7 @@ const SliderHabitaciones = () => {
         </div>
       </div>
       {/* footer */}
-      <Footer minHeight="min-h-[50vh]" />
+      <Footer minHeight="min-h-[30vh]" />
     </div>
   );
 };
