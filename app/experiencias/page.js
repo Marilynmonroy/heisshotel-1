@@ -25,7 +25,7 @@ export default function Experiencias() {
             objectFit="cover"
           />
         </div>
-        <section className="flex flex-col gap-10 items-center justify-end text-white z-20 absolute inset-0 pb-12">
+        <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 pb-12">
           <div className="text-center flex flex-col">
             <span className="p-regular-16">
               LAS MEJORES EXPERIENCIAS LAS ENCUENTRAS EN
@@ -36,7 +36,7 @@ export default function Experiencias() {
               aventura.
             </span>
           </div>
-          <div className="w-full horizontal">
+          <div className="w-full experiencias">
             <Swiper
               navigation={true}
               cssMode={true}
@@ -49,16 +49,49 @@ export default function Experiencias() {
                   slidesPerView: 3,
                 },
               }}
-              className="w-[90%] md:w-full"
+              className="w-[90%] md:w-[88%] "
               modules={[Navigation, FreeMode, Mousewheel]}
               mousewheel={true}
             >
               <SwiperSlide className="flex md:ml-12 md:w-[50%]">
                 <DrawerExperiencias
-                  imageUrl={"/images/Terraza.webp"}
+                  imageUrl={"/images/experiencias/experiencias1.webp"}
                   altText={"Experiencias"}
                   title={"Experiencias"}
-                  height="20rem"
+                  height="15rem"
+                  text={
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide className="flex md:w-[50%]">
+                <DrawerExperiencias
+                  imageUrl={"/images/experiencias/experiencias2.webp"}
+                  altText={"Experiencias"}
+                  title={"Experiencias"}
+                  height="15rem"
+                  text={
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide className="flex md:w-[50%]">
+                <DrawerExperiencias
+                  imageUrl={"/images/experiencias/experiencias3.webp"}
+                  altText={"Experiencias"}
+                  title={"Experiencias"}
+                  height="15rem"
+                  text={
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                  }
+                />
+              </SwiperSlide>
+              <SwiperSlide className="flex md:w-[50%]">
+                <DrawerExperiencias
+                  imageUrl={"/images/experiencias/experiencias4.webp"}
+                  altText={"Experiencias"}
+                  title={"Experiencias"}
+                  height="15rem"
                   text={
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
                   }
@@ -69,40 +102,7 @@ export default function Experiencias() {
                   imageUrl={"/images/Terraza.webp"}
                   altText={"Experiencias"}
                   title={"Experiencias"}
-                  height="20rem"
-                  text={
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide className="flex md:w-[50%]">
-                <DrawerExperiencias
-                  imageUrl={"/images/Terraza.webp"}
-                  altText={"Experiencias"}
-                  title={"Experiencias"}
-                  height="20rem"
-                  text={
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide className="flex md:w-[50%]">
-                <DrawerExperiencias
-                  imageUrl={"/images/Terraza.webp"}
-                  altText={"Experiencias"}
-                  title={"Experiencias"}
-                  height="20rem"
-                  text={
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide className="flex md:w-[50%] pr-5">
-                <DrawerExperiencias
-                  imageUrl={"/images/Terraza.webp"}
-                  altText={"Experiencias"}
-                  title={"Experiencias"}
-                  height="20rem"
+                  height="15rem"
                   text={
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
                   }

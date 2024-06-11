@@ -1,12 +1,18 @@
 .horizontal .swiper-button-prev,
 .horizontal .swiper-button-next {
   color: white;
-  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   transform: rotate(0deg);
 }
 
 .swiper-button-lock {
   display: flex;
+}
+
+.experiencias .swiper-button-prev,
+.experiencias .swiper-button-next {
+  color: white;
 }
 
 @media (max-width: 768px) {
