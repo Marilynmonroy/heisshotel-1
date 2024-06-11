@@ -157,7 +157,8 @@ const SliderHome = () => {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               }}
-              spaceBetween={15}
+              spaceBetween={17}
+              loop={true}
               slidesPerView={"auto"}
               modules={[Navigation, FreeMode]}
               className="w-full h-screen vertical"
@@ -166,13 +167,14 @@ const SliderHome = () => {
                 "--swiper-navigation-weight": "10px",
               }}
             >
-              <div className="flex flex-col h-screen">
+              <div className="flex flex-col h-[93%]">
                 <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/Terraza.webp"
                     altText="Rooftop heiss"
                     title="ROOFTOP"
                     height="20rem"
+                    linkUrl={"/espacios/#rooftop-section"}
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{ height: "20rem" }}>
@@ -181,6 +183,7 @@ const SliderHome = () => {
                     altText="Piscina heiss"
                     title="PISCINA CON JACUZZI"
                     height="20rem"
+                    linkUrl={"/espacios/#piscina-section"}
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{ height: "20rem" }}>
@@ -189,6 +192,7 @@ const SliderHome = () => {
                     altText="Lobby heiss"
                     title="LOBBY"
                     height="20rem"
+                    linkUrl={"/espacios/#lobby-section"}
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{ height: "20rem" }}>
@@ -197,6 +201,7 @@ const SliderHome = () => {
                     altText="Gimnasio heiss"
                     title="GIMNASIO"
                     height="20rem"
+                    linkUrl={"/espacios/#gimnasio-section"}
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{ height: "20rem" }}>
@@ -205,14 +210,16 @@ const SliderHome = () => {
                     altText="Sala de masajes heiss"
                     title="SALA DE MASAJES"
                     height="20rem"
+                    linkUrl={"/espacios/#salamasajes-section"}
                   />
                 </SwiperSlide>
-                <SwiperSlide style={{ height: "20rem" }} className="mb-9">
+                <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/Zona_Comercial.webp"
                     altText="zona comercial heiss"
                     title="ZONA COMERCIAL"
                     height="20rem"
+                    linkUrl={"/espacios/#comercial-section"}
                   />
                 </SwiperSlide>
               </div>

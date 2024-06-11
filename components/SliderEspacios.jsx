@@ -231,7 +231,10 @@ const SliderComponent = () => {
       </div>
 
       {/* Zona comercial */}
-      <div className="text-white h-screen justify-center items-center text-center flex-col-reverse flex md:flex-row w-full">
+      <div
+        id="comercial-section"
+        className="text-white h-screen justify-center items-center text-center flex-col-reverse flex md:flex-row w-full"
+      >
         <Swiper slidesPerView={1} className="md:w-[55%] w-full h-screen">
           <SwiperSlide className="md:w-[55%] w-full md:h-screen h-full">
             <div className="relative w-full h-full">
