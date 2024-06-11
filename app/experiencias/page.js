@@ -111,7 +111,7 @@ export default function Experiencias() {
             </Swiper>
           </div>
           <Button variant="secondary" type="submit">
-            BOOK NOW
+            RESERVE YA
           </Button>
         </section>
       </div>

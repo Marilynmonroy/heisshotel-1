@@ -93,7 +93,7 @@ function Header() {
                 href="https://hotels.cloudbeds.com/es/reservation/lLxxdq"
                 target="_blank"
               >
-                BOOK NOW
+                RESERVE YA{" "}
               </Link>
             </Button>
           </div>

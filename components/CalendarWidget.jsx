@@ -147,7 +147,7 @@ export function CalendarWidget() {
                     }
                     initialFocus
                     className={"rounded-md border shadow"}
-                    style={{ width: "220px", height: "260px" }} 
+                    style={{ width: "220px", height: "260px" }}
                     dayStyle={(date) => ({
                       ...(date &&
                         date.getDate() === new Date().getDate() && {
@@ -165,7 +165,7 @@ export function CalendarWidget() {
           )}
         />
         <Button variant="secondary" type="submit">
-          BOOK NOW
+          RESERVE YA
         </Button>
       </form>
     </Form>

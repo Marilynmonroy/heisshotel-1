@@ -52,7 +52,7 @@ function DrawerExperiencias({ imageUrl, altText, title, height, width, text }) {
                 />
               </div>
               <Button variant="secondary" type="submit" className="w-24">
-                BOOK NOW
+                RESERVE YA{" "}
               </Button>
             </div>
           </div>
