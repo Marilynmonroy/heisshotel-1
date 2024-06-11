@@ -79,7 +79,7 @@ import React from "react";
 
 function GoogleMaps() {
   return (
-    <div className="h-full w-full -z-10">
+    <div className="h-full w-full">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3653842515896!2d-75.57517242433772!3d6.21545102666507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44293176eacd53%3A0xd445e48905455d9a!2sHeiss%20Hotel!5e0!3m2!1ses!2sco!4v1718048212671!5m2!1ses!2sco"
         width="100%"
