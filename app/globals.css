@@ -150,6 +150,6 @@
 
 @layer components {
   .espacios {
-    @apply w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-28 md:pr-16 lg:pl-32 lg:pr-18 xl:pl-48 xl:pr-36;
+    @apply w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-28 md:pr-16 lg:pl-32 lg:pr-18 xl:pl-40 xl:pr-36;
   }
 }
