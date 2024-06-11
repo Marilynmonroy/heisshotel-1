@@ -57,7 +57,7 @@ const SliderHome = () => {
   const renderSlides = () => (
     <>
       {/* Inicio */}
-      {/* <div className="text-white h-screen flex justify-center items-center text-center">
+      <div className="text-white h-screen flex justify-center items-center text-center">
         <div className="relative w-full h-full ">
           <div className="absolute inset-0 p-1 bg-black opacity-20 z-10"></div>
           <Image
@@ -73,7 +73,7 @@ const SliderHome = () => {
           </div>
         </div>
       </div>
-      {/* Habitaciones 
+      {/* Habitaciones */}
       <div className="text-white h-screen text-center flex justify-center items-center">
         <div className="relative w-full h-full">
           <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
@@ -111,7 +111,7 @@ const SliderHome = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* Espacios */}
       <div className="text-white h-screen text-center flex justify-center items-center sliderHome">
         {/* Para móviles  */}
