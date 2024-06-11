@@ -14,7 +14,6 @@ register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Link from "next/link";
 import Footer from "../Footer";
-import "/app/css/paginationhorizontal.css";
 import "/app/css/navigationhorizontal.css";
 import CardsHabitaciones from "../CardsHabitaciones";
 
