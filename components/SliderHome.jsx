@@ -314,8 +314,15 @@ const SliderHome = () => {
       </div>
 
       {/* Mapa */}
-      <div className=" text-white h-screen text-center flex justify-center items-center">
-        <GoogleMaps />
+      <div className=" text-white h-screen relative text-center flex justify-center items-center">
+        <GoogleMaps className="h-[75vh]" />
+        <div className="hidden sm:flex h-[25vh] relative">
+          <Image
+            src={"/images/habitacionLarge/largedetalles.webp"}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </div>
       {/* footer */}
 

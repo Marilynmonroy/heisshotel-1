@@ -25,13 +25,13 @@ export default function Experiencias() {
             objectFit="cover"
           />
         </div>
-        <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 pb-12">
+        <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 pb-24 md:pb-12">
           <div className="text-center flex flex-col">
             <span className="p-regular-16">
               LAS MEJORES EXPERIENCIAS LAS ENCUENTRAS EN
             </span>
             <h4 className="h3">MEDELLÍN</h4>
-            <span className="p-light-16 lg:text-center lg:float-center">
+            <span className="p-light-16 px-5 md:px-0lg:text-center lg:float-center">
               Explora Medellín y sumérgete en su autenticidad, diversidad y
               aventura.
             </span>
