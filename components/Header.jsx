@@ -68,6 +68,9 @@ function Header() {
                   <li onClick={handleMenuOptionClick} className="block">
                     <Link href="/contacto">CONTACTO</Link>
                   </li>
+                  {/* <li onClick={handleMenuOptionClick} className="block">
+                    <Link href="/experiencias">EXPERIENCIAS</Link>
+                  </li> */}
                 </ul>
               </SheetContent>
             </Sheet>
