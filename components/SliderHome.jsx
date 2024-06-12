@@ -28,32 +28,24 @@ import "/app/css/pagination.css";
 import GoogleMaps from "./GoogleMaps";
 
 const SliderHome = () => {
-  // Estado para verificar se o dispositivo é móvel
   const [isMobile, setIsMobile] = useState(false);
 
-  // Efeito para atualizar o estado `isMobile` com base na largura da janela
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
     };
-    handleResize(); // Verifica inicialmente
-    window.addEventListener("resize", handleResize); // Adiciona evento de redimensionamento
+    handleResize();
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize); // Limpa o evento no desmontar
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  // Módulos do Swiper baseados no estado `isMobile`
-  const swiperModules = isMobile
-    ? [] // Sem módulos para mobile
-    : [Keyboard, Mousewheel, Pagination, EffectFade]; // Módulos para desktop
-
-  // Propriedades do Swiper baseadas no estado `isMobile`
+  const swiperModules = isMobile ? [] : [Keyboard, Mousewheel, Pagination, EffectFade];
   const swiperProps = isMobile
-    ? {} // Sem efeitos para mobile
-    : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true }; // Efeito de fade para desktop
+    ? {}
+    : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true };
 
-  // Função para renderizar slides de forma estática (para mobile)
   const renderSlides = () => (
     <>
       {/* Inicio */}
@@ -63,8 +55,8 @@ const SliderHome = () => {
           <Image
             src="/images/Fachada_Heiss_R3.webp"
             alt="Fachada Heiss"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             priority
           />
           <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
@@ -80,8 +72,8 @@ const SliderHome = () => {
           <Image
             src="/images/Habitacion_Small_Front.webp"
             alt="Habitación Small"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             priority
           />
           <div className="absolute inset-0 flex z-20 flex-col justify-center px-5">
@@ -120,9 +112,8 @@ const SliderHome = () => {
             <div className="absolute inset-0 p-1 bg-black opacity-25 z-10"></div>
             <Image
               src="/images/Zona_Comercial.webp"
-              objectFit="cover"
-              layout="fill"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
               alt="Zona Comercial"
             />
             <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
@@ -225,13 +216,11 @@ const SliderHome = () => {
               </div>
             </Swiper>
           </div>
-          {/* Imagen estática con flechas de navegación */}
           <div className="absolute bg-cover w-[100%] h-[93%] bg-center md:col-span-3 rounded-3xl z-10 inset-0 relative-image">
             <Image
               src="/images/Zona_Comercial.webp"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
               className="rounded-3xl bg-black opacity-60"
               alt="Zona comercial"
             />
@@ -255,7 +244,7 @@ const SliderHome = () => {
               </div>
             </div>
             <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>{" "}
+            <div className="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -314,29 +303,30 @@ const SliderHome = () => {
       </div>
 
       {/* Mapa */}
-      <div className=" text-white h-screen hidden sm:flex w-full">
+      <div className="text-white h-screen hidden sm:flex w-full">
         <div className="flex flex-col h-screen w-full">
           <div className="h-[60vh] w-full relative">
             <GoogleMaps />
-          </div>{" "}
+          </div>
           <div className="hidden sm:flex h-[40vh] relative">
             <Image
-              src={"/images/habitacionLarge/largedetalles.webp"}
-              layout="fill"
-              objectFit="cover"
+              src="/images/habitacionLarge/largedetalles.webp"
+              fill
+              style={{ objectFit: "cover" }}
+              alt="Detalhes da Habitação"
             />
           </div>
         </div>
       </div>
       {/* footer */}
-
       <div>
         <Footer>
           <div className="hidden sm:flex h-[26vh]">
             <Image
-              src={"/images/habitacionLarge/largedetalles.webp"}
-              layout="fill"
-              objectFit="cover"
+              src="/images/habitacionLarge/largedetalles.webp"
+              fill
+              style={{ objectFit: "cover" }}
+              alt="Detalhes da Habitação"
             />
           </div>
 
@@ -353,10 +343,8 @@ const SliderHome = () => {
   return (
     <>
       {isMobile ? (
-        // Renderização estática para mobile
         <div className="w-full h-screen overflow-auto">{renderSlides()}</div>
       ) : (
-        // Usando Swiper para desktop
         <Swiper
           direction={"vertical"}
           spaceBetween={0}
