@@ -1,3 +1,4 @@
+// app/components/Header.js
 "use client";
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
@@ -71,7 +72,7 @@ function Header() {
           </Link>
         </div>
 
-        <Button variant="outline" asChild className="text-white ">
+        <Button variant="outline" asChild className="text-white">
           <Link
             href="https://hotels.cloudbeds.com/es/reservation/lLxxdq"
             target="_blank"
