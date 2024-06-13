@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer({ children, minHeight = "min-h-screen" }) {
   return (
-    <div className={`flex flex-col ${minHeight} text-white w-full`}>
+    <div className={`flex flex-col ${minHeight} text-white w-full z-40`}>
       <div className="w-full relative flex-grow">{children}</div>
       <footer className="bg-black w-full py-7 md:pt-10 md:px-18 lg:px-24 xl:pt-10 xl:px-44">
         <div className="w-full">
@@ -71,11 +71,11 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
               </section>
             </div>
 
-            <div className="w-full flex flex-col pb-18 pt-5 md:pt-0 md:pl-10 md:pr-[8rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[15rem] xl:pb-4 md:flex-row md:justify-between justify-center items-center">
+            <div className="w-full flex flex-col pb-18 pt-5 md:pt-0 md:pl-10 md:pr-[12rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[11rem] xl:pb-4 md:flex-row md:justify-between justify-center items-center">
               <Link href="/contacto">
                 <h6 className="h6">CONTÁCTENOS</h6>
               </Link>
-              <Link href="/politicas-uso">
+              <Link href="/">
                 <h6 className="h6">PÓLITICAS DE USO</h6>
               </Link>
               <Link href="/politicas-privacidad">

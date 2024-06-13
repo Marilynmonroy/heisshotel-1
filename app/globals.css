@@ -104,7 +104,9 @@
   .h6 {
     @apply text-[16px] md:text-[13px] lg:text-[20px] font-medium;
   }
-
+  .h7 {
+    @apply text-[20px] md:text-[28px] lg:text-[35px] font-bold;
+  }
   .p-medium-16 {
     @apply text-base md:text-sm lg:text-lg xl:text-xl font-medium;
   }
