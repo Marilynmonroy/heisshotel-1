@@ -104,6 +104,7 @@ export function CalendarWidget() {
                     dayStyle={(date) => ({
                       ...(date && date.getDate() === new Date().getDate()),
                     })}
+                    defaultMonth={new Date(2024, 8, 10)}
                   />
                 </PopoverContent>
               </Popover>
@@ -157,6 +158,7 @@ export function CalendarWidget() {
                     dayHoverStyle={(date) => ({
                       backgroundColor: "lightblue",
                     })}
+                    defaultMonth={new Date(2024, 8, 10)}
                   />
                 </PopoverContent>
               </Popover>

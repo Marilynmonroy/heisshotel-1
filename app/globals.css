@@ -104,7 +104,6 @@
   .h6 {
     @apply text-[16px] md:text-[13px] lg:text-[20px] font-medium;
   }
-  
 
   .p-medium-16 {
     @apply text-base md:text-sm lg:text-lg xl:text-xl font-medium;
@@ -152,4 +151,15 @@
   .espacios {
     @apply w-[75%] md:w-[50%] h-full flex flex-col gap-3 justify-center text-left md:gap-5 md:pl-28 md:pr-16 lg:pl-32 lg:pr-18 xl:pl-40 xl:pr-36;
   }
+}
+/* Para navegadores Webkit como Chrome y Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

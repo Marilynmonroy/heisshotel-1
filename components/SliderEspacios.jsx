@@ -15,14 +15,6 @@ import Image from "next/image";
 import { register } from "swiper/element/bundle";
 import Footer from "./Footer";
 register();
-import {
-  Mousewheel,
-  Pagination,
-  EffectFade,
-  Keyboard,
-  FreeMode,
-  Navigation,
-} from "swiper/modules";
 import GoogleMaps from "./GoogleMaps";
 const SliderComponent = () => {
   return (
@@ -39,6 +31,7 @@ const SliderComponent = () => {
           priority
         />
         <div className="items-center justify-center text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
+          <Badge className="w-64">Próximamente espacios en construcción</Badge>
           <h2 className="h2">CAMBIA DE AMBIENTE</h2>
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center px-5">
             El espacio que buscas, con las comodidades que necesitas para una

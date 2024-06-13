@@ -34,7 +34,7 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
                     <b className="font-medium">Comercial y Mercadeo:</b> +57 313
                     525 0564
                   </p>
-                  <p>argemiroquintero@heiss.com.co</p>
+                  {/* <p>argemiroquintero@heiss.com.co</p> */}
                   <p>
                     <b className="font-medium">Front desk:</b> +57 313 738 3098
                   </p>
@@ -71,7 +71,7 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
               </section>
             </div>
 
-            <div className="w-full flex flex-col pb-18 pt-5 md:pt-0 md:pl-10 md:pr-[12rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[15rem] xl:pb-4 md:flex-row md:justify-between justify-center items-center">
+            <div className="w-full flex flex-col pb-18 pt-5 md:pt-0 md:pl-10 md:pr-[8rem] md:pb-5 lg:pr-36 lg:pb-4 xl:pr-[15rem] xl:pb-4 md:flex-row md:justify-between justify-center items-center">
               <Link href="/contacto">
                 <h6 className="h6">CONTÁCTENOS</h6>
               </Link>

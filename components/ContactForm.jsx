@@ -8,19 +8,21 @@ import {
   FormLabel,
   FormDescription,
   FormMessage,
-} from "@/components/ui/form"; // Ajusta según tu estructura de proyecto
-import { Input } from "./ui/input"; // Ajusta según tu estructura de proyecto
+} from "@/components/ui/form";
+import { Input } from "./ui/input";
+import { ToastAction } from "./ui/toast";
+import { useToast } from "./ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "./ui/button"; // Ajusta según tu estructura de proyecto
+import { Button } from "./ui/button";
 
 const formSchema = z.object({
   nombre: z
     .string()
     .min(2, "El nombre debe tener al menos 2 caracteres")
     .max(40, "El nombre debe tener menos de 40 caracteres"),
-  celular: z
+  movil: z
     .string()
     .min(10, "El celular debe tener al menos 10 caracteres")
     .max(15, "El celular debe tener menos de 15 caracteres"),
@@ -28,17 +30,22 @@ const formSchema = z.object({
 });
 
 function ContactForm() {
+  const { toast } = useToast();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       nombre: "",
-      celular: "",
+      movil: "",
       correo: "",
     },
   });
 
   function onSubmit(data) {
     console.log("Form submitted", data);
+    toast({
+      title: "Hemos recibido tus datos",
+      description: "Pronto nuestros asesores se contactarán contigo",
+    });
   }
 
   return (
@@ -67,16 +74,14 @@ function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="celular"
+          name="movil"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-xs lg:text-sm">Celular</FormLabel>
+              <FormLabel className="text-xs lg:text-sm">Móvil</FormLabel>
               <FormControl>
                 <Input type="number" {...field} />
               </FormControl>
-              <FormMessage>
-                {form.formState.errors.celular?.message}
-              </FormMessage>
+              <FormMessage>{form.formState.errors.movil?.message}</FormMessage>
             </FormItem>
           )}
         />
@@ -95,7 +100,7 @@ function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" variant="secondary" className=" self-center">
+        <Button type="submit" variant="secondary" className="self-center">
           ENVIAR
         </Button>
       </form>

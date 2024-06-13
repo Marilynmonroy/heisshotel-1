@@ -67,14 +67,14 @@ const Contacto = () => {
                   </span>
                 }
               />
-              <IconMessage
+              {/* <IconMessage
                 imageSrc={"/icons/mail.svg"}
                 altText={"argemiroquintero@heiss.com.co"}
                 width={5}
                 height={5}
                 className={"w-5"}
                 text={"argemiroquintero@heiss.com.co"}
-              />
+              /> */}
             </span>
           </div>
           <div className="md:w-4/5 lg:w-3/5 xl:w-2/5">

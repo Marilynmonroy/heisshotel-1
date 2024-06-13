@@ -41,7 +41,9 @@ const SliderHome = () => {
     };
   }, []);
 
-  const swiperModules = isMobile ? [] : [Keyboard, Mousewheel, Pagination, EffectFade];
+  const swiperModules = isMobile
+    ? []
+    : [Keyboard, Mousewheel, Pagination, EffectFade];
   const swiperProps = isMobile
     ? {}
     : { effect: "fade", fadeEffect: { crossFade: true }, mousewheel: true };
@@ -281,7 +283,7 @@ const SliderHome = () => {
           <div className="text-center flex flex-col content-center z-20 lg:text-left lg:pl-44 px-5 ">
             <div className="mb-5 md:my-8">
               <Button asChild>
-                <Link href="https://wa.me/573178946768" target="_blank">
+                <Link href="https://wa.me/573135250564" target="_blank">
                   EXPLORAR
                 </Link>
               </Button>
@@ -310,10 +312,10 @@ const SliderHome = () => {
           </div>
           <div className="hidden sm:flex h-[40vh] relative">
             <Image
-              src="/images/habitacionLarge/largedetalles.webp"
+              src={"/images/_URV6897.webp"}
               fill
               style={{ objectFit: "cover" }}
-              alt="Detalhes da Habitação"
+              alt="Mapa"
             />
           </div>
         </div>
@@ -326,7 +328,7 @@ const SliderHome = () => {
               src="/images/habitacionLarge/largedetalles.webp"
               fill
               style={{ objectFit: "cover" }}
-              alt="Detalhes da Habitação"
+              alt="Habitación"
             />
           </div>
 
