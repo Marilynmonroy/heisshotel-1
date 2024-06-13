@@ -27,7 +27,7 @@ function Header() {
 
   return (
     <div className="fixed top-0 left-0 w-full z-30 py-9 bg-transparent">
-      <div className="flex items-center w-full max-w-[92%] xl:max-w-[89%]">
+      <div className="flex items-center justify-between w-[90%] max-w-screen-xl mx-auto">
         <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
           <SheetTrigger asChild>
             <button onClick={handleMenuToggle}>
@@ -60,7 +60,7 @@ function Header() {
           </SheetContent>
         </Sheet>
 
-        <div className="hidden sm:flex justify-center flex-grow pl-[101px]">
+        <div className="hidden sm:flex justify-center flex-grow">
           <Link href="/">
             <Image
               src="/icons/heiss.svg"
