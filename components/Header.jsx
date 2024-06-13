@@ -56,11 +56,14 @@ function Header() {
               <li onClick={handleMenuOptionClick}>
                 <Link href="/contacto">CONTACTO</Link>
               </li>
+              {/* <li onClick={handleMenuOptionClick} className="block">
+                    <Link href="/experiencias">EXPERIENCIAS</Link>
+                  </li> */}
             </ul>
           </SheetContent>
         </Sheet>
 
-        <div className="hidden sm:flex justify-center flex-grow">
+        <div className="hidden sm:flex justify-center flex-grow pl-[101px]">
           <Link href="/">
             <Image
               src="/icons/heiss.svg"
