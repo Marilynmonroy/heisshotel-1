@@ -247,7 +247,7 @@ const SliderHome = () => {
               </div>
             </div>
             <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next pr-10 pt-7">
+            <div className="swiper-button-next pr-12 pt-9">
               <Badge className={"-rotate-90"}>Explora</Badge>
             </div>
           </div>
