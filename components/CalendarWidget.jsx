@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
@@ -26,7 +26,7 @@ const FormSchema = z.object({
 });
 
 export function CalendarWidget() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date(2024, 7, 10));
   const [endDate, setEndDate] = useState(new Date());
   const [isDepartureOpen, setIsDepartureOpen] = useState(false);
   const departureTriggerRef = useRef(null);
@@ -34,12 +34,6 @@ export function CalendarWidget() {
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
-  };
-
-  const selectionRange = {
-    startDate: startDate,
-    endDate: endDate,
-    key: "selection",
   };
 
   const currentDate = new Date();
@@ -81,14 +75,14 @@ export function CalendarWidget() {
                     >
                       {field.value
                         ? format(field.value, "dd/MM/yyyy")
-                        : format(new Date(), "dd/MM/yyyy")}
+                        : format(startDate, "dd/MM/yyyy")}
                       <CalendarIcon className="ml-auto h-5 w-5 opacity-80" />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto" align="start">
                   <Calendar
-                    ranges={[selectionRange]}
+                    ranges={[{ startDate, endDate, key: "selection" }]}
                     onChange={handleSelect}
                     mode="single"
                     selected={field.value}
@@ -96,7 +90,7 @@ export function CalendarWidget() {
                       field.onChange(date);
                       setIsDepartureOpen(true);
                     }}
-                    disabled={(date) => date < new Date()}
+                    disabled={(date) => date < new Date() || date < startDate}
                     fromYear={2023}
                     initialFocus
                     className={""}
@@ -104,7 +98,7 @@ export function CalendarWidget() {
                     dayStyle={(date) => ({
                       ...(date && date.getDate() === new Date().getDate()),
                     })}
-                    defaultMonth={new Date(2024, 8, 10)}
+                    defaultMonth={new Date(2024, 7, 10)}
                   />
                 </PopoverContent>
               </Popover>
@@ -130,7 +124,7 @@ export function CalendarWidget() {
                     >
                       {field.value
                         ? format(field.value, "dd/MM/yyyy")
-                        : format(currentDate, "dd/MM/yyyy")}
+                        : format(new Date(2024, 7, 11), "dd/MM/yyyy")}
                       <CalendarIcon className="ml-auto h-5 w-5 opacity-80" />
                     </Button>
                   </FormControl>
