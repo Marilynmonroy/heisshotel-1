@@ -9,13 +9,13 @@ import {
   FormDescription,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "./ui/input";
-import { ToastAction } from "./ui/toast";
-import { useToast } from "./ui/use-toast";
+import { Input } from "@/components/ui/input";
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
   nombre: z
@@ -40,12 +40,34 @@ function ContactForm() {
     },
   });
 
-  function onSubmit(data) {
-    console.log("Form submitted", data);
-    toast({
-      title: "Hemos recibido tus datos",
-      description: "Pronto nuestros asesores se contactarán contigo",
-    });
+  async function onSubmit(data) {
+    // console.log("Form submitted", data);
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      if (response.ok) {
+        toast({
+          title: "Hemos recibido tus datos",
+          description: "Pronto nuestros asesores se contactarán contigo",
+        });
+      } else {
+        toast({
+          title: "Error al enviar el correo",
+          description: result.message,
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error al enviar el correo",
+        description: "Ocurrió un error inesperado",
+      });
+    }
   }
 
   return (
