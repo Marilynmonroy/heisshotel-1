@@ -110,7 +110,7 @@ const SliderHome = () => {
       {/* Espacios */}
       <div className="text-white h-screen text-center flex justify-center items-center sliderHome">
         {/* Para móviles  */}
-        <div className="md:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center">
+        <div className="lg:hidden bg-cover bg-center w-full h-full flex flex-col justify-center items-center">
           <div className="relative w-full h-full ">
             <div className="absolute inset-0 p-1 bg-black opacity-25 z-10"></div>
             <Image
@@ -119,7 +119,7 @@ const SliderHome = () => {
               style={{ objectFit: "cover", objectPosition: "center" }}
               alt="Zona Comercial"
             />
-            <div className="absolute inset-0 flex flex-col justify-center mb-28 items-center z-20">
+            <div className="absolute inset-0 flex flex-col justify-center mb-28 md:-mb-6 items-center z-20">
               <div className="items-center lg:text-right flex flex-col gap-3 md:gap-5 lg:items-start">
                 <span className="p-regular-16">HEISS MEDELLÍN</span>
                 <h2 className="h2">CAMBIA DE AMBIENTE</h2>
@@ -132,7 +132,7 @@ const SliderHome = () => {
                   satisfacción.
                 </p>
               </div>
-              <div className="my-5 md:my-8">
+              <div className="my-5 lg:my-8">
                 <Button asChild>
                   <Link href="/espacios">CONOCE MÁS</Link>
                 </Button>
@@ -142,8 +142,8 @@ const SliderHome = () => {
         </div>
 
         {/* Para dispositivos grandes */}
-        <div className="hidden md:absolute md:grid md:grid-cols-4 gap-6 p-8 w-full h-full vertical">
-          <div className="md:flex hidden">
+        <div className="hidden z-50 lg:absolute lg:grid lg:grid-cols-4 gap-6 p-8 w-full h-full vertical">
+          <div className="lg:flex hidden">
             <Swiper
               direction={"vertical"}
               navigation={{
@@ -155,7 +155,7 @@ const SliderHome = () => {
               slidesPerView={"auto"}
               rewind={true}
               modules={[Navigation]}
-              className="w-full h-screen vertical"
+              className="w-full h-screen vertical z-50"
               style={{
                 "--swiper-navigation-size": "10px",
                 "--swiper-navigation-weight": "10px",
