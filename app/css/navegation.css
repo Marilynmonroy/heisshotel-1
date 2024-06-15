@@ -10,13 +10,13 @@
 
 /* Posiciona las flechas fuera del Swiper y sobre la imagen estática */
 .vertical .swiper-button-prev {
-  left: 4%;
+  left: 5%;
   top: 60%;
   transform: translateY(-50%) rotate(90deg);
 }
 
 .vertical .swiper-button-next {
-  left: 4%;
+  left: 5%;
   top: 70%;
   transform: translateY(-50%) rotate(90deg);
 }
@@ -31,4 +31,19 @@
 .relative-image {
   position: relative;
   z-index: 50;
+}
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: rotate(90deg);
+    transform: translateY(-20%);
+  }
+  50% {
+    transform: translateY(0);
+    transform: rotate(90deg);
+  }
 }

@@ -26,6 +26,7 @@ import Footer from "./Footer";
 import "/app/css/navegation.css";
 import "/app/css/pagination.css";
 import GoogleMaps from "./GoogleMaps";
+import { Badge } from "./ui/badge";
 
 const SliderHome = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -141,11 +142,10 @@ const SliderHome = () => {
         </div>
 
         {/* Para dispositivos grandes */}
-        <div className="hidden md:absolute md:grid md:grid-cols-4 gap-6 p-8 overscroll-contain w-full h-full vertical">
+        <div className="hidden md:absolute md:grid md:grid-cols-4 gap-6 p-8 w-full h-full vertical">
           <div className="md:flex hidden">
             <Swiper
               direction={"vertical"}
-              freeMode={true}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -153,14 +153,15 @@ const SliderHome = () => {
               spaceBetween={20}
               loop={true}
               slidesPerView={"auto"}
-              modules={[Navigation, FreeMode]}
+              rewind={true}
+              modules={[Navigation]}
               className="w-full h-screen vertical"
               style={{
                 "--swiper-navigation-size": "10px",
                 "--swiper-navigation-weight": "10px",
               }}
             >
-              <div className="flex flex-col h-[93%]">
+              <div className="flex flex-col h-[100%]">
                 <SwiperSlide style={{ height: "20rem" }}>
                   <CardExperiencias
                     imageUrl="/images/Terraza.webp"
@@ -246,7 +247,9 @@ const SliderHome = () => {
               </div>
             </div>
             <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
+            <div className="swiper-button-next pr-10 pt-7">
+              <Badge className={"-rotate-90"}>Explora</Badge>
+            </div>
           </div>
         </div>
       </div>
@@ -306,11 +309,11 @@ const SliderHome = () => {
 
       {/* Mapa */}
       <div className="text-white h-screen hidden sm:flex w-full">
-        <div className="flex flex-col h-screen w-full">
-          <div className="h-[60vh] w-full relative">
+        <div className="flex h-screen w-full">
+          <div className="h-full w-[70%] relative">
             <GoogleMaps />
           </div>
-          <div className="hidden sm:flex h-[40vh] relative">
+          <div className="hidden sm:flex w-full relative inset-0 bg-black opacity-80">
             <Image
               src={"/images/_URV6897.webp"}
               fill

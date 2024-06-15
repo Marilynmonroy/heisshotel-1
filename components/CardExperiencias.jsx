@@ -14,7 +14,7 @@ function CardExperiencias({ imageUrl, altText, title, height, linkUrl }) {
             className="rounded-3xl"
             alt={altText}
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/65 opacity-0 transition-opacity duration-200 ease-in-out hover:opacity-100 rounded-3xl">
+          <div className="absolute inset-0 flex items-center justify-center rounded-3xl">
             <h2 className="h6 text-white">{title}</h2>
           </div>
         </div>
