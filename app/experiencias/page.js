@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import { Navigation, Mousewheel, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
