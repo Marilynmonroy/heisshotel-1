@@ -17,7 +17,7 @@ import DrawerExperiencias from "@/components/DrawerExperiencias";
 export default function Experiencias() {
   return (
     <section className="overflow-y-auto">
-      <div className="relative w-full h-screen">
+      <div className="relative w-full h-screen pb-52">
         <div className="absolute inset-0 bg-black opacity-85 z-10">
           <Image
             src="/images/experiencias.webp"
@@ -26,7 +26,7 @@ export default function Experiencias() {
             objectFit="cover"
           />
         </div>
-        <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 pb-24 md:pb-12">
+        <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 pb-36 md:pb-12">
           <div className="text-center flex flex-col">
             <span className="p-regular-16">
               LAS MEJORES EXPERIENCIAS LAS ENCUENTRAS EN
