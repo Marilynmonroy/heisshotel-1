@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import { Navigation, Mousewheel, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
@@ -111,11 +110,8 @@ export default function Experiencias() {
               </SwiperSlide>
             </Swiper>
           </div>
-          <Button variant="secondary" asChild className="text-white">
-            <Link
-              href="https://hotels.cloudbeds.com/es/reservation/lLxxdq"
-              target="_blank"
-            >
+          <Button asChild variant="secondary">
+            <Link href="https://wa.me/573135250564" target="_blank">
               RESERVE YA
             </Link>
           </Button>

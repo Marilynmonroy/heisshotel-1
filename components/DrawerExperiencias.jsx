@@ -1,6 +1,7 @@
 import React from "react";
 import { IoMdClose } from "react-icons/io";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 import {
   Drawer,
@@ -51,8 +52,10 @@ function DrawerExperiencias({ imageUrl, altText, title, height, width, text }) {
                   alt={altText}
                 />
               </div>
-              <Button variant="secondary" type="submit" className="w-24">
-                RESERVE YA{" "}
+              <Button asChild variant="secondary">
+                <Link href="https://wa.me/573135250564" target="_blank">
+                  RESERVE YA
+                </Link>
               </Button>
             </div>
           </div>
