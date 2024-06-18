@@ -110,8 +110,13 @@ export default function Experiencias() {
               </SwiperSlide>
             </Swiper>
           </div>
-          <Button variant="secondary" type="submit">
-            RESERVE YA
+          <Button variant="secondary" asChild className="text-white">
+            <Link
+              href="https://hotels.cloudbeds.com/es/reservation/lLxxdq"
+              target="_blank"
+            >
+              RESERVE YA
+            </Link>
           </Button>
         </section>
       </div>
