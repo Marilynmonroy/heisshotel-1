@@ -47,7 +47,7 @@ export function CalendarWidget() {
     const { arrival, departure } = data;
     const arrivalDate = arrival
       ? format(arrival, "yyyy-MM-dd")
-      : format (new Date(2024, 7, 10));
+      : format(new Date(2024, 7, 10), "yyyy-MM-dd");
     const departureDate = departure ? format(departure, "yyyy-MM-dd") : "";
     const cloudbedsUrl = `https://hotels.cloudbeds.com/es/reservation/lLxxdq?checkin=${arrivalDate}&checkout=${departureDate}`;
 
