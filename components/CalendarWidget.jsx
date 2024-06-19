@@ -152,7 +152,7 @@ export function CalendarWidget() {
                     dayHoverStyle={(date) => ({
                       backgroundColor: "lightblue",
                     })}
-                    defaultMonth={new Date(2024, 8, 10)}
+                    defaultMonth={new Date(2024, 7, 10)}
                   />
                 </PopoverContent>
               </Popover>
