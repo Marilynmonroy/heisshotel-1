@@ -51,8 +51,8 @@ const SliderHabLarge = () => {
         <Image
           src="/images/habitacionLarge/largeprincipal.webp"
           alt="Piscina Image"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           priority
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
@@ -79,27 +79,24 @@ const SliderHabLarge = () => {
             <Image
               src="/images/habitacionLarge/largecarrousel1.webp"
               alt="Cama Junior Suite"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="bottom"
+              fill
+              style={{ objectFit: "cover", objectPosition: "bottom" }}
             />
           </SwiperSlide>
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionLarge/largecarrousel2.webp"
               alt="Cocina Junior Suite"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
             />
           </SwiperSlide>
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionLarge/largecarrousel3.webp"
               alt="Centro Junior Suite"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
             />
           </SwiperSlide>
         </Swiper>
@@ -119,8 +116,8 @@ const SliderHabLarge = () => {
             <Image
               src="/images/habitacionLarge/largedetalles.webp"
               alt="Mesa Junior Suite"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionLarge/largedetalles.webp")
@@ -131,8 +128,8 @@ const SliderHabLarge = () => {
             <Image
               src="/images/habitacionLarge/largedetalles2.webp"
               alt="Detalle Junior Suite"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionLarge/largedetalles2.webp")
@@ -143,8 +140,8 @@ const SliderHabLarge = () => {
             <Image
               src="/images/habitacionLarge/largedetalles3.webp"
               alt="Sofa Junior Suite"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionLarge/largedetalles3.webp")
@@ -157,9 +154,8 @@ const SliderHabLarge = () => {
                 <Image
                   src="/images/habitacionLarge/largecarrousel1.webp"
                   alt="Cama Junior Suite"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="bottom"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "bottom" }}
                   onClick={() =>
                     openModal("/images/habitacionLarge/largecarrousel1.webp")
                   }
@@ -169,9 +165,8 @@ const SliderHabLarge = () => {
                 <Image
                   src="/images/habitacionLarge/largecarrousel2.webp"
                   alt="Cocina Junior Suite"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                   onClick={() =>
                     openModal("/images/habitacionLarge/largecarrousel2.webp")
                   }
@@ -181,9 +176,8 @@ const SliderHabLarge = () => {
                 <Image
                   src="/images/habitacionLarge/largecarrousel3.webp"
                   alt="Centro Junior Suite"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="bottom"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "bottom" }}
                   onClick={() =>
                     openModal("/images/habitacionLarge/largecarrousel3.webp")
                   }
@@ -213,8 +207,8 @@ const SliderHabLarge = () => {
                 <Image
                   src="/images/habitacionLarge/largedetalles.webp"
                   alt="Mesa Junior Suite"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionLarge/largedetalles.webp")
@@ -225,8 +219,8 @@ const SliderHabLarge = () => {
                 <Image
                   src="/images/habitacionLarge/largedetalles2.webp"
                   alt="Detalle Junior Suite"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionLarge/largedetalles2.webp")
@@ -237,8 +231,8 @@ const SliderHabLarge = () => {
                 <Image
                   src="/images/habitacionLarge/largedetalles3.webp"
                   alt="Sofa Junior Suite"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionLarge/largedetalles3.webp")
@@ -251,9 +245,8 @@ const SliderHabLarge = () => {
                     <Image
                       src="/images/habitacionLarge/largecarrousel1.webp"
                       alt="Cama Junior Suite"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="bottom"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "bottom" }}
                       onClick={() =>
                         openModal(
                           "/images/habitacionLarge/largecarrousel1.webp"
@@ -265,9 +258,8 @@ const SliderHabLarge = () => {
                     <Image
                       src="/images/habitacionLarge/largecarrousel2.webp"
                       alt="Cocina Junior Suite"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="center"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "center" }}
                       onClick={() =>
                         openModal(
                           "/images/habitacionLarge/largecarrousel2.webp"
@@ -279,9 +271,8 @@ const SliderHabLarge = () => {
                     <Image
                       src="/images/habitacionLarge/largecarrousel3.webp"
                       alt="Centro Junior Suite"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="bottom"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "bottom" }}
                       onClick={() =>
                         openModal(
                           "/images/habitacionLarge/largecarrousel3.webp"

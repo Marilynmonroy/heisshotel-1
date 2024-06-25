@@ -27,7 +27,7 @@ const SliderComponent = () => {
           alt="Piscina Image"
           fill
           className="responsive-image"
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           priority
         />
         <div className="items-center justify-center text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
@@ -74,7 +74,7 @@ const SliderComponent = () => {
                 alt="Terraza Image"
                 fill
                 className="responsive-image"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -96,7 +96,7 @@ const SliderComponent = () => {
                 alt="Lobby Image"
                 fill
                 className="responsive-image"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -142,7 +142,7 @@ const SliderComponent = () => {
                 alt="Piscina Image"
                 fill
                 className="responsive-image"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 priority
               />
             </div>
@@ -164,7 +164,7 @@ const SliderComponent = () => {
                 alt="Gimnasio Image"
                 fill
                 className="responsive-image"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 loading="lazy"
               />
             </div>
@@ -215,7 +215,7 @@ const SliderComponent = () => {
                 alt="Sala de Masajes Image"
                 fill
                 className="responsive-image"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 loading="lazy"
               />
             </div>
@@ -237,7 +237,7 @@ const SliderComponent = () => {
                 alt="Zona Comercial Image"
                 fill
                 className="responsive-image"
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 loading="lazy"
               />
             </div>

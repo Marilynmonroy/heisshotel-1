@@ -8,9 +8,8 @@ function CardExperiencias({ imageUrl, altText, title, height, linkUrl }) {
         <div style={{ height: height }} className="relative cursor-pointer">
           <Image
             src={imageUrl}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
             className="rounded-3xl"
             alt={altText}
           />

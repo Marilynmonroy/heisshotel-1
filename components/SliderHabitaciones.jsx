@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "./Footer";
@@ -22,8 +21,8 @@ const SliderHabitaciones = () => {
           <Image
             src="/images/Habitacion_L_Balcón.webp"
             alt="Habitación Small"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             priority
           />
           <div className="absolute inset-0 flex z-20 flex-col justify-center w-full gap-5">

@@ -20,9 +20,8 @@ function DrawerExperiencias({ imageUrl, altText, title, height, width, text }) {
         >
           <Image
             src={imageUrl}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
             className="rounded-3xl"
             alt={altText}
           />
@@ -45,9 +44,8 @@ function DrawerExperiencias({ imageUrl, altText, title, height, width, text }) {
               <div className="flex w-full h-full relative">
                 <Image
                   src={imageUrl}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                   className="rounded-3xl flex"
                   alt={altText}
                 />

@@ -76,10 +76,10 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
                 <h6 className="h6">CONTÁCTENOS</h6>
               </Link>
               <Link href="/politicas-uso">
-                <h6 className="h6">PÓLITICAS DE USO</h6>
+                <h6 className="h6">POLÍTICAS DE USO</h6>
               </Link>
               <Link href="/politicas-privacidad">
-                <h6 className="h6">PÓLITICAS DE PRIVACIDAD</h6>
+                <h6 className="h6">POLÍTICAS DE PRIVACIDAD</h6>
               </Link>
             </div>
           </section>

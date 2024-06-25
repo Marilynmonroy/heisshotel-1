@@ -22,8 +22,8 @@ export default function Experiencias() {
           <Image
             src="/images/experiencias.webp"
             alt="Experiencias image"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
         <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 pb-48 md:pb-12">

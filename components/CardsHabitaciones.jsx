@@ -11,8 +11,8 @@ function CardsHabitaciones() {
           <div className="absolute inset-0 bg-black opacity-80 z-10">
             <Image
               src="/images/habitacionSmall/smallcarrousel.webp"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               alt="Habitación Estándar"
               className="absolute"
             />
@@ -29,8 +29,8 @@ function CardsHabitaciones() {
           <div className="absolute inset-0 bg-black opacity-80 z-20">
             <Image
               src="/images/habitacionLargeCard.webp"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               alt="Habitación Suite"
               className="absolute shadow-[0px_0px_20px_5px_#000000] md:shadow-[0px_0px_30px_15px_#000000] "
             />
@@ -47,8 +47,8 @@ function CardsHabitaciones() {
           <div className="absolute inset-0 bg-black opacity-80 z-10">
             <Image
               src="/images/habitacionMedium/mediumcarrousel2.webp"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               alt="Habitación Superior"
               className="absolute"
             />

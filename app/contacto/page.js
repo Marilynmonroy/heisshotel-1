@@ -15,8 +15,8 @@ const Contacto = () => {
         <Image
           src="/images/contact.webp"
           alt="Contacto image"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
         />
         <section className="flex flex-col gap-14 md:flex-row items-center justify-center md:gap-10 xl:gap-28 text-white z-20 absolute inset-0 md:px-12 lg:px-16 xl:px-36">
           <div className="px-16 pt-11 md:px-0 md:w-3/5 text-center md:text-left flex flex-col">

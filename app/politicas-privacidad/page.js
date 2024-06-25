@@ -13,8 +13,8 @@ function politicasPrivacidad() {
         <div className="absolute inset-0">
           <Image
             src="/images/_URV6897.webp"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             alt="Mapa"
           />
         </div>

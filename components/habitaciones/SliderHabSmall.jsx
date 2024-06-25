@@ -52,8 +52,8 @@ const SliderHabSmall = () => {
         <Image
           src="/images/habitacionSmall/smallPrincipal.webp"
           alt="Piscina Image"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           priority
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
@@ -78,27 +78,24 @@ const SliderHabSmall = () => {
             <Image
               src="/images/habitacionSmall/smallcarrousel.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="bottom"
+              fill
+              style={{ objectFit: "cover", objectPosition: "bottom" }}
             />
           </SwiperSlide>
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionSmall/smallcarrousel2.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="bottom"
+              fill
+              style={{ objectFit: "cover", objectPosition: "bottom" }}
             />
           </SwiperSlide>
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionSmall/smallcarrousel3.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
             />
           </SwiperSlide>
         </Swiper>
@@ -118,8 +115,8 @@ const SliderHabSmall = () => {
             <Image
               src="/images/habitacionSmall/smalldetalles.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionSmall/smalldetalles.webp")
@@ -130,8 +127,8 @@ const SliderHabSmall = () => {
             <Image
               src="/images/habitacionSmall/smalldetalles2.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionSmall/smalldetalles2.webp")
@@ -142,8 +139,8 @@ const SliderHabSmall = () => {
             <Image
               src="/images/habitacionSmall/smalldetalles3.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionSmall/smalldetalles3.webp")
@@ -156,27 +153,24 @@ const SliderHabSmall = () => {
                 <Image
                   src="/images/habitacionSmall/smallcarrousel.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="bottom"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "bottom" }}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
                   src="/images/habitacionSmall/smallcarrousel2.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
                   src="/images/habitacionSmall/smallcarrousel3.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="bottom"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "bottom" }}
                 />
               </SwiperSlide>
             </>
@@ -203,8 +197,8 @@ const SliderHabSmall = () => {
                 <Image
                   src="/images/habitacionSmall/smalldetalles.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionSmall/smalldetalles.webp")
@@ -215,8 +209,8 @@ const SliderHabSmall = () => {
                 <Image
                   src="/images/habitacionSmall/smalldetalles2.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionSmall/smalldetalles2.webp")
@@ -227,8 +221,8 @@ const SliderHabSmall = () => {
                 <Image
                   src="/images/habitacionSmall/smalldetalles3.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionSmall/smalldetalles3.webp")
@@ -241,27 +235,24 @@ const SliderHabSmall = () => {
                     <Image
                       src="/images/habitacionSmall/smallcarrousel.webp"
                       alt="Piscina Image"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="bottom"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "bottom" }}
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
                       src="/images/habitacionSmall/smallcarrousel2.webp"
                       alt="Piscina Image"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="center"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "center" }}
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <Image
                       src="/images/habitacionSmall/smallcarrousel3.webp"
                       alt="Piscina Image"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="bottom"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "bottom" }}
                     />
                   </SwiperSlide>
                 </>

@@ -20,6 +20,7 @@
     "@types/google.maps": "^3.55.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "contentful": "^10.12.2",
     "date-fns": "^3.6.0",
     "lucide-react": "^0.379.0",
     "next": "14.2.3",

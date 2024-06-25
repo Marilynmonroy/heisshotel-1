@@ -51,9 +51,8 @@ const SliderHabMedium = () => {
         <Image
           src="/images/habitacionMedium/mediumprincipal.webp"
           alt="Piscina Image"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="left"
+          fill
+          style={{ objectFit: "cover", objectPosition: "left" }}
           priority
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
@@ -79,27 +78,24 @@ const SliderHabMedium = () => {
             <Image
               src="/images/habitacionMedium/mediumcarrousel2.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="bottom"
+              fill
+              style={{ objectFit: "cover", objectPosition: "bottom" }}
             />
           </SwiperSlide>
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionMedium/mediumcarrousel.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
             />
           </SwiperSlide>
           <SwiperSlide style={{ height: "35rem" }}>
             <Image
               src="/images/habitacionMedium/mediumcarrousel3.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
             />
           </SwiperSlide>
         </Swiper>
@@ -119,8 +115,8 @@ const SliderHabMedium = () => {
             <Image
               src="/images/habitacionMedium/mediumdetalles1.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionMedium/mediumdetalles1.webp")
@@ -131,8 +127,8 @@ const SliderHabMedium = () => {
             <Image
               src="/images/habitacionMedium/mediumdetalles2.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionMedium/mediumdetalles2.webp")
@@ -143,8 +139,8 @@ const SliderHabMedium = () => {
             <Image
               src="/images/habitacionMedium/mediumdetalles3.webp"
               alt="Piscina Image"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
               onClick={() =>
                 openModal("/images/habitacionMedium/mediumdetalles3.webp")
@@ -157,9 +153,8 @@ const SliderHabMedium = () => {
                 <Image
                   src="/images/habitacionMedium/mediumcarrousel.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="bottom"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "bottom" }}
                   onClick={() =>
                     openModal("/images/habitacionMedium/mediumcarrousel.webp")
                   }
@@ -169,9 +164,8 @@ const SliderHabMedium = () => {
                 <Image
                   src="/images/habitacionMedium/mediumcarrousel2.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                   onClick={() =>
                     openModal("/images/habitacionMedium/mediumcarrousel2.webp")
                   }
@@ -181,9 +175,8 @@ const SliderHabMedium = () => {
                 <Image
                   src="/images/habitacionMedium/mediumcarrousel3.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="bottom"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "bottom" }}
                   onClick={() =>
                     openModal("/images/habitacionMedium/mediumcarrousel3.webp")
                   }
@@ -213,8 +206,8 @@ const SliderHabMedium = () => {
                 <Image
                   src="/images/habitacionMedium/mediumdetalles1.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionMedium/mediumdetalles1.webp")
@@ -225,8 +218,8 @@ const SliderHabMedium = () => {
                 <Image
                   src="/images/habitacionMedium/mediumdetalles2.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionMedium/mediumdetalles2.webp")
@@ -237,8 +230,8 @@ const SliderHabMedium = () => {
                 <Image
                   src="/images/habitacionMedium/mediumdetalles3.webp"
                   alt="Piscina Image"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   priority
                   onClick={() =>
                     openModal("/images/habitacionMedium/mediumdetalles3.webp")
@@ -251,9 +244,8 @@ const SliderHabMedium = () => {
                     <Image
                       src="/images/habitacionMedium/mediumcarrousel.webp"
                       alt="Piscina Image"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="bottom"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "bottom" }}
                       onClick={() =>
                         openModal("/images/Medium/mediumcarrousel.webp")
                       }
@@ -263,9 +255,8 @@ const SliderHabMedium = () => {
                     <Image
                       src="/images/habitacionMedium/mediumcarrousel2.webp"
                       alt="Piscina Image"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="center"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "center" }}
                       onClick={() =>
                         openModal(
                           "/images/habitacionMedium/mediumcarrousel2.webp"
@@ -277,9 +268,8 @@ const SliderHabMedium = () => {
                     <Image
                       src="/images/habitacionMedium/mediumcarrousel3.webp"
                       alt="Piscina Image"
-                      layout="fill"
-                      objectFit="cover"
-                      objectPosition="bottom"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "bottom" }}
                       onClick={() =>
                         openModal(
                           "/images/habitacionMedium/mediumcarrousel3.webp"
