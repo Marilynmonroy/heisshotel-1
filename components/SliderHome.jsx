@@ -17,7 +17,6 @@ import {
   Pagination,
   EffectFade,
   Keyboard,
-  FreeMode,
 } from "swiper/modules";
 import { Button } from "./ui/button";
 import { CalendarWidget } from "./CalendarWidget";
@@ -27,6 +26,7 @@ import "/app/css/navegation.css";
 import "/app/css/pagination.css";
 import GoogleMaps from "./GoogleMaps";
 import { Badge } from "./ui/badge";
+import { getAllHomePageContent } from "@/lib/api";
 
 const SliderHome = () => {
   const [isMobile, setIsMobile] = useState(false);
