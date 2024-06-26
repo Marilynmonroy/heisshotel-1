@@ -15,12 +15,6 @@ export async function GET(request) {
     return new Response("Invalid token", { status: 401 });
   }
 
-  const article = await getArticle(slug);
-
-  if (!article) {
-    return new Response("Página no encontrada", { status: 404 });
-  }
-
   draftMode().enable();
   redirect("/");
 }
