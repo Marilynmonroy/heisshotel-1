@@ -1,8 +1,10 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "./Footer";
 import { Button } from "@/components/ui/button";
 import { IoMdClose } from "react-icons/io";
+import { useState, useEffect } from "react";
 
 import {
   Drawer,
@@ -11,8 +13,26 @@ import {
   DrawerClose,
 } from "@/components/ui/drawer";
 import { CalendarWidget } from "./CalendarWidget";
+import { getAllHabitacionesPageContent } from "@/lib/api";
 
 const SliderHabitaciones = () => {
+  const [habContent, setHabContent] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getAllHabitacionesPageContent();
+
+        setHabContent(data);
+      } catch (error) {
+        console.error("Error fetching habitaciones page content:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const habContentData = habContent.length > 0 ? habContent[0] : {};
+
   return (
     <div className=" w-full h-screen">
       <div className="text-white h-screen text-center flex items-center">
@@ -27,16 +47,17 @@ const SliderHabitaciones = () => {
           />
           <div className="absolute inset-0 flex z-20 flex-col justify-center w-full gap-5">
             <div className="items-center text-center flex flex-col gap-3">
-              <span className="p-regular-16">HEISS MEDELLÍN</span>
-              <h3 className="h4">HABITACIONES</h3>
+              <span className="p-regular-16 uppercase">
+                {habContentData.subtitleHab}
+              </span>
+              <h3 className="h4 uppercase">{habContentData.titleHab}</h3>
             </div>
             <div className="md:p-5">
               <CalendarWidget />{" "}
             </div>
             <div className="items-center text-center flex flex-col gap-2">
               <span className="p-light-16 w-11/12 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center px-5">
-                Ofrecemos diferentes categorías de habitaciones escoge la que
-                mejor se acomode a tu estadia.
+                {habContentData.descriptionHab}
               </span>
             </div>
             <div className="">
@@ -118,14 +139,12 @@ const SliderHabitaciones = () => {
                       </div>
                     </div>
                     <div className="flex flex-col justify-center text-center md:text-right md:w-96 xl:w-5/6 pt-10 px-7">
-                      <h3 className="h6">PODRAS ENCONTRAR</h3>
+                      <h3 className="h6 uppercase">
+                        {" "}
+                        {habContentData.modalTitle}
+                      </h3>
                       <p className="p-light-12 pt-3 md:pt-7">
-                        Nuestras habitaciones están diseñadas para ofrecer el
-                        máximo confort y elegancia. Disfruta de camas queen
-                        size, Wi-Fi gratuito, televisores de pantalla plana y
-                        baños privados con artículos de tocador de lujo. Algunas
-                        habitaciones también cuentan con balcones privados para
-                        que puedas disfrutar de vistas panorámicas de Medellín.
+                        {habContentData.modalDescription}
                       </p>
                     </div>
                   </section>

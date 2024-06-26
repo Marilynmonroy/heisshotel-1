@@ -127,7 +127,7 @@
   }
 
   .p-regular-16 {
-    @apply text-xs md:text-sm lg:text-lg xl:text-xl font-normal;
+    @apply text-xs md:text-sm lg:text-lg xl:text-xl font-normal ;
   }
   .p-light-24 {
     @apply text-xs md:text-[14px] lg:text-[16px] xl:text-[18px] font-light py-1 md:py-3 md:leading-snug tracking-wide;
