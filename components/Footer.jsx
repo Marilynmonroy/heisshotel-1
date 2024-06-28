@@ -2,25 +2,51 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getFooterContent } from "@/lib/api";
+import { getFooter } from "@/lib/api";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+
+// Configuración de opciones para el renderizado de rich text
+const options = {
+  renderText: (text) => {
+    return text.split("\n").reduce((children, textSegment, index) => {
+      return [...children, index > 0 && <br key={index} />, textSegment];
+    }, []);
+  },
+  renderNode: {
+    [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+    [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+    [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
+    [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+  },
+};
 
 export default function Footer({ children, minHeight = "min-h-screen" }) {
-  // const [footerContent, setFooterContent] = useState([]);
+  const [footerContent, setFooterContent] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const data = await getFooterContent();
-  //       console.log(getFooterContent());
-  //       setFooterContent(data);
-  //     } catch (error) {
-  //       console.error("Error fetching habitaciones page content:", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getFooter();
+        setFooterContent(data);
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching footer content:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-  // const footerContentData = footerContent.length > 0 ? footerContent[0] : {};
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!footerContent) {
+    return <div>No footer content available</div>;
+  }
 
   return (
     <div className={`flex flex-col ${minHeight} text-white w-full z-40`}>
@@ -43,50 +69,28 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
                 <div className="border-t-2 pt-2 border-white w-10/12 md:hidden" />
                 <div className="md:items-start flex flex-col p-light-14">
                   <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">
-                    DIRECCIÓN
+                    {footerContent.adressTitleFooter}
                   </h5>
-                  <p> Cra. 43F # 14-60, El Poblado, Medellín - Manila</p>
+                  <p>{footerContent.adressDescriptionFooter}</p>
                   <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">
-                    CONTACTO
+                    {footerContent.contactTitleFooter}
                   </h5>
-                  <p>
-                    <b className="font-medium">Comercial y Mercadeo:</b> +57 313
-                    525 0564
-                  </p>
-                  {/* <p>argemiroquintero@heiss.com.co</p> */}
-                  <p>
-                    <b className="font-medium">Front desk:</b> +57 313 738 3098
-                  </p>
-                  <p>frontdesk@heiss.com.co</p>
+                  <div className="text-start">
+                    {documentToReactComponents(
+                      footerContent.contactDescriptionForm.json,
+                      options
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="border-t-2 py-2 border-white w-10/12 md:hidden" />
               <section className="md:text-left p-light-12 w-[80%] pb-3 md:pb-0">
-                <p className="pb-1 lg:pb-2">
-                  En Heiss Hotel rechazamos rotundamente cualquier tipo de abuso
-                  o explotación sexual de Niños, Niñas y Adolescentes.
-                </p>
-                <p className="py-1 lg:py-2">
-                  Prohibimos el ingreso a nuestras instalaciones de:
-                </p>
-                <p className="py-1 lg:py-2">
-                  1) Cualquier persona que pretenda ofrecer servicios o planes
-                  relacionados con la Explotación Sexual Comercial de Niños,
-                  Niñas y Adolescentes. <br />
-                  2) De Niños, Niñas y Adolescentes que no estén acompañados por
-                  sus padres o tutores o que no estén debidamente autorizados
-                  por estos.
-                </p>
-                <p className="pt-1 lg:pt-2">
-                  Advertimos a todos nuestros huéspedes y clientes que en
-                  desarrollo de lo dispuesto en el artículo 17 de la Ley 679 de
-                  2001, La Ley 1098 de 2006, La Ley 1336 de 2009, la Resolución
-                  3840 de 2009 y Código Ético Mundial Para el Turismo, la
-                  explotación y el abuso sexual de menores de edad (Niños, Niñas
-                  y Adolescentes) en el país, son sancionados con Penas de hasta
-                  20 años de cárcel y multas de hasta 1500 Salarios Mínimos
-                  Legales Mensuales Vigentes.
-                </p>
+                <div className="pb-1 lg:pb-2">
+                  {documentToReactComponents(
+                    footerContent.disclaimer.json,
+                    options
+                  )}
+                </div>
               </section>
             </div>
 

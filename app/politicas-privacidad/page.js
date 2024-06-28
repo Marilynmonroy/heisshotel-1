@@ -4,7 +4,21 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import { getPrivacidad } from "@/lib/api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 
+const options = {
+  renderText: (text) => {
+    return text.split("\n").reduce((children, textSegment, index) => {
+      return [...children, index > 0 && <br key={index} />, textSegment];
+    }, []);
+  },
+  renderNode: {
+    [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+    [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+    [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
+    [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+  },
+};
 function PoliticasPrivacidad() {
   const [privacidadContent, setPrivacidadContent] = useState(null);
 
