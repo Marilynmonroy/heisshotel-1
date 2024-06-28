@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import { getFooterContent } from "@/lib/api";
+import { getFooterContent } from "@/lib/api";
 
 export default function Footer({ children, minHeight = "min-h-screen" }) {
   // const [footerContent, setFooterContent] = useState([]);
@@ -11,7 +11,7 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
   //   const fetchData = async () => {
   //     try {
   //       const data = await getFooterContent();
-
+  //       console.log(getFooterContent());
   //       setFooterContent(data);
   //     } catch (error) {
   //       console.error("Error fetching habitaciones page content:", error);
