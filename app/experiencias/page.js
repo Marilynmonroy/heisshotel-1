@@ -76,7 +76,10 @@ export default function Experiencias() {
               mousewheel={true}
             >
               {experienciasContent.map((experience) => (
-                <SwiperSlide className="flex md:w-[25%]">
+                <SwiperSlide
+                  className="flex md:w-[25%]"
+                  key={experience.sys.id}
+                >
                   <Drawer>
                     <DrawerTrigger asChild className="md:my-5 relative">
                       <div className="relative flex cursor-pointer h-[15rem]">
