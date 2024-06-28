@@ -16,11 +16,14 @@ import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Link from "next/link";
 import Footer from "../Footer";
 import "/app/css/navigationhorizontal.css";
+import { getHabContent } from "@/lib/api";
 
 const SliderHabMedium = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+  const [habMediumContent, setHabMediumContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const openModal = (imageSrc) => {
     setSelectedImage(imageSrc);
@@ -44,6 +47,32 @@ const SliderHabMedium = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getHabContent();
+
+        setHabMediumContent(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching habitaciones page content:", error);
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  if (isLoading) {
+    return <div>Cargando...</div>;
+  }
+
+  if (!habMediumContent || habMediumContent.length === 0) {
+    return <div>No hay datos disponibles.</div>;
+  }
+  const habMediumContentData = habMediumContent.find(
+    (entry) => entry.titleHabitacion === "SUPERIOR"
+  );
+
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-screen">
@@ -56,10 +85,10 @@ const SliderHabMedium = () => {
           priority
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
-          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
-            HOTEL HEISS MEDELLÍN
+          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center uppercase">
+            {habMediumContentData.subtitleHabitacion}
           </span>
-          <h2 className="h3">SUPERIOR</h2>
+          <h2 className="h3"> {habMediumContentData.titleHabitacion}</h2>
           <div className="mt-5">
             <CalendarWidget />
           </div>
@@ -284,13 +313,9 @@ const SliderHabMedium = () => {
         )}
         <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
-            <h2 className="h5 py-8">SUPERIOR</h2>
+            <h2 className="h5 py-8"> {habMediumContentData.titleHabitacion}</h2>
             <p className="p-light-16 md:pl-12">
-              Descubre nuestra cómoda <b> Habitación Superior </b> de 20 mt2 con
-              un balcón adicional de 4.5 mt2, diseñada para ofrecer una estancia
-              relajante y funcional. Esta habitación combina comodidad interior
-              con un espacio exterior privado. ¡Reserva ahora y disfruta de una
-              experiencia completa en nuestra Habitación Superior con Balcón!
+              {habMediumContentData.descriptionHabitacion}
             </p>
           </div>
           {/* ICONOS */}

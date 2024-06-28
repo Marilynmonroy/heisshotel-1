@@ -33,7 +33,6 @@ const SliderComponent = () => {
     };
     fetchData();
   }, []);
-  console.error("espacios page content:", espaciosContent);
 
   return (
     <section className="overflow-y-auto">

@@ -26,7 +26,7 @@ export default function Experiencias() {
             style={{ objectFit: "cover" }}
           />
         </div>
-        <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 pb-48 md:pb-12">
+        <section className="flex flex-col gap-5 items-center justify-end text-white z-20 absolute inset-0 mb-24 md:pb-12">
           <div className="text-center flex flex-col">
             <span className="p-regular-16">
               LAS MEJORES EXPERIENCIAS LAS ENCUENTRAS EN

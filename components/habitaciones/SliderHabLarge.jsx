@@ -16,11 +16,14 @@ import Link from "next/link";
 import Footer from "../Footer";
 import "/app/css/navigationhorizontal.css";
 import CardsHabitaciones from "../CardsHabitaciones";
+import { getHabContent } from "@/lib/api";
 
 const SliderHabLarge = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+  const [habLargeContent, setHabLargeContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const openModal = (imageSrc) => {
     setSelectedImage(imageSrc);
@@ -44,6 +47,33 @@ const SliderHabLarge = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getHabContent();
+
+        setHabLargeContent(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching habitaciones page content:", error);
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  if (isLoading) {
+    return <div>Cargando...</div>;
+  }
+
+  if (!habLargeContent || habLargeContent.length === 0) {
+    return <div>No hay datos disponibles.</div>;
+  }
+  const habLargeContentData = habLargeContent.find(
+    (entry) => entry.titleHabitacion === "JUNIOR SUITE"
+  );
+
+
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-screen ">
@@ -56,10 +86,10 @@ const SliderHabLarge = () => {
           priority
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
-          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
-            HOTEL HEISS MEDELLÍN
+          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center uppercase">
+            {habLargeContentData.subtitleHabitacion}
           </span>
-          <h2 className="h3">JUNIOR SUITE</h2>
+          <h2 className="h3">{habLargeContentData.titleHabitacion}</h2>
           <div className="mt-5">
             <CalendarWidget />
           </div>
@@ -287,14 +317,9 @@ const SliderHabLarge = () => {
         )}
         <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
-            <h2 className="h5 py-8">JUNIOR SUITE</h2>
+            <h2 className="h5 py-8">{habLargeContentData.titleHabitacion}</h2>
             <p className="p-light-16 md:pl-12">
-              Descubre la elegancia y el confort de nuestra{" "}
-              <b>Junior Suite, </b>
-              una espaciosa habitación de 20 mt2 con un balcón privado de 10
-              mt2. Perfecta para aquellos que buscan un poco más de lujo durante
-              su estancia. Esta Junior Suite combina espacios interiores y
-              exteriores generosos con detalles elegantes.
+              {habLargeContentData.descriptionHabitacion}
             </p>
           </div>
           {/* ICONOS */}

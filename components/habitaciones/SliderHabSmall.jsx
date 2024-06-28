@@ -16,11 +16,14 @@ import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Footer from "../Footer";
 import Link from "next/link";
 import "/app/css/navigationhorizontal.css";
+import { getHabContent } from "@/lib/api";
 
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+  const [habSmallContent, setHabSmallContent] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const openModal = (imageSrc) => {
     setSelectedImage(imageSrc);
@@ -45,6 +48,31 @@ const SliderHabSmall = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getHabContent();
+
+        setHabSmallContent(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching habitaciones page content:", error);
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+  if (isLoading) {
+    return <div>Cargando...</div>;
+  }
+
+  if (!habSmallContent || habSmallContent.length === 0) {
+    return <div>No hay datos disponibles.</div>;
+  }
+  const habSmallContentData = habSmallContent.find(
+    (entry) => entry.titleHabitacion === "ESTÁNDAR"
+  );
+
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-screen">
@@ -57,10 +85,10 @@ const SliderHabSmall = () => {
           priority
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
-          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center">
-            HOTEL HEISS MEDELLÍN
+          <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center uppercase">
+            {habSmallContentData.subtitleHabitacion}
           </span>
-          <h2 className="h3">ESTÁNDAR</h2>
+          <h2 className="h3">{habSmallContentData.titleHabitacion}</h2>
           <div className="mt-5">
             <CalendarWidget />
           </div>
@@ -262,12 +290,9 @@ const SliderHabSmall = () => {
         )}
         <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
-            <h2 className="h5 py-8">ESTÁNDAR</h2>
+            <h2 className="h5 py-8">{habSmallContentData.titleHabitacion}</h2>
             <p className="p-light-16 md:pl-12">
-              Bienvenido a nuestra acogedora Habitación Estándar de 20mt2,
-              diseñada para ofrecer confort y funcionalidad. Su diseño
-              inteligente y acogedor garantiza una estancia placentera y
-              relajante.
+              {habSmallContentData.descriptionHabitacion}
             </p>
           </div>
           {/* ICONOS */}

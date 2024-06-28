@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+// import { getFooterContent } from "@/lib/api";
 
 export default function Footer({ children, minHeight = "min-h-screen" }) {
+  // const [footerContent, setFooterContent] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await getFooterContent();
+
+  //       setFooterContent(data);
+  //     } catch (error) {
+  //       console.error("Error fetching habitaciones page content:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+
+  // const footerContentData = footerContent.length > 0 ? footerContent[0] : {};
+
   return (
     <div className={`flex flex-col ${minHeight} text-white w-full z-40`}>
       <div className="w-full relative flex-grow">{children}</div>
@@ -24,7 +42,7 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
                 <div className="border-t-2 pt-2 border-white w-10/12 md:hidden" />
                 <div className="md:items-start flex flex-col p-light-14">
                   <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">
-                    Dirección
+                    DIRECCIÓN
                   </h5>
                   <p> Cra. 43F # 14-60, El Poblado, Medellín - Manila</p>
                   <h5 className="uppercase text-[14px] md:text-lg font-medium py-1 md:py-4">

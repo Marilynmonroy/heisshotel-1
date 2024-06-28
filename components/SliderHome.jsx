@@ -31,7 +31,7 @@ import { getAllHomePageContent } from "@/lib/api";
 const SliderHome = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [homeContent, setHomeContent] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // Estado para manejar la carga de datos
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
     const handleResize = () => {
