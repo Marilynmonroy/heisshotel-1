@@ -14,6 +14,7 @@ export async function POST(request) {
     "contacto",
     "espacios",
     "habitaciones",
+    "habitacionEstandar",
     "home",
     "metadataHome"
   );

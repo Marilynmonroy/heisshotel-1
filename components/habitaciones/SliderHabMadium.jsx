@@ -16,7 +16,7 @@ import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Link from "next/link";
 import Footer from "../Footer";
 import "/app/css/navigationhorizontal.css";
-import { getHabContent } from "@/lib/api";
+import { getHabitContent } from "@/lib/api";
 
 const SliderHabMedium = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -51,7 +51,7 @@ const SliderHabMedium = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getHabContent();
+        const data = await getHabitContent();
 
         setHabMediumContent(data);
         setIsLoading(false);
@@ -70,7 +70,7 @@ const SliderHabMedium = () => {
     return <div>No hay datos disponibles.</div>;
   }
   const habMediumContentData = habMediumContent.find(
-    (entry) => entry.titleHabitacion === "SUPERIOR"
+    (entry) => entry.title === "SUPERIOR"
   );
 
   return (
@@ -86,9 +86,9 @@ const SliderHabMedium = () => {
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center uppercase">
-            {habMediumContentData.subtitleHabitacion}
+            {habMediumContentData.subtitle}
           </span>
-          <h2 className="h3"> {habMediumContentData.titleHabitacion}</h2>
+          <h2 className="h3"> {habMediumContentData.title}</h2>
           <div className="mt-5">
             <CalendarWidget />
           </div>
@@ -313,9 +313,9 @@ const SliderHabMedium = () => {
         )}
         <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
-            <h2 className="h5 py-8"> {habMediumContentData.titleHabitacion}</h2>
+            <h2 className="h5 py-8"> {habMediumContentData.title}</h2>
             <p className="p-light-16 md:pl-12">
-              {habMediumContentData.descriptionHabitacion}
+              {habMediumContentData.description}
             </p>
           </div>
           {/* ICONOS */}

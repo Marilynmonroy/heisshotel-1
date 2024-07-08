@@ -16,7 +16,7 @@ import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Footer from "../Footer";
 import Link from "next/link";
 import "/app/css/navigationhorizontal.css";
-import { getHabContent } from "@/lib/api";
+import { getHabitContent } from "@/lib/api";
 
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -51,26 +51,21 @@ const SliderHabSmall = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getHabContent();
-
+        const data = await getHabitContent();
         setHabSmallContent(data);
-        setIsLoading(false);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching habitaciones page content:", error);
-        setIsLoading(false);
       }
     };
     fetchData();
   }, []);
-  if (isLoading) {
-    return <div>Cargando...</div>;
-  }
 
   if (!habSmallContent || habSmallContent.length === 0) {
     return <div>No hay datos disponibles.</div>;
   }
   const habSmallContentData = habSmallContent.find(
-    (entry) => entry.titleHabitacion === "ESTÁNDAR"
+    (entry) => entry.title === "ESTÁNDAR"
   );
 
   return (
@@ -86,9 +81,9 @@ const SliderHabSmall = () => {
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center uppercase">
-            {habSmallContentData.subtitleHabitacion}
+            {habSmallContentData.subtitle}
           </span>
-          <h2 className="h3">{habSmallContentData.titleHabitacion}</h2>
+          <h2 className="h3">{habSmallContentData.title}</h2>
           <div className="mt-5">
             <CalendarWidget />
           </div>
@@ -290,9 +285,9 @@ const SliderHabSmall = () => {
         )}
         <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
-            <h2 className="h5 py-8">{habSmallContentData.titleHabitacion}</h2>
+            <h2 className="h5 py-8">{habSmallContentData.title}</h2>
             <p className="p-light-16 md:pl-12">
-              {habSmallContentData.descriptionHabitacion}
+              {habSmallContentData.description}
             </p>
           </div>
           {/* ICONOS */}

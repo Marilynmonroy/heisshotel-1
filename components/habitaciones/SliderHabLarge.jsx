@@ -16,7 +16,7 @@ import Link from "next/link";
 import Footer from "../Footer";
 import "/app/css/navigationhorizontal.css";
 import CardsHabitaciones from "../CardsHabitaciones";
-import { getHabContent } from "@/lib/api";
+import { getHabitContent } from "@/lib/api";
 
 const SliderHabLarge = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -51,8 +51,7 @@ const SliderHabLarge = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getHabContent();
-
+        const data = await getHabitContent();
         setHabLargeContent(data);
         setIsLoading(false);
       } catch (error) {
@@ -70,9 +69,8 @@ const SliderHabLarge = () => {
     return <div>No hay datos disponibles.</div>;
   }
   const habLargeContentData = habLargeContent.find(
-    (entry) => entry.titleHabitacion === "JUNIOR SUITE"
+    (entry) => entry.title === "JUNIOR SUITE"
   );
-
 
   return (
     <section className="overflow-y-auto">
@@ -87,9 +85,9 @@ const SliderHabLarge = () => {
         />
         <div className="items-center justify-center mb-20 text-center flex flex-col gap-3 text-white z-20 absolute inset-0">
           <span className="p-light-16 md:w-1/2 lg:w-2/3 xl:w-2/4 lg:text-center lg:float-center uppercase">
-            {habLargeContentData.subtitleHabitacion}
+            {habLargeContentData.subtitle}
           </span>
-          <h2 className="h3">{habLargeContentData.titleHabitacion}</h2>
+          <h2 className="h3">{habLargeContentData.title}</h2>
           <div className="mt-5">
             <CalendarWidget />
           </div>
@@ -317,9 +315,9 @@ const SliderHabLarge = () => {
         )}
         <div className="flex flex-col w-3/4 md:w-[45%] gap-10 h-full py-10 lg:pr-20 items-start justify-start md:p-10 md:items-end md:justify-end md:text-right text-left">
           <div className="">
-            <h2 className="h5 py-8">{habLargeContentData.titleHabitacion}</h2>
+            <h2 className="h5 py-8">{habLargeContentData.title}</h2>
             <p className="p-light-16 md:pl-12">
-              {habLargeContentData.descriptionHabitacion}
+              {habLargeContentData.description}
             </p>
           </div>
           {/* ICONOS */}
