@@ -30,7 +30,6 @@ export default function Footer({ children, minHeight = "min-h-screen" }) {
       try {
         const data = await getFooter();
         setFooterContent(data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching footer content:", error);
       } finally {

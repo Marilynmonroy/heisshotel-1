@@ -1,15 +1,12 @@
-"use client";
+// app/layout.js
 import localFont from "next/font/local";
-import Head from "next/head";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/toaster";
 import SocialMedia from "@/components/SocialMedia";
 import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { useEffect, useState } from "react";
 import { getSeoHome } from "@/lib/api";
-
 const now = localFont({
   src: [
     {
@@ -35,106 +32,60 @@ const now = localFont({
   ],
 });
 
-// export const metadata = {
-//   title: "Heiss Hotel",
-//   description:
-//     "Un hotel novedoso, vanguardista e imponente · Ubicado en Manila, uno de los barrios de mayor interés turístico y mayor potencial de valorización.",
-//   keywords:
-//     "hotel, lujo, Heiss Hotel, alojamiento, reservas, vacaciones, comodidad",
-//   author: "Heiss Hotel",
-//   openGraph: {
-//     type: "website",
-//     url: "https://www.heisshotel.com",
-//     title: "Heiss Hotel - Tu Refugio de Lujo",
-//     description:
-//       "Disfruta de una experiencia única en Heiss Hotel, donde el lujo y la comodidad se encuentran. Reserva ahora y vive la estancia de tus sueños.",
-//     images: [
-//       {
-//         url: "https://www.heisshotel.com/og-image.jpg",
-//         width: 800,
-//         height: 600,
-//         alt: "Heiss Hotel",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Heiss Hotel - Tu Refugio de Lujo",
-//     description:
-//       "Disfruta de una experiencia única en Heiss Hotel, donde el lujo y la comodidad se encuentran. Reserva ahora y vive la estancia de tus sueños.",
-//     images: [
-//       {
-//         url: "https://www.heisshotel.com/twitter-image.jpg",
-//         width: 1200,
-//         height: 628,
-//         alt: "Heiss Hotel",
-//       },
-//     ],
-//   },
-//   canonical: "https://www.heisshotel.com",
-// };
+export async function generateMetadata() {
+  const seoMetadata = await getSeoHome();
+
+  return {
+    title: seoMetadata?.title,
+    description: seoMetadata?.description,
+    keywords: seoMetadata?.keywords,
+    openGraph: {
+      type: "website",
+      url: "https://www.heisshotel.com",
+      title: seoMetadata?.openGraphTitle,
+      description: seoMetadata?.openGraphDescription,
+      images: [
+        {
+          url: seoMetadata?.openGraphImages?.[0]?.url,
+          width: 800,
+          height: 600,
+          alt: "Heiss Hotel",
+        },
+      ],
+    },
+    twitter: {
+      card: seoMetadata?.twitterCard,
+      title: seoMetadata?.twitterTitle,
+      description: seoMetadata?.twitterDescription,
+      images: [
+        {
+          url: seoMetadata?.twitterImage?.url,
+          width: 1200,
+          height: 628,
+          alt: "Heiss Hotel",
+        },
+      ],
+    },
+    canonical: "https://www.heisshotel.com",
+  };
+}
 
 export default function RootLayout({ children }) {
-  const [seoHomeData, setSeoHomeData] = useState([]);
-  useEffect(() => {
-    async function fetchSeoHomeData() {
-      const data = await getSeoHome();
-      setSeoHomeData(data);
-      console.log("seo Home:", data);
-    }
-    fetchSeoHomeData();
-  }, []);
-  const seoHomeContentData = seoHomeData.length > 0 ? seoHomeData[0] : {};
-
   return (
     <html lang="es">
-      <Head>
-        {/* AQUI VA EL SEO */}
-        <title>{seoHomeContentData?.title || "Heis Hotel"}</title>
-        <meta name="description" content={seoHomeContentData?.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://heisshotel.com/" />
-        <meta
-          property="og:title"
-          content={seoHomeContentData?.openGraphTitle}
-        />
-        <meta
-          property="og:description"
-          content={seoHomeContentData?.openGraphDescription}
-        />
-        <meta
-          property="og:image"
-          content={seoHomeContentData?.openGraphImages?.url}
-        />
-        <meta property="og:image:width" content={800} />
-        <meta property="og:image:height" content={600} />
-        <meta property="og:image:alt" content={seoHomeContentData?.title} />
-        <meta name="twitter:card" content={seoHomeContentData.twitterCard} />
-        <meta name="twitter:title" content={seoHomeContentData.twitterTitle} />
-        <meta
-          name="twitter:description"
-          content={seoHomeContentData.twitterDescription}
-        />
-        <meta
-          name="twitter:image"
-          content={seoHomeContentData.twitterImage?.url}
-        />{" "}
-        <link rel="canonical" href="https://www.heisshotel.com" />
-        {/* AQUÍ TERMINA EL SEO */}
-      </Head>
-
-      {/* AQUÍ VAN LOS SCRIPTS */}
-      <Script
-        id="gtm-script"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      <head>
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-5K9FJW5T');`,
-        }}
-      />
+          }}
+        />
+      </head>
       <body className={now.className}>
         <noscript>
           <iframe

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /api/
+Disallow: /css/
+Sitemap: https://heisshotel.com/sitemap.xml

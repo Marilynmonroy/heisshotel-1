@@ -9,7 +9,14 @@ export async function POST(request) {
     return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
   }
 
-  revalidateTag("footer", "contacto", "espacios", "habitaciones", "home");
+  revalidateTag(
+    "footer",
+    "contacto",
+    "espacios",
+    "habitaciones",
+    "home",
+    "metadataHome"
+  );
 
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }

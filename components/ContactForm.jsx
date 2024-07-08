@@ -41,7 +41,6 @@ function ContactForm() {
   });
 
   async function onSubmit(data) {
-    // console.log("Form submitted", data);
     try {
       const response = await fetch("/api/sendEmail", {
         method: "POST",
@@ -56,6 +55,7 @@ function ContactForm() {
           title: "Hemos recibido tus datos",
           description: "Pronto nuestros asesores se contactarán contigo",
         });
+        form.reset();
       } else {
         toast({
           title: "Error al enviar el correo",

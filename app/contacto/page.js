@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
-import IconMessage from "@/components/IconMessage";
 import Footer from "@/components/Footer";
 import GoogleMaps from "@/components/GoogleMaps";
 import { getContactPageContent } from "@/lib/api";
