@@ -35,13 +35,15 @@ Sigue estos pasos para clonar y configurar el proyecto en tu máquina local:
 
    ````bash
     npm install
+   ````
 
     O con yarn:
 
-    ```bash
+    ````bash
     yarn install
+       ````
 
-   ````
+
 
 3. **Ejecutar el proyecto en modo de desarrollo**
 
@@ -49,17 +51,18 @@ Sigue estos pasos para clonar y configurar el proyecto en tu máquina local:
 
    ````bash
     npm run dev
+   ````
 
     O con yarn:
 
-    ```bash
+    ````bash
     yarn dev
+   ````
 
     El sitio web debería estar disponible en "http://localhost:3000".
-   ````
 
 ## Contacto
 
 Si tienes alguna pregunta o sugerencia, no dudes en contactarnos:
-    - [`correo electrónico del desarrollador`](mailto:aragonmmarilynt@gmail.com),
-    - [`correo electrónico del hotel`](mailto:frontdesk@heiss.com.co)
+     [`correo electrónico del desarrollador`](mailto:aragonmmarilynt@gmail.com),
+     [`correo electrónico del hotel`](mailto:frontdesk@heiss.com.co)
