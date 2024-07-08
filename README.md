@@ -58,7 +58,7 @@ Sigue estos pasos para clonar y configurar el proyecto en tu máquina local:
     El sitio web debería estar disponible en "http://localhost:3000".
    ````
 
-**Contacto**
+## Contacto
 
 Si tienes alguna pregunta o sugerencia, no dudes en contactarnos:
     - [`correo electrónico del desarrollador`](mailto:aragonmmarilynt@gmail.com),
