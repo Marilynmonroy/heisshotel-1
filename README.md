@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Heiss Hotel
 
-## Getting Started
+Bienvenido al repositorio del proyecto de Heiss Hotel. Este proyecto utiliza Next.js para desarrollar un sitio web moderno, rápido y optimizado para motores de búsqueda. La información y el contenido del sitio web son gestionados mediante Contentful, un CMS headless que facilita la administración y actualización de contenido.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: Framework de React que permite la generación estática y el renderizado del lado del servidor.
+- **Contentful**: CMS headless utilizado para gestionar y obtener contenido dinámico.
+- **SEO**: Técnicas implementadas para mejorar la visibilidad en motores de búsqueda.
+- **Responsive Design**: Diseño adaptativo que garantiza una experiencia óptima en dispositivos móviles y de escritorio.
+- **Google Tag Manager**: Integración para el manejo de etiquetas y seguimiento de métricas.
+- **Swiper**: Utilizado para crear carouseles de imágenes y otros elementos interactivos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos previos
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Antes de empezar, asegúrate de tener instalado lo siguiente:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js (versión 12 o superior)
+- npm o yarn
 
-## Learn More
+## Instalación
 
-To learn more about Next.js, take a look at the following resources:
+Sigue estos pasos para clonar y configurar el proyecto en tu máquina local:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clonar el repositorio**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/tu-usuario/heiss-hotel.git
+   cd heiss-hotel
+   ```
 
-## Deploy on Vercel
+2. **Instalar dependencias**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Con npm:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ````bash
+    npm install
+
+    O con yarn:
+
+    ```bash
+    yarn install
+
+   ````
+
+3. **Ejecutar el proyecto en modo de desarrollo**
+
+   Con npm:
+
+   ````bash
+    npm run dev
+
+    O con yarn:
+
+    ```bash
+    yarn dev
+
+    El sitio web debería estar disponible en "http://localhost:3000".
+   ````
+
+**Contacto**
+
+Si tienes alguna pregunta o sugerencia, no dudes en contactarnos:
+    - [`correo electrónico del desarrollador`](mailto:aragonmmarilynt@gmail.com),
+    - [`correo electrónico del hotel`](mailto:frontdesk@heiss.com.co)
