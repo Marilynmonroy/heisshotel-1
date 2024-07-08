@@ -19,20 +19,6 @@ import { getHabitContent } from "@/lib/api";
 
 register();
 
-const HAB_CONTENT_FIELDS = `
-  sys {
-    id
-  }
-  title
-  subtitle
-  description
-  imagesCollection {
-    items {
-      url
-    }
-  }
-`;
-
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -69,8 +55,10 @@ const SliderHabSmall = () => {
         const data = await getHabitContent();
         setHabSmallContent(data);
         console.log(data);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching habitaciones page content:", error);
+        setIsLoading(false);
       }
     };
     fetchData();
@@ -94,7 +82,6 @@ const SliderHabSmall = () => {
   );
   const imagesMobile = habSmallContentData.imagesCollection.items.slice(0, 6);
 
-  console.log(imagesMobile);
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-screen">
@@ -147,35 +134,35 @@ const SliderHabSmall = () => {
           loop={true}
           modules={[Navigation, Zoom]}
         >
-          {imagesSecondCarousel.map((image, index) => (
-            <SwiperSlide key={index}>
-              <Image
-                src={image.url}
-                alt="Piscina Image"
-                fill
-                style={{ objectFit: "cover" }}
-                priority
-                onClick={() => openModal(image.url)}
-              />
-            </SwiperSlide>
-          ))}
+          <IoMdSearch className="absolute bottom-44 hidden sm:block  md:bottom-10 md:left-[12rem] lg:left-[16rem] xl:left-[25rem] z-50 text-[40px] opacity-9" />
+
+          {isMobile
+            ? imagesMobile.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    alt=""
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority
+                    onClick={() => openModal(image.url)}
+                  />
+                </SwiperSlide>
+              ))
+            : imagesSecondCarousel.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    alt="Piscina Image"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority
+                    onClick={() => openModal(image.url)}
+                  />
+                </SwiperSlide>
+              ))}
         </Swiper>
-        {isMobile && (
-          <>
-            {imagesMobile.map((image, index) => (
-              <SwiperSlide key={index}>
-                <Image
-                  src={image.url}
-                  alt=""
-                  fill
-                  style={{ objectFit: "cover" }}
-                  priority
-                  onClick={() => openModal(image.url)}
-                />
-              </SwiperSlide>
-            ))}
-          </>
-        )}
+
         {modalOpen && (
           <Modal onClose={closeModal}>
             <Swiper
@@ -192,20 +179,18 @@ const SliderHabSmall = () => {
               }}
               modules={[Navigation, Zoom, Pagination]}
             >
-              {habSmallContentData.imagesCollection.items.map(
-                (image, index) => (
-                  <SwiperSlide key={index}>
-                    <Image
-                      src={image.url}
-                      alt="Piscina Image"
-                      fill
-                      style={{ objectFit: "cover" }}
-                      priority
-                      onClick={() => openModal(image.url)}
-                    />
-                  </SwiperSlide>
-                )
-              )}
+              {imagesMobile.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    alt=""
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority
+                    onClick={() => openModal(image.url)}
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Modal>
         )}

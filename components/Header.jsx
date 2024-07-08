@@ -56,9 +56,11 @@ function Header() {
               <li onClick={handleMenuOptionClick}>
                 <Link href="/contacto">CONTACTO</Link>
               </li>
-              {/* <li onClick={handleMenuOptionClick} className="block">
-                    <Link href="/experiencias">EXPERIENCIAS</Link>
-                  </li> */}
+
+              {/* PARA ACTIVAR EXPERIENCIAS EN EL MENÚ QUITAR EL HIDDEN */}
+              <li onClick={handleMenuOptionClick} className="hidden">
+                <Link href="/experiencias">EXPERIENCIAS</Link>
+              </li>
             </ul>
           </SheetContent>
         </Sheet>

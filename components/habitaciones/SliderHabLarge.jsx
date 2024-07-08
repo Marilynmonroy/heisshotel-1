@@ -10,13 +10,14 @@ import Image from "next/image";
 import { CalendarWidget } from "../CalendarWidget";
 import { Button } from "../ui/button";
 import { register } from "swiper/element/bundle";
-register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Link from "next/link";
 import Footer from "../Footer";
 import "/app/css/navigationhorizontal.css";
 import CardsHabitaciones from "../CardsHabitaciones";
 import { getHabitContent } from "@/lib/api";
+
+register();
 
 const SliderHabLarge = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -53,6 +54,7 @@ const SliderHabLarge = () => {
       try {
         const data = await getHabitContent();
         setHabLargeContent(data);
+        console.log(data);
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching habitaciones page content:", error);
@@ -61,16 +63,24 @@ const SliderHabLarge = () => {
     };
     fetchData();
   }, []);
-  if (isLoading) {
-    return <div>Cargando...</div>;
-  }
 
   if (!habLargeContent || habLargeContent.length === 0) {
     return <div>No hay datos disponibles.</div>;
   }
+
   const habLargeContentData = habLargeContent.find(
     (entry) => entry.title === "JUNIOR SUITE"
   );
+
+  const imagesFirstCarousel = habLargeContentData.imagesCollection.items.slice(
+    0,
+    3
+  );
+  const imagesSecondCarousel = habLargeContentData.imagesCollection.items.slice(
+    3,
+    6
+  );
+  const imagesMobile = habLargeContentData.imagesCollection.items.slice(0, 6);
 
   return (
     <section className="overflow-y-auto">
@@ -103,30 +113,16 @@ const SliderHabLarge = () => {
           loop={true}
           modules={[Navigation, Pagination]}
         >
-          <SwiperSlide style={{ height: "35rem" }}>
-            <Image
-              src="/images/habitacionLarge/largecarrousel1.webp"
-              alt="Cama Junior Suite"
-              fill
-              style={{ objectFit: "cover", objectPosition: "bottom" }}
-            />
-          </SwiperSlide>
-          <SwiperSlide style={{ height: "35rem" }}>
-            <Image
-              src="/images/habitacionLarge/largecarrousel2.webp"
-              alt="Cocina Junior Suite"
-              fill
-              style={{ objectFit: "cover", objectPosition: "center" }}
-            />
-          </SwiperSlide>
-          <SwiperSlide style={{ height: "35rem" }}>
-            <Image
-              src="/images/habitacionLarge/largecarrousel3.webp"
-              alt="Centro Junior Suite"
-              fill
-              style={{ objectFit: "cover", objectPosition: "center" }}
-            />
-          </SwiperSlide>
+          {imagesFirstCarousel.map((image, index) => (
+            <SwiperSlide key={index} style={{ height: "35rem" }}>
+              <Image
+                src={image.url}
+                alt="Piscina Image"
+                fill
+                style={{ objectFit: "cover", objectPosition: "bottom" }}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
 
@@ -140,79 +136,31 @@ const SliderHabLarge = () => {
           modules={[Navigation, Zoom]}
         >
           <IoMdSearch className="absolute bottom-44 hidden sm:block  md:bottom-10 md:left-[12rem] lg:left-[16rem] xl:left-[25rem] z-50 text-[40px] opacity-9" />
-          <SwiperSlide>
-            <Image
-              src="/images/habitacionLarge/largedetalles.webp"
-              alt="Mesa Junior Suite"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              onClick={() =>
-                openModal("/images/habitacionLarge/largedetalles.webp")
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/habitacionLarge/largedetalles2.webp"
-              alt="Detalle Junior Suite"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              onClick={() =>
-                openModal("/images/habitacionLarge/largedetalles2.webp")
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/habitacionLarge/largedetalles3.webp"
-              alt="Sofa Junior Suite"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              onClick={() =>
-                openModal("/images/habitacionLarge/largedetalles3.webp")
-              }
-            />
-          </SwiperSlide>
-          {isMobile && (
-            <>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionLarge/largecarrousel1.webp"
-                  alt="Cama Junior Suite"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "bottom" }}
-                  onClick={() =>
-                    openModal("/images/habitacionLarge/largecarrousel1.webp")
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionLarge/largecarrousel2.webp"
-                  alt="Cocina Junior Suite"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                  onClick={() =>
-                    openModal("/images/habitacionLarge/largecarrousel2.webp")
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionLarge/largecarrousel3.webp"
-                  alt="Centro Junior Suite"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "bottom" }}
-                  onClick={() =>
-                    openModal("/images/habitacionLarge/largecarrousel3.webp")
-                  }
-                />
-              </SwiperSlide>
-            </>
-          )}
+          {isMobile
+            ? imagesMobile.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    alt=""
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority
+                    onClick={() => openModal(image.url)}
+                  />
+                </SwiperSlide>
+              ))
+            : imagesSecondCarousel.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    alt="Piscina Image"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority
+                    onClick={() => openModal(image.url)}
+                  />
+                </SwiperSlide>
+              ))}
         </Swiper>
         {modalOpen && (
           <Modal onClose={closeModal}>
@@ -230,86 +178,18 @@ const SliderHabLarge = () => {
               }}
               modules={[Navigation, Zoom, Pagination]}
             >
-              {" "}
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionLarge/largedetalles.webp"
-                  alt="Mesa Junior Suite"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  priority
-                  onClick={() =>
-                    openModal("/images/habitacionLarge/largedetalles.webp")
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionLarge/largedetalles2.webp"
-                  alt="Detalle Junior Suite"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  priority
-                  onClick={() =>
-                    openModal("/images/habitacionLarge/largedetalles2.webp")
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionLarge/largedetalles3.webp"
-                  alt="Sofa Junior Suite"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  priority
-                  onClick={() =>
-                    openModal("/images/habitacionLarge/largedetalles3.webp")
-                  }
-                />
-              </SwiperSlide>
-              {isMobile && (
-                <>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/habitacionLarge/largecarrousel1.webp"
-                      alt="Cama Junior Suite"
-                      fill
-                      style={{ objectFit: "cover", objectPosition: "bottom" }}
-                      onClick={() =>
-                        openModal(
-                          "/images/habitacionLarge/largecarrousel1.webp"
-                        )
-                      }
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/habitacionLarge/largecarrousel2.webp"
-                      alt="Cocina Junior Suite"
-                      fill
-                      style={{ objectFit: "cover", objectPosition: "center" }}
-                      onClick={() =>
-                        openModal(
-                          "/images/habitacionLarge/largecarrousel2.webp"
-                        )
-                      }
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/habitacionLarge/largecarrousel3.webp"
-                      alt="Centro Junior Suite"
-                      fill
-                      style={{ objectFit: "cover", objectPosition: "bottom" }}
-                      onClick={() =>
-                        openModal(
-                          "/images/habitacionLarge/largecarrousel3.webp"
-                        )
-                      }
-                    />
-                  </SwiperSlide>
-                </>
-              )}
+              {imagesMobile.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    alt=""
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority
+                    onClick={() => openModal(image.url)}
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Modal>
         )}
