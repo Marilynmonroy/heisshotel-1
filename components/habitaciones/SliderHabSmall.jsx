@@ -11,12 +11,27 @@ import { CalendarWidget } from "../CalendarWidget";
 import CardsHabitaciones from "../CardsHabitaciones";
 import { Button } from "../ui/button";
 import { register } from "swiper/element/bundle";
-register();
 import { Pagination, Navigation, Zoom } from "swiper/modules";
 import Footer from "../Footer";
 import Link from "next/link";
 import "/app/css/navigationhorizontal.css";
 import { getHabitContent } from "@/lib/api";
+
+register();
+
+const HAB_CONTENT_FIELDS = `
+  sys {
+    id
+  }
+  title
+  subtitle
+  description
+  imagesCollection {
+    items {
+      url
+    }
+  }
+`;
 
 const SliderHabSmall = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -64,10 +79,22 @@ const SliderHabSmall = () => {
   if (!habSmallContent || habSmallContent.length === 0) {
     return <div>No hay datos disponibles.</div>;
   }
+
   const habSmallContentData = habSmallContent.find(
     (entry) => entry.title === "ESTÁNDAR"
   );
 
+  const imagesFirstCarousel = habSmallContentData.imagesCollection.items.slice(
+    0,
+    3
+  );
+  const imagesSecondCarousel = habSmallContentData.imagesCollection.items.slice(
+    3,
+    6
+  );
+  const imagesMobile = habSmallContentData.imagesCollection.items.slice(0, 6);
+
+  console.log(imagesMobile);
   return (
     <section className="overflow-y-auto">
       <div className="relative w-full h-screen">
@@ -89,6 +116,7 @@ const SliderHabSmall = () => {
           </div>
         </div>
       </div>
+
       {/* carrousel 1 */}
       <div className="text-white h-3/4 text-center md:flex items-center w-full hidden md:visible horizontal">
         <Swiper
@@ -97,30 +125,16 @@ const SliderHabSmall = () => {
           loop={true}
           modules={[Navigation, Pagination]}
         >
-          <SwiperSlide style={{ height: "35rem" }}>
-            <Image
-              src="/images/habitacionSmall/smallcarrousel.webp"
-              alt="Piscina Image"
-              fill
-              style={{ objectFit: "cover", objectPosition: "bottom" }}
-            />
-          </SwiperSlide>
-          <SwiperSlide style={{ height: "35rem" }}>
-            <Image
-              src="/images/habitacionSmall/smallcarrousel2.webp"
-              alt="Piscina Image"
-              fill
-              style={{ objectFit: "cover", objectPosition: "bottom" }}
-            />
-          </SwiperSlide>
-          <SwiperSlide style={{ height: "35rem" }}>
-            <Image
-              src="/images/habitacionSmall/smallcarrousel3.webp"
-              alt="Piscina Image"
-              fill
-              style={{ objectFit: "cover", objectPosition: "center" }}
-            />
-          </SwiperSlide>
+          {imagesFirstCarousel.map((image, index) => (
+            <SwiperSlide key={index} style={{ height: "35rem" }}>
+              <Image
+                src={image.url}
+                alt="Piscina Image"
+                fill
+                style={{ objectFit: "cover", objectPosition: "bottom" }}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
 
@@ -133,72 +147,35 @@ const SliderHabSmall = () => {
           loop={true}
           modules={[Navigation, Zoom]}
         >
-          <IoMdSearch className="absolute bottom-44 hidden sm:block  md:bottom-10 md:left-[12rem] lg:left-[16rem] xl:left-[25rem] z-50 text-[40px] opacity-9" />
-          <SwiperSlide>
-            <Image
-              src="/images/habitacionSmall/smalldetalles.webp"
-              alt="Piscina Image"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              onClick={() =>
-                openModal("/images/habitacionSmall/smalldetalles.webp")
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/habitacionSmall/smalldetalles2.webp"
-              alt="Piscina Image"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              onClick={() =>
-                openModal("/images/habitacionSmall/smalldetalles2.webp")
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/images/habitacionSmall/smalldetalles3.webp"
-              alt="Piscina Image"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              onClick={() =>
-                openModal("/images/habitacionSmall/smalldetalles3.webp")
-              }
-            />
-          </SwiperSlide>
-          {isMobile && (
-            <>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionSmall/smallcarrousel.webp"
-                  alt="Piscina Image"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "bottom" }}
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionSmall/smallcarrousel2.webp"
-                  alt="Piscina Image"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionSmall/smallcarrousel3.webp"
-                  alt="Piscina Image"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "bottom" }}
-                />
-              </SwiperSlide>
-            </>
-          )}
+          {imagesSecondCarousel.map((image, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                src={image.url}
+                alt="Piscina Image"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+                onClick={() => openModal(image.url)}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
+        {isMobile && (
+          <>
+            {imagesMobile.map((image, index) => (
+              <SwiperSlide key={index}>
+                <Image
+                  src={image.url}
+                  alt=""
+                  fill
+                  style={{ objectFit: "cover" }}
+                  priority
+                  onClick={() => openModal(image.url)}
+                />
+              </SwiperSlide>
+            ))}
+          </>
+        )}
         {modalOpen && (
           <Modal onClose={closeModal}>
             <Swiper
@@ -215,70 +192,19 @@ const SliderHabSmall = () => {
               }}
               modules={[Navigation, Zoom, Pagination]}
             >
-              {" "}
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionSmall/smalldetalles.webp"
-                  alt="Piscina Image"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  priority
-                  onClick={() =>
-                    openModal("/images/habitacionSmall/smalldetalles.webp")
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionSmall/smalldetalles2.webp"
-                  alt="Piscina Image"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  priority
-                  onClick={() =>
-                    openModal("/images/habitacionSmall/smalldetalles2.webp")
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src="/images/habitacionSmall/smalldetalles3.webp"
-                  alt="Piscina Image"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  priority
-                  onClick={() =>
-                    openModal("/images/habitacionSmall/smalldetalles3.webp")
-                  }
-                />
-              </SwiperSlide>
-              {isMobile && (
-                <>
-                  <SwiperSlide>
+              {habSmallContentData.imagesCollection.items.map(
+                (image, index) => (
+                  <SwiperSlide key={index}>
                     <Image
-                      src="/images/habitacionSmall/smallcarrousel.webp"
+                      src={image.url}
                       alt="Piscina Image"
                       fill
-                      style={{ objectFit: "cover", objectPosition: "bottom" }}
+                      style={{ objectFit: "cover" }}
+                      priority
+                      onClick={() => openModal(image.url)}
                     />
                   </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/habitacionSmall/smallcarrousel2.webp"
-                      alt="Piscina Image"
-                      fill
-                      style={{ objectFit: "cover", objectPosition: "center" }}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <Image
-                      src="/images/habitacionSmall/smallcarrousel3.webp"
-                      alt="Piscina Image"
-                      fill
-                      style={{ objectFit: "cover", objectPosition: "bottom" }}
-                    />
-                  </SwiperSlide>
-                </>
+                )
               )}
             </Swiper>
           </Modal>
@@ -291,7 +217,6 @@ const SliderHabSmall = () => {
             </p>
           </div>
           {/* ICONOS */}
-
           <div className="flex gap-5 md:gap-6 lg:gap-8 xl:gap-10 justify-end">
             <Image
               src="/icons/camas.svg"
@@ -307,7 +232,6 @@ const SliderHabSmall = () => {
               height={29.1}
               className="w-[30px] lg:w-[50px]"
             />
-
             <Image
               src="/icons/armario.svg"
               alt="Armario"
@@ -315,7 +239,6 @@ const SliderHabSmall = () => {
               height={29.1}
               className="w-[30px] lg:w-[50px]"
             />
-
             <Image
               src="/icons/ducha.svg"
               alt="Ducha"
