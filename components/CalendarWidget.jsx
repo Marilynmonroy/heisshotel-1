@@ -1,8 +1,7 @@
-"use client";
 import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { format } from "date-fns";
+import { format, addDays } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { z } from "zod";
 import { cn } from "@/lib/utils";
@@ -27,7 +26,7 @@ const FormSchema = z.object({
 });
 
 export function CalendarWidget() {
-  const [startDate, setStartDate] = useState(new Date(2024, 7, 10));
+  const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [isDepartureOpen, setIsDepartureOpen] = useState(false);
   const departureTriggerRef = useRef(null);
@@ -37,6 +36,7 @@ export function CalendarWidget() {
     setEndDate(ranges.selection.endDate);
   };
 
+  const defaultStartDate = new Date(2024, 7, 10); // 10 de agosto de 2024
   const currentDate = new Date();
   currentDate.setDate(currentDate.getDate() + 1);
 
@@ -44,11 +44,15 @@ export function CalendarWidget() {
     resolver: zodResolver(FormSchema),
   });
 
+  if (!form.getValues("arrival")) {
+    const today = new Date();
+    const defaultDate = today < defaultStartDate ? defaultStartDate : today;
+    form.setValue("arrival", defaultDate);
+  }
+
   const onSubmit = async (data) => {
     const { arrival, departure } = data;
-    const arrivalDate = arrival
-      ? format(arrival, "yyyy-MM-dd")
-      : format(new Date(2024, 7, 10), "yyyy-MM-dd");
+    const arrivalDate = arrival ? format(arrival, "yyyy-MM-dd") : "";
     const departureDate = departure ? format(departure, "yyyy-MM-dd") : "";
     const cloudbedsUrl = `https://hotels.cloudbeds.com/es/reservation/lLxxdq?checkin=${arrivalDate}&checkout=${departureDate}`;
 
@@ -78,7 +82,7 @@ export function CalendarWidget() {
                     >
                       {field.value
                         ? format(field.value, "dd/MM/yyyy")
-                        : format(startDate, "dd/MM/yyyy")}
+                        : format(defaultStartDate, "dd/MM/yyyy")}
                       <CalendarIcon className="ml-auto h-5 w-5 opacity-80" />
                     </Button>
                   </FormControl>
@@ -92,8 +96,11 @@ export function CalendarWidget() {
                     onSelect={(date) => {
                       field.onChange(date);
                       setIsDepartureOpen(true);
+                      // Automatically set departure date to the next day
+                      const nextDay = addDays(date, 1);
+                      form.setValue("departure", nextDay);
                     }}
-                    disabled={(date) => date < new Date() || date < startDate}
+                    disabled={(date) => date < defaultStartDate}
                     fromYear={2023}
                     initialFocus
                     className={""}
@@ -101,7 +108,7 @@ export function CalendarWidget() {
                     dayStyle={(date) => ({
                       ...(date && date.getDate() === new Date().getDate()),
                     })}
-                    defaultMonth={new Date(2024, 7, 10)}
+                    defaultMonth={defaultStartDate}
                   />
                 </PopoverContent>
               </Popover>
@@ -127,7 +134,13 @@ export function CalendarWidget() {
                     >
                       {field.value
                         ? format(field.value, "dd/MM/yyyy")
-                        : format(new Date(2024, 7, 11), "dd/MM/yyyy")}
+                        : format(
+                            addDays(
+                              form.watch("arrival") || defaultStartDate,
+                              1
+                            ),
+                            "dd/MM/yyyy"
+                          )}
                       <CalendarIcon className="ml-auto h-5 w-5 opacity-80" />
                     </Button>
                   </FormControl>
@@ -155,7 +168,7 @@ export function CalendarWidget() {
                     dayHoverStyle={(date) => ({
                       backgroundColor: "lightblue",
                     })}
-                    defaultMonth={new Date(2024, 7, 10)}
+                    defaultMonth={defaultStartDate}
                   />
                 </PopoverContent>
               </Popover>
@@ -164,7 +177,7 @@ export function CalendarWidget() {
           )}
         />
         <Button variant="secondary" type="submit">
-          RESERVE YA
+          RESERVAR YA
         </Button>
       </form>
     </Form>

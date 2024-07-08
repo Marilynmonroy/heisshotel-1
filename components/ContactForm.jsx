@@ -51,6 +51,8 @@ function ContactForm() {
       });
       const result = await response.json();
       if (response.ok) {
+
+        // MENSAJE QUE APARECE AL MANDAR LA INFORMACIÓN
         toast({
           title: "Hemos recibido tus datos",
           description: "Pronto nuestros asesores se contactarán contigo",
