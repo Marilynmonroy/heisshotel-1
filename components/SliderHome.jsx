@@ -93,7 +93,7 @@ const SliderHome = () => {
           <div className="relative w-full h-full ">
             <div className="absolute inset-0 p-1 bg-black opacity-20 z-10"></div>
             <Image
-              src="/images/Fachada_Heiss_R3.webp"
+              src="/images/home.jpg"
               alt="Fachada Heiss"
               fill
               style={{ objectFit: "cover" }}
