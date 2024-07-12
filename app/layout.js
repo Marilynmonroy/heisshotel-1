@@ -35,19 +35,19 @@ const now = localFont({
 export async function generateMetadata() {
   const seoMetadata = await getSeoHome();
   return {
-    title: seoMetadata.title,
-    description: seoMetadata.description,
-    keywords: seoMetadata.keywords,
+    title: seoMetadata?.title,
+    description: seoMetadata?.description,
+    keywords: seoMetadata?.keywords,
     metadataBase: new URL("https://www.heisshotel.com"),
 
     openGraph: {
       type: "website",
       url: "https://www.heisshotel.com",
-      title: seoMetadata.openGraphTitle,
-      description: seoMetadata.openGraphDescription,
+      title: seoMetadata?.openGraphTitle,
+      description: seoMetadata?.openGraphDescription,
       images: [
         {
-          url: seoMetadata.openGraphImages.url,
+          url: seoMetadata?.openGraphImages.url,
           width: 800,
           height: 600,
           alt: "Heiss Hotel",
@@ -55,12 +55,12 @@ export async function generateMetadata() {
       ],
     },
     twitter: {
-      card: seoMetadata.twitterCard,
-      title: seoMetadata.twitterTitle,
-      description: seoMetadata.twitterDescription,
+      card: seoMetadata?.twitterCard,
+      title: seoMetadata?.twitterTitle,
+      description: seoMetadata?.twitterDescription,
       images: [
         {
-          url: seoMetadata.twitterImage.url,
+          url: seoMetadata?.twitterImage.url,
           width: 1200,
           height: 628,
           alt: "Heiss Hotel",
