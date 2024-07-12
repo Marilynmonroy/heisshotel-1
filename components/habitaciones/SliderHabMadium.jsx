@@ -49,7 +49,7 @@ const SliderHabMedium = () => {
   }, []);
 
 
-  // contentful
+  // CONTENTFUL
   useEffect(() => {
 
     const fetchData = async () => {
